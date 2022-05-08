@@ -1,0 +1,20 @@
+1. How many data types in Java ? ==> Ex01
++ Primitive Type 
+==> int a = 5;
++ Object Type 
+==> Item item = new Item(1, "A");
+
+2. Different bewteen int and Integer ?
+
+3. Different between idea of declaration with Integer
++ Integer a = 10;
++ Integer a = new Integer(100);
+
+4. Explain final keyword in Java ?
+
+5. What is the purpose of STATIC keyword in JAVA ?
+static    : initial at loading time, class scope
+when      : method, attribute does not depend on calling object
+
+non-static: initial while calling from object, object scope
+when      : method, attribute depend on calling object
