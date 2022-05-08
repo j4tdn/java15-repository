@@ -1,0 +1,32 @@
+Chương trình Java ==> Class với đuôi file là .java bao gồm
++ Thuộc tính
++ Phương thức
+
+
+KDL nguyên thủy
+ + int, float, double, char --> STACK
+ + lưu trữ được single value, giá trị đơn
+ + Khởi tạo giá trị thì dùng toán tử ==> int a = 5;
+ ==> Lưu trữ 1 thông tin và luôn có giá trị
+		
+KDL đối tượng
+ + KDL đối tượng có sẵn của JAVA: String, Integer, Float 
+ + KDL do mình tạo ra: Item, Employee, Student
+ + Khởi tạo giá trị thì dùng toán tử new để tạo ra ô nhớ ở HEAP
+ ==> Lưu trữ 1 hoặc nhiều thông tin, và giá trị không bắt buộc
+ ==> Cần hỗ trợ các phương thức để xử lý
+		
+==> int vs Integer
+  int --> STACK, luôn luôn có giá trị và mặc định là 0
+	  --> lưu trữ
+		
+  Integer --> HEAP, có thể có giá trị hoặc không NULL
+	  --> lưu trữ, hỗ trợ các phương thức hữu ích 
+	  
+
+==> Final always happens at STACK
+
+==> Java is passed by value
+    swap(int, int)
+    swap(Integer, Integer)
+    swap(CustomInteger, CustomInteger)
