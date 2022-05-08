@@ -1,0 +1,25 @@
+package io;
+
+import java.util.Random;
+
+public class Ex02Random {
+        public static void main(String[] args) {
+			Random rd = new Random();
+			// 0-10
+			int number = rd.nextInt(10);
+			System.out.println("Random number: " + number);
+			
+			// 26-34 ==> A + rd.nextInt(B-A+1)
+			int digit = 26 + rd.nextInt(34-26+1);
+			System.out.println("Random digit: " + digit);
+			
+			String[] letters = {"A","B","C","D","E"};
+			int length = letters.length;
+			String letter = letters[rd.nextInt(length)];
+			System.out.println("Random letter: " + letter);
+			
+			for (int i = 1; i <= 10; i++) {
+				 System.out.println(i + ": " + letters[rd.nextInt(length)]);
+			}
+		}
+}
