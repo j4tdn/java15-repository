@@ -25,9 +25,6 @@ public class Ex03 {
     }
 
     private static int symmetrical_num(int n) {
-        // flag = 1 => số đối xứng
-        // flag = 0 => không phải số đối xứng
-
         int flag = 0;
         if (reverse_num(n) == n) flag = 1;
         return flag;

@@ -1,8 +1,12 @@
 package view;
 
+import java.util.Scanner;
+
 public class Ex01Power {
     public static void main(String[] args) {
-        int a = 35;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap so de kiem tra : ");
+        int a = sc.nextInt();
         if (isPower(a)) {
             System.out.println("la luy thua 2");
         } else {
