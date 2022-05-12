@@ -3,6 +3,11 @@ package structure;
 
  /**/ 
 public class Ex01TestMainMethod {
+	public static void anotherMain() {
+		System.out.println("Another main method");
+		
+		
+	}
 	// ctrl space
 	// main method
 	public static void main(String[] args) {
@@ -14,10 +19,6 @@ public class Ex01TestMainMethod {
 		// end
 	
 	}
-	public static void anotherMain() {
-		System.out.println("Another main method");
-		
-		
-	}
+	
 }	
 
