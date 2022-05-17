@@ -1,4 +1,4 @@
-package bean;
+package bean; 
 
 public class Item {
 	public int itemId;
