@@ -1,0 +1,8 @@
+1.STATIC:
+Class.Funtion();
+nonstatic phụ thuộc vào đối tượng
+static phụ thuộc vào class
+thuộc tính phụ thuộc vào đối tượng đang gọi =>nonstatic
+Funtion:
+Không phụ thuộc vào đối tượng static
+phụ thuộc vào đối tượng non-static

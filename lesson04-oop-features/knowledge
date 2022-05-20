@@ -1,0 +1,19 @@
+1. Tính đóng gói - Encapsulation
+	Khái niệm:
+			Tính chất đóng gói được thể hiện qua các access modifier. 
+				- private => phạm vi class
+				- protected, default(no define) => phạm vi package
+				=> thừa kế(inheritance)
+				Khi lớp cha có phương thức, thuộc tính mang access modifier là
+					+ protected: lớp con( trong cùng package hoặc ngoài package) đều kế thừa được)
+					+default: lớp con( trong cùng package mới có thể kế thừa)
+				-public => mọi nơi
+2. Tính đa hình -polimorphsim
++ Phương thức:
+	overloading
+		Hai hay nhiều phương thức được gọi là overloading khi:
+			- thuộc cùng 1 class
+			- cùng tên hàm
+			- khác số lượng tham số
+			
+	overiding:

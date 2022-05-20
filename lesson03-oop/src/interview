@@ -1,0 +1,9 @@
+1. Phân biệt class và object. cho ví dụ đã từng sử dụng
+2.this là gì
+tại sao khai báo private cho các thuộc tính trong Class
+và sử dụng getter, setter để truy cập
+=> tại sao ko dùng public để dễ dàng truy cập
+4. phân biệt constructor và setter method
+5. khi nào nên sử dụng, khai báo từ khóa static cho:
++ thuộc tính
++ phương thức
