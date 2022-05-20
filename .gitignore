@@ -5,6 +5,7 @@
 *.project
 *.classpath
 *.settings
+*/.gitignore
 
 # Ignore .gitignore in project
 */.gitignore
