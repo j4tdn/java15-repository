@@ -1,4 +1,4 @@
-package Control;
+package control;
 
 /**
  * Give a month as number
