@@ -18,3 +18,19 @@
 			+ Khác KDL truyền vào của tham số
 		
 	. Overriding:
+		- Hàm thuộc lớp cha
+		- Kế thừa định nghĩa (override)
+		- Kế thừa cả thuộc tính và phương thức nhưng chỉ override được phương thức
+		Tại sao không khai báo trực tiếp KDL lúc compile và runtime giống nhau
+		 * - Áp dụng factory pattern
+		 * - Dễ dàng chuyển đổi kiểu dữ liệu qua về
+		 * - Tạo tập hợp các phần tử KDL cha, con đưa vào 1 mảng chung duy nhất
+		 * - Convention
+		 * 
+		 * 2. Nếu lấy KDL của lớp con new KDL của lớp cha được không
+		 * - Cha = con -> OK
+		 * - Con = cha -> NO
+		 * 
+		 * 3. Lấy KDL lúc compile và runtime không có quan hệ được không
+		 * - Không
+		 * Design pattern: factory pattern
