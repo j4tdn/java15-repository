@@ -2,33 +2,23 @@ package bean;
 
 public class Car {
 	private String color;
-	private String model;
+	public static String model;
 	
-	//constructor
+	// constructor
 	public Car() {
-		
 	}
 
-	public Car(String color, String model) {
-		super();
+	public Car(String color) {
 		this.color = color;
-		this.model = model;
 	}
 
+	// getter, setter
 	public String getColor() {
 		return color;
 	}
 
 	public void setColor(String color) {
 		this.color = color;
-	}
-
-	public String getModel() {
-		return model;
-	}
-
-	public void setModel(String model) {
-		this.model = model;
 	}
 
 	@Override

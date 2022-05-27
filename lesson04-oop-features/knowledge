@@ -1,0 +1,5 @@
+1. Đóng gói - Encapsulation
+Khái niệm: Tính chất đóng gói được thể hiện qua các access modifier. Nếu:
++ private ==> phạm vi class
++ protected, default(no define) ==> phạm vi package
++ public ==> mọi nơi
