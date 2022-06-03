@@ -18,3 +18,54 @@ Khái niệm: Tính chất đóng gói được thể hiện qua các access mod
   	  - Khác KDL truyền vào của tham số
   	
   . Overiding:
+    + Hàm thuộc lớp cha
+    + Kế thừa, định nghĩa(override) lại trong lớp con
+    + Kế thừa cả thuộc tính, phương thức
+    + Chỉ được phép override phương thức
+ 
++ Đối tượng
+	1. Tại sao không khai báo trực tiếp KDL lúc compile và runtime giống nhau
+	 *  + Áp dụng factory pattern
+	 *  + Dễ dàng chuyển đổi kiểu dữ liệu qua về
+	 *  + Tạo tập hợp các phần tử KDL cha, con đưa vào 1 mảng chung duy nhất
+	 *  + Convention
+	 *  
+	2. Nếu lấy KDL của lớp con new(gán =) KDL của lớp cha được không
+	 *  + Cha = Con --> OK
+	 *  + Else      --> NO
+	 *  
+	3. Lấy KDL lúc compile và runtime không có quan hệ được không
+	 *  + Không
+	 
+3. Thừa kế
+   1. this, super
+   ? Đặt vấn đề
+   + Class chứa hàm không có body >> Không cho phép	
+   + Class con không bắt buộc phải override, định nghĩa lại các phương thức của class cha 
+   2. Kiểu kế thừa
+   + Class extends    Class
+   + Class extends    Abstract Class
+   + Class implements Interface
+   + Class extends Class implements Interface(s)
+   ==> Interface     : consists of abstract methods
+   ==> Abstract class: consists of abstract and normal methods
+   ==> Class         : consists of normal methods
+   ** Java không hỗ trợ đa thừa kế(multiple extends). Vì class con kế thừa
+   từ class cha --> không bắt buộc phải override
+   --> Nếu các class cha có các hàm trùng tên X mà mình ko override lại trong
+   class con thì khi Con con = new Con() rồi gọi con.X() thì nó không biết gọi X
+   trong class cha nào
+   
+   ** Từ JAVA 08: Interface có thể chứa hàm có body bằng cách thêm từ khóa default hoặc static
+         JAVA 09: Thêm từ khóa là private
+      Nguyên nhân: Hạn chế tạo ra, override các phương thức trùng nhau ở class con từ interface cha
+      Khi các hàm ở class con override từ interface cha mà có trùng nội dung hàm 
+      --> tạo ra hàm có body ở interface cha
+   
+   ???: Tính chất trừu tượng
+   ???: Multiple implements interface after JAVA08
+   
+   
+   
+   
+   
