@@ -1,0 +1,8 @@
+1. Encapsulation
+Concept: Tính chất đống gói được thể hiện qua các access modifier. Nếu
++ private ==> phạm vi class
++ protected, default(no define) ==> phạm vi package
++ public ==> mọi nơi
+
+2. Polymorphisim
+
