@@ -1,41 +1,69 @@
 package home;
 
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class RandomPassword {
+	// SYSTEM
 	private static String username = "admin";
 	private static String password = "147";
+	
 	private static Random rd = new Random();
+	// null, null, null, null ....
 	private static String[] storage = new String[1000];
-
+	
+	
 	public static void main(String[] args) {
-		String ipUsername="admin";
-		String ipPassword = null;
-		int breakLine = 1;
-		int  currentIndex =0;
-		do {
-			ipPassword=""+ rd.nextInt(10) + rd.nextInt(10) + rd.nextInt(10);
-			System.out.print(ipPassword+"   ");
 		
-			if (isExists(storage, ipPassword) ) {
+		// String s = null;
+		// System.out.println("uppercase: " + s.toUpperCase());
+		
+		System.out.println("=======================");
+		
+		String ipUsername = "admin";
+		String ipPassword = null;
+		
+		int breakLine = 1;
+		int currentIndex = 0;
+		do {
+			ipPassword = "" + rd.nextInt(10) + rd.nextInt(10) + rd.nextInt(10); // 263
+			
+			if (isExists(storage, ipPassword, currentIndex)) {
 				continue;
-
-				storage [ currentIndex++] = ipPassword;
-				System. out . print (ipPassword + "				") ;
-				if (breakLine % 12 == 0) {
-				System. out . println() ;
-				breakLine++ ;
-				
-				} while(!signIn(ipUsername, ipPassword) ) ;
-				// storage: 1000
-	private static boolean isExists (String[] storage, String ipPassword) {
-				for (String password: storage) {
-				if (password . equals(ipPassword) ) {
-				return true;
-				}
-			}return false;
+			}
+			
+			storage[currentIndex++] = ipPassword;
+			
+			sleep(50);
+			System.out.print(ipPassword + "   ");
+			if (breakLine % 12 == 0) {
+				System.out.println();
+			}
+			breakLine++;
+		} while(!signIn(ipUsername, ipPassword));
+		
+		System.out.println("Đăng nhập thành công !!!");
 	}
-	private static boolean signIn(String ipUsernam, String ipPassword) {
-		return ipUsernam.equals(username) && ipPassword.equals(password);
+	
+	private static void sleep(long milliseconds) {
+		try {
+			TimeUnit.MILLISECONDS.sleep(milliseconds);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	// storage: 1000
+	private static boolean isExists(String[] storage, String ipPassword, int currentValidIndex) {
+		for (int i = 0; i < currentValidIndex; i++) {
+			if (storage[i].equals(ipPassword)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	private static boolean signIn(String ipUsername, String ipPassword) {
+		return ipUsername.equals(username) && ipPassword.equals(password);
 	}
 }

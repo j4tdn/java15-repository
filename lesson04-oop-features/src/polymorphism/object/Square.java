@@ -1,6 +1,6 @@
 package polymorphism.object;
 
-public class Square extends Shape {
+public class Square extends Shape{
 
 	@Override
 	void draw() {
@@ -12,5 +12,8 @@ public class Square extends Shape {
 		System.out.println("Square ==> calS ...");
 	}
 	
-	
+	void setBackground() {
+		System.out.println("Square ==> setBackground");
+	}
+
 }
