@@ -9,7 +9,7 @@
 		- Public: sử dụng mọi nơi
 
 2. Đa hình - Polymorphism
-+ Phương thức:
+	+ Phương thức:
 	. Overloading:
 		Hai hay nhiều phương thức được gọi là overloading khi
 		- Thuộc cùng 1 class
@@ -21,7 +21,7 @@
 		- Hàm thuộc lớp cha
 		- Kế thừa định nghĩa (override)
 		- Kế thừa cả thuộc tính và phương thức nhưng chỉ override được phương thức
-		Tại sao không khai báo trực tiếp KDL lúc compile và runtime giống nhau
+		 * 1. Tại sao không khai báo trực tiếp KDL lúc compile và runtime giống nhau
 		 * - Áp dụng factory pattern
 		 * - Dễ dàng chuyển đổi kiểu dữ liệu qua về
 		 * - Tạo tập hợp các phần tử KDL cha, con đưa vào 1 mảng chung duy nhất
@@ -34,3 +34,40 @@
 		 * 3. Lấy KDL lúc compile và runtime không có quan hệ được không
 		 * - Không
 		 * Design pattern: factory pattern
+ 
+3. Thừa kế
+	1. this, super
+		?. Đặt vấn đề
+		- Class chứa hàm không có body >> Không cho phép
+		- Class con không bắt buộc phải override, định nghĩa lại các phương thức của class
+	2. Kiểu kế thừa
+		- Class extends 	Class
+		- Class extends 	Abstract Class
+		- Class Implements 	Interface
+		- Class extends Class implements Interface(s)
+		==> Interface 	: 	consist of abstract methods
+		==> Abstract Class: consist of abstract and normal methods
+		==> Class: 			consist of normal methods
+		** Java không hỗ trợ đa thừa kế (multiple extends). Vì class con kế thừa từ class cha 
+		--->Không bắt buộc phải override
+		---> Nếu các class cha có các hàm trùng trên mà mình không override lại trong class con thì
+		khi Con con = new Con() rồi gọi con.X() thì nó không biết gọi biết trong class cha nào
+ 		** Từ JAVA8: Interface có thể chứa hàm có body bằng cách thêm từ khóa default hoặc static
+ 			  JAVA9: Thêm từ khóa là private
+ 		Nguyên nhân: Hạn chế tạo ra, override các phương thức trùng nhau ở class con từ interface cha
+ 		Khi các hàm ở class con override từ interace cha mà có trùng nội dung hàm
+ 		--> Tạo ra hàm có body ở interface cha
+ 		
+ 		???: Tính chất trừu tượng
+ 		???: Multiple implements interface after JAVA8
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
