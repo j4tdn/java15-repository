@@ -1,0 +1,2 @@
+- Chỉ override được phương thức
+- this gọi thằng hiện tại, còn super gọi của cha
