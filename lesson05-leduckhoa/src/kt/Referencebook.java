@@ -1,4 +1,4 @@
-package exercise5;
+package kt;
 
 public class Referencebook extends Book{
 	private String refBookId;

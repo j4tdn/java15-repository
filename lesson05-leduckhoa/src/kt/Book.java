@@ -1,4 +1,4 @@
-package exercise5;
+package kt;
 
 public class Book {
 	private double price;

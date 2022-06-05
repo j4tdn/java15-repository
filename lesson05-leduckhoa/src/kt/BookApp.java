@@ -1,4 +1,4 @@
-package exercise5;
+package kt;
 
 import java.util.Arrays;
 
