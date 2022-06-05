@@ -1,0 +1,40 @@
+1. đóng gói - encapsulation
+khái niệm : tính chất đóng gói thể hiện qua các access modifier, nếu :
++ private ==> đóng gói trong phạm vi class
++ protected, default(không khai báo - no define ) ==> phạm vi package;
+  ===> thừa kế : inheritance
+  Khi lớp cha có thuộc tính mang access modifier là
+.  protected : class con(trong cùng package hoặc ngoài package) đều kế thừa
+.  default :   lớp con ( trong cùng package) mới có thể kế thừa
++ public ==> phạm vi mọi nơi
+
+2. đa hình - polymorphism
++ phương thức :
+    . overloading:
+    hai hay nhiều phương thức được gọi là overloading khi
+    - thuộc chung class
+    - cùng tên hàm
+    - khác số lượng tham số
+    - khác kiểu dữ liệu truyền vào của tham số
+    
+	
+    
+    . overiding:
+    + ham thuoc lop cha
+    + ke thua, dinh nghia lai o trong lop con
+    + ke thua ca thuoc tinh, phuong thuc
+    + chi dc phep override phuong thuc
+    
+		/**
+		 * 1. tai sao khong khai bao truc tiep kdl luc compile va runtime giong nhau?
+		 * + ap dung factory pattern
+		 * + de dang chuyen doi du lieu qua ve
+		 * +tao tap hop cac phan tu kdl cha, con dua vao 1 mang duy nhat
+		 * +convention
+		 * 
+		 * 2. neu lay kdl cua lop con new kdl cua lop cha duoc khog ?
+		 * + cha = con > OK
+		 * + con = cha > NO
+		 * 3. lay kdl luc compile va runtime khong co quan he duoc khog ?
+		 * 
+		 */
