@@ -1,0 +1,18 @@
+package inheritance.iinterface;
+
+public class ShapeDemo {
+	public static void main(String[] args) {
+		Shape shapeRect = new Rectangle();
+		shapeRect.draw();
+		shapeRect.calS();
+		System.out.println("==================");
+		// Anoymous class
+
+		
+		Shape triangle = new Triangle();
+		triangle.calS();
+		triangle.draw();
+
+	}
+
+}
