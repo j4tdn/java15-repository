@@ -1,0 +1,5 @@
+Đóng gói Encapsulation
+Khái niệm : tính chất đóng gói dc thể hiện các access modifier. Nếu 
++ private ==> phạm vi class
++ protected, default (no define) ==> Phamj vi package
++ public ==> mọi nơi
