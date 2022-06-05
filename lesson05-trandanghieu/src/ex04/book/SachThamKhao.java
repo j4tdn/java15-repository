@@ -17,9 +17,12 @@ public class SachThamKhao extends Sach{
 	@Override
 	public String toString() {
 		return "SachThamKhao [Thue=" + Thue + ", getMaSach()=" + getMaSach() + ", getDonGia()=" + getDonGia()
-				+ ", getNhaXuatBan()=" + getNhaXuatBan() + ", toString()=" + super.toString() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + "]";
+				+ ", getNhaXuatBan()=" + getNhaXuatBan() + "]";
 	}
+	
+	
+	
+	
 	
 	
 	
