@@ -1,0 +1,33 @@
+1. đóng goid - encapsulation
+2. khái niệm: tính chất đóng gói được thể hiển
++ private ==> phạm vi class
++ protected, default(no define) == > phạm vi packege
+==> thừa kế - inheritance
+khi lớp cha có phương thức, thuộc tính mang access modifier là
+    * protected: class con (trong cùng package hoặc ngoại package) đều kế thừa được
+    * default : lớp con (trong cùng package ) mới có thể kế thừa
++ public ==> mọi nơi
+
+
+2. đa hình - polymorphsim
++ phương thúc:
+    * overloading:
+        hai hay nhiều phương thúc được gọi là overloading khi
+        + thuộc cùng 1 class
+        + cùng tên hàm
+            - khác số lượng tham số
+            - khác KDL truyền vào của tham số
+
+    *overiding
+    + hàm thuộc lớp cha
+    + kế thừa, định nghĩa(override) lại trong lớp con
++ đối tượng
+    1. tại sao không khai báo trục tiếp KDL lúc complie và runtime giống nhau
+        + áp dụng factory patten
+        + dễ dàng chuyển đổi KDL qua về
+        + tạo tập hợp các phần tử KDL cha , con đưa vào 1 mảng chung duy nhất
+        + convention
+    2. nếu lấy KDL của lóp con new KDL của lớp cha đc không
+        + cha = con => ok
+        + else => no
+    3. lấy KDL lúc compile và runtime không có qhe đc ko --> không
