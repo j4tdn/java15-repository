@@ -1,16 +1,28 @@
 package inheritance;
 
 public class Book {
+	private String id;
 	private String name;
-	private String bookId;
 	private double price;
 	private String publisher;
-	public Book(String name, String bookId, double price, String publisher) {
-        
+
+	public Book() {
+	}
+
+	public Book(String id, String name, double price, String publisher) {
+		super();
+		this.id = id;
 		this.name = name;
-		this.bookId = bookId;
 		this.price = price;
 		this.publisher = publisher;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -19,14 +31,6 @@ public class Book {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getBookId() {
-		return bookId;
-	}
-
-	public void setBookId(String bookId) {
-		this.bookId = bookId;
 	}
 
 	public double getPrice() {
@@ -47,7 +51,6 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [name=" + name + ", bookId=" + bookId + ", price=" + price + ", publisher=" + publisher + "]";
+		return "Book [id=" + id + ", name=" + name + ", price=" + price + ", publisher=" + publisher + "]";
 	}
-  
 }
