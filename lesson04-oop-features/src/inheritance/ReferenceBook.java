@@ -25,4 +25,10 @@ public class ReferenceBook  extends Book{
     public void setTax(double tax) {
         this.tax = tax;
     }
+
+    @Override
+    public String toString() {
+        return "ReferenceBook{" +
+                "tax=" + tax + ", book = " + super.toString();
+    }
 }

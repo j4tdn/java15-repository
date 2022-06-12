@@ -21,6 +21,8 @@ khi lớp cha có phương thức, thuộc tính mang access modifier là
     *overiding
     + hàm thuộc lớp cha
     + kế thừa, định nghĩa(override) lại trong lớp con
+    + kế thừa cả thuộc tính và phương thức
+    + chỉ đc phép overide phương thức
 + đối tượng
     1. tại sao không khai báo trục tiếp KDL lúc complie và runtime giống nhau
         + áp dụng factory patten
@@ -31,3 +33,8 @@ khi lớp cha có phương thức, thuộc tính mang access modifier là
         + cha = con => ok
         + else => no
     3. lấy KDL lúc compile và runtime không có qhe đc ko --> không
+
+ 3. thừa kế
+    1. this, super
+    2. đặt vấn đề
+        + class chưa hàm không có body >> không cho phép
