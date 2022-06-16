@@ -1,16 +1,16 @@
 package company;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class User {
 	private String name;
-	private Date dateTime;
+	private LocalDate dateTime;
 	private float coefficientSalary;
 	
 	public User() {
 	}
 
-	public User(String name, Date dateTime, float coefficientSalary) {
+	public User(String name, LocalDate dateTime, float coefficientSalary) {
 		super();
 		this.name = name;
 		this.dateTime = dateTime;
@@ -25,11 +25,11 @@ public class User {
 		this.name = name;
 	}
 
-	public Date getDateTime() {
+	public LocalDate getDateTime() {
 		return dateTime;
 	}
 
-	public void setDateTime(Date dateTime) {
+	public void setDateTime(LocalDate dateTime) {
 		this.dateTime = dateTime;
 	}
 

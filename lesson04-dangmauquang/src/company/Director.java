@@ -1,6 +1,6 @@
 package company;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class Director extends User{
 	private float positionCoefficient;
@@ -8,7 +8,7 @@ public class Director extends User{
 	public Director() {
 	}
 
-	public Director(String name, Date dateTime, float coefficientSalary, float positionCoefficient) {
+	public Director(String name, LocalDate dateTime, float coefficientSalary, float positionCoefficient) {
 		super(name, dateTime, coefficientSalary);
 		this.positionCoefficient = positionCoefficient;
 	}

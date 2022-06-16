@@ -1,6 +1,6 @@
 package company;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class Employee extends User {
 	private String departmentName;
@@ -8,7 +8,7 @@ public class Employee extends User {
 	public Employee() {
 	}
 
-	public Employee(String name, Date dateTime, float coefficientSalary, String departmentName) {
+	public Employee(String name, LocalDate dateTime, float coefficientSalary, String departmentName) {
 		super(name, dateTime, coefficientSalary);
 		this.departmentName = departmentName;
 	}
