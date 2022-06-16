@@ -1,4 +1,4 @@
-package kt.util;
+package kt.ex02.util;
 
 public class ArrayUtils {
     private ArrayUtils(){
