@@ -1,16 +1,25 @@
 package polymorphism.method;
 
-public class PolyMethodChild extends PolymethodParent {
+public class PolyMethodChild extends PolyMethodParent{
 	
-		public static void main(String[] args) {
-			PolymethodParent parent = new PolyMethodChild();
-			
-			System.out.println(parent.text);
-			parent.log();
-		}
+	public static void main(String[] args) {
+		// TODO
+		PolyMethodChild child = new PolyMethodChild();
+		System.out.println(child.text); // parent
+		System.out.println(child.ptext); // parent
+		child.log(); // child
 		
-		String text = "child ====> text";
-		void log() {
-			System.out.println("text =====> Child");
-		}
+		PolyMethodParent parent = new PolyMethodChild();
+		System.out.println(parent.ptext); // cha
+		parent.log(); // con
+		
+		
+	}
+	
+	String text = "child ==> text";
+	
+	@Override
+	void log() {
+		System.out.println("child ==> log");
+	}
 }

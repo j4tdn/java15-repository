@@ -5,18 +5,21 @@ public class PolyMethodOverload {
 		int x = 5;
 		int y = 10;
 		int z = 15;
-		System.out.println("sum: " + Sum(x, y));
-		System.out.println("sum: " + Sum(5.0f, 5.0f));
-		System.out.println("sum: " + Sum(x, y, z));
+		
+		System.out.println("sum 2: " + sum(x, y));
+		System.out.println("sum 3: " + sum(x, y, z));
+		System.out.println("sum f: " + sum(5.0f, 2.0f));
 	}
 	
-	private static int Sum(int a, int b) {
-		return a+b;
+	private static float sum(float a, float b) {
+		return a + b;
 	}
-	private static float Sum(float a, float b) {
-		return a+b;
+	
+	private static int sum(int a, int b) {
+		return a + b;
 	}
-	private static int Sum(int a, int b, int c) {
-		return a+b+c;
+	
+	private static int sum(int a, int b, int c) {
+		return a + b + c;
 	}
-}	
+}

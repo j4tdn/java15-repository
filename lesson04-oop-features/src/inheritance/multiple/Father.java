@@ -1,7 +1,6 @@
 package inheritance.multiple;
 
 public class Father {
-	
 	void smoking() {
 		System.out.println("Father --> smoking");
 	}

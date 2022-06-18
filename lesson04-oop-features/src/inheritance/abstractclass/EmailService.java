@@ -6,8 +6,4 @@ public abstract class EmailService {
 	void loginWith2Steps() {
 		System.out.println("optional");
 	}
-
-	
-
-	
 }
