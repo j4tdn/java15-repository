@@ -2,6 +2,14 @@ package inheritance.multiple;
 
 //public class Child extends Father {
 public class Child implements Dad, Mom {
+	
+	@Override
+	public void gaming() {
+		// TODO Auto-generated method stub
+		Dad.super.gaming();
+		Mom.super.gaming();
+	}
+	
 	@Override
 	public void playSport() {
 		// TODO Auto-generated method stub
@@ -19,6 +27,8 @@ public class Child implements Dad, Mom {
 		// TODO Auto-generated method stub
 
 	}
+
+	
 
 	public static void main(String[] args) {
 		Child son = new Child();
