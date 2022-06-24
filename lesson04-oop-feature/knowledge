@@ -21,3 +21,6 @@ Khái niệm
  	+ Hàm thuộc lớp cha
  	+ Kế thừa, định nghĩa lại trong lớp con
  	+ Kế thừa được thuộc tính phương thức nhưng chỉ override được phương thức
+ 4. Tính chất trừu tượng
+ Khái niệm: Được thể hiện qua class, interface, abstract class, method	
+ 

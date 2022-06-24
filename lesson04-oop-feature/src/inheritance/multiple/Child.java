@@ -25,4 +25,11 @@ public class Child implements Dad, Mom {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public void gaming() {
+		// TODO Auto-generated method stub
+		Dad.super.gaming();
+		Mom.super.gaming();
+	}
 }
