@@ -6,6 +6,7 @@ package inheritance.Multiple;
 		Child son = new Child();
 		son.playSport();
 		son.smoking();
+		son.gaming();
 	}
 
 	@Override
@@ -23,5 +24,12 @@ package inheritance.Multiple;
 	@Override
 	public void playSport() {
 		System.out.println("Child -->playfb");
+	}
+
+	@Override
+	public void gaming() {
+		// TODO Auto-generated method stub
+		Dad.super.gaming();
+		Mom.super.gaming();
 	}
 }
