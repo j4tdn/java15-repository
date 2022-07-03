@@ -1,6 +1,6 @@
 package view;
 
-public class Ex02_DivisionAsThrow {
+public class Ex02_DivisionAsThrows {
 	public static void main(String[] args) {
 		//2.2 Throw/Throws
 		System.out.println("D1: " + divide(5, 0));

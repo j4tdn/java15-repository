@@ -3,7 +3,7 @@ package view;
 import java.io.File;
 import java.io.IOException;
 
-public class Ex03_FileCreatorAsThrow {
+public class Ex03_FileCreatorAsThrows {
 	public static void main(String[] args) {
 		try {
 			boolean isSuccess  = createFile("helloo.txt");
