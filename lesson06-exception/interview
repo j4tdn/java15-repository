@@ -1,0 +1,14 @@
+1. How many exception types ?
++ Compile - Checked
++ Runtime - Unchecked
+
+2. Difference between Checked and Unchecked exception ?
++ Checked --> Require handle at compile , coding time
++ Unchecked --> Optional
+
+3. How many ways to handle exception ?
++ Validate before exception
++ Try/catch
++ Throw/throws
+
+4. What does key word "finally" mean ? Example

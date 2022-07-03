@@ -1,18 +1,23 @@
-1. Đóng gói - Encapsulation
-Khái niệm : Tính chất đóng gói được thể hiện qua access modifier. Nếu:
-+ private ==> phạm vi class
-+ protected , default(no define ) ==> Phạm vi package
-===> Thừa kế - Inheritance
-Khi lớp cha có phương thức , thuộc tính mang access modifier là :
-. protected: class con (trong cùng package hoặc ngoài package ) đều kế thừa được
-. default: lớp con ( trong cùng package ) mới có thể kế thừa được
-+ public ==> mọi nơi
-2.Đa hình - polymorphism
-+ Đa hình trong phương thức :
+1. Ä�Ã³ng gÃ³i - Encapsulation
+KhÃ¡i niá»‡m : TÃ­nh cháº¥t Ä‘Ã³ng gÃ³i Ä‘Æ°á»£c thá»ƒ hiá»‡n qua access modifier. Náº¿u:
++ private ==> pháº¡m vi class
++ protected , default(no define ) ==> Pháº¡m vi package
+===> Thá»«a káº¿ - Inheritance
+Khi lá»›p cha cÃ³ phÆ°Æ¡ng thá»©c , thuá»™c tÃ­nh mang access modifier lÃ  :
+. protected: class con (trong cÃ¹ng package hoáº·c ngoÃ i package ) Ä‘á»�u káº¿ thá»«a Ä‘Æ°á»£c
+. default: lá»›p con ( trong cÃ¹ng package ) má»›i cÃ³ thá»ƒ káº¿ thá»«a Ä‘Æ°á»£c
++ public ==> má»�i nÆ¡i
+2.Ä�a hÃ¬nh - polymorphism
++ Ä�a hÃ¬nh trong phÆ°Æ¡ng thá»©c :
 .Overloading;
- Hai hay nhiều phương thức được gọi là overloading khi 
- - Thuộc cùng 1 class
- - Cùng tên
- - Khác số lượng tham số
+ Hai hay nhiá»�u phÆ°Æ¡ng thá»©c Ä‘Æ°á»£c gá»�i lÃ  overloading khi 
+ - Thuá»™c cÃ¹ng 1 class
+ - CÃ¹ng tÃªn
+ - KhÃ¡c sá»‘ lÆ°á»£ng tham sá»‘
 
 .Overriding;
++ Hàm thuộc lớp cha
++ Kế thừa , định nghĩa lại trong lớp con
++ Kế thừa được thuộc tính phương thức nhưng chỉ override được phương thức
+4. Trừu tượng :
+Khái niệm : được thể hiện qua class , interface , abstract class , method
