@@ -1,6 +1,6 @@
 package view;
 
-public class Ex02DivisionAsThrow {
+public class Ex02DivisionAsThrows {
 	public static void main(String[] args) {
 
 		System.out.println("D1: " + divide(10, 5));
@@ -18,6 +18,6 @@ public class Ex02DivisionAsThrow {
 
 /*
  * Exception in thread "main" java.lang.ArithmeticException: / by zero at
- * view.Ex02DivisionAsThrow.divide(Ex02DivisionAsThrow.java:11) at
- * view.Ex02DivisionAsThrow.main(Ex02DivisionAsThrow.java:7)
+ * view.Ex02DivisionAsThrows.divide(Ex02DivisionAsThrows.java:11) at
+ * view.Ex02DivisionAsThrows.main(Ex02DivisionAsThrows.java:7)
  */
