@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="478fff0e-dada-4e57-86a9-c578057a3021" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../lesson04-oop-features/interview" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-oop-features/src/inheritance/multiple/Child.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-oop-features/src/inheritance/multiple/Dad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-oop-features/src/inheritance/multiple/Father.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-oop-features/src/inheritance/multiple/Mom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-oop-features/src/inheritance/multiple/Mother.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/lesson04-thanhbinh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/src/ex01/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/src/ex01/model/Students.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/src/ex01/view/ManagerStudent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/src/ex02/Number.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/src/ex03/Pascal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/src/ex04/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/src/ex04/model/Director.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/src/ex04/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/src/ex04/model/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/src/ex04/model/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson04-thanhbinh/src/ex04/view/AppCompany.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ex02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lesson04-oop-features/knowledge" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson04-oop-features/knowledge" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lesson05-thanhbinh/src/kt/ex02/util/ArrayUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson05-thanhbinh/src/kt/ex02/util/ArrayUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lesson05-thanhbinh/src/kt/ex04/Ex04.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson05-thanhbinh/src/kt/ex04/Ex04.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Ex01.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BWsflLpMHiMYejY9b9BO3HWuFx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JAVA14/lesson06-thanhbinh" />
+  </component>
+  <component name="RunManager" selected="Application.Ex02">
+    <configuration name="Ex01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex01" />
+      <module name="lesson06-thanhbinh" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Ex02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex02" />
+      <module name="lesson06-thanhbinh" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Ex02" />
+        <item itemvalue="Application.Ex01" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="478fff0e-dada-4e57-86a9-c578057a3021" name="Changes" comment="" />
+      <created>1657033281388</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657033281388</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
