@@ -9,8 +9,8 @@ public interface Ex03FilterString {
 	}
 	private static String [] getStudents(String[] elements) {
 		String [] result = new String[elements.length];
+		int count =0;
 		for(String element: elements) {
-			int count =0;
 			if(element.startsWith("P")) {
 				result[count] = element;
 				count++;

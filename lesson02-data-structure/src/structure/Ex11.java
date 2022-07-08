@@ -36,7 +36,7 @@ public class Ex11 {
 		for (int i = 0; i < input.length(); i++) {
 			char tmp = input.charAt(i);
 			// if (isDigit(tmp) == true) ==> if(isDigit(tmp))
-			// if (isDigit(tmp) == true) ==> if(!isDigit(tmp))			
+			// if (isDigit(tmp) == true) ==> if(isDigit(tmp))			
 			if (!isDigit(tmp)) {
 				return false;
 			}
