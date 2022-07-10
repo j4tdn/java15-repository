@@ -4,7 +4,7 @@
 + Object Type 
 ==> Item item = new Item(1, "A");
 
-2. Different bewteen int and Integer ?
+2. Different between int and Integer ?
 
 3. Different between idea of declaration with Integer
 + Integer a = 10;

@@ -62,8 +62,10 @@ Khái niệm: Tính chất đóng gói được thể hiện qua các access mod
       Khi các hàm ở class con override từ interface cha mà có trùng nội dung hàm 
       --> tạo ra hàm có body ở interface cha
    
-   ???: Tính chất trừu tượng
    ???: Multiple implements interface after JAVA08
+ 
+4. Tính chất trừu tượng
+Khái niệm: Được thể hiện qua class, interface, abstract class, method
    
    
    
