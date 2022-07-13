@@ -2,6 +2,7 @@ package datetime.exercises;
 
 import java.util.Calendar;
 
+import common.Holiday;
 import utils.DateUtils;
 
 /**
@@ -20,7 +21,9 @@ public class Ex06FindDeadlineDate {
 		int implemetedDates = 0;
 		while(true) {
 			int weekday = c.get(Calendar.DAY_OF_WEEK);
-			boolean isDayOff = (weekday == Calendar.SATURDAY || weekday == Calendar.SUNDAY);
+			boolean isDayOff = (weekday == Calendar.SATURDAY 
+					|| weekday == Calendar.SUNDAY
+					|| DateUtils.isHoliday(c, Holiday.getVnmseHolidays()));
 			if (!isDayOff) {
 				implemetedDates++;
 				if (implemetedDates == BUDGET) {

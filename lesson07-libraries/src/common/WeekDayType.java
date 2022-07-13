@@ -1,7 +1,7 @@
 package common;
 
 public enum WeekDayType {
-	SUNDAY("Chủ nhật"),
+	SUNDAY("Chủ nhật"), // WeekDayType SUNDAY = new WeekDayType("Chủ nhật");
 	MONDAY("Thứ Hai"),
 	TUESDAY("Thứ Ba"),
 	WEDNESDAY("Thứ Tư"),
