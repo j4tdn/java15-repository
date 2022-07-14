@@ -22,10 +22,12 @@ public class Ex01_CodeDemo {
 		System.out.println("now: " + c);
 		Calendar cWithTime = Calendar.getInstance();
 		cWithTime.set(2025,Calendar.AUGUST, 19);
-		cWithTime.set(Calendar.MONTH, Calendar.JANUARY);
-		cWithTime.set(Calendar.YEAR, 2022);
-		cWithTime.add(Calendar.DAY_OF_MONTH, 6);
-		System.out.println("now: " + cWithTime);
-		System.out.println(cWithTime.get(1));
+	//	cWithTime.set(Calendar.MONTH, Calendar.JANUARY);
+		//cWithTime.set(Calendar.YEAR, 2022);
+	//	cWithTime.add(Calendar.DAY_OF_MONTH, 6);
+	// 	cWithTime.set(Calendar.DAY_OF_WEEK, 1);
+		//System.out.println("now: " + cWithTime);
+		System.out.println(cWithTime);
+	//	System.out.println(cWithTime.get(1));
 	}
 }

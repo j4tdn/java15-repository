@@ -7,6 +7,11 @@ public class Ex02 {
 		Calendar c = Calendar.getInstance();
 		int month = c.get(Calendar.MONTH) + 1;
 		System.out.println("Month: " + month);
+		System.out.println("Tháng " + month+ " co " + day(month, c) + " ngày");
+		year(c);
+	}
+	static int day(int month, Calendar c) {
+		int days = 0;
 		switch (month) {
 		// các tháng 1, 3, 5, 7, 8, 10 và 12 có 31 ngày.
 		case 1:
@@ -16,7 +21,7 @@ public class Ex02 {
 		case 8:
 		case 10:
 		case 12:
-			System.out.println("Tháng " + month + " có 31 ngày.");
+			days = 31;
 			break;
 
 		// các tháng 4, 6, 9 và 11 có 30 ngày
@@ -24,17 +29,21 @@ public class Ex02 {
 		case 6:
 		case 9:
 		case 11:
-			System.out.println("Tháng " + month + " có 30 ngày.");
+			days = 30;
 			break;
 		case 2:
 			if (c.get(Calendar.YEAR) % 4 == 0 && c.get(Calendar.YEAR) % 100 != 0) {
-				System.out.println("Tháng " + month + " có 29 ngày.");
+				days = 29;
+				break;
 			} else {
-				System.out.println("Tháng " + month + " có 28 ngày.");
-
+				days = 28;
+				break;
 			}
 
 		}
+		return days;
+	}
+	private static void year(Calendar c) {
 		if(c.get(Calendar.YEAR) % 4 == 0 && c.get(Calendar.YEAR) % 100 != 0) {
 			System.out.println("Năm " + c.get(Calendar.YEAR) + " có 366 ngày.");
 		}
@@ -42,6 +51,5 @@ public class Ex02 {
 			System.out.println("Năm " + c.get(Calendar.YEAR) + " có 365 ngày.");
 
 		}
-
 	}
 }
