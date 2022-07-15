@@ -1,0 +1,13 @@
+Java07
+Calendar
+Date
+--> 'd/M/y H/m/s/ms'.....
+---> thừa dữ liệu nếu như chỉ muốn lưu một số trường
+
+Java08
+LocalDate --> d/M/y
+LocalTime --> H/m/s
+LocalDateTime --> d/M/y H/m/s/ms
+DatetimeFormatter
+
+
