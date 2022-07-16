@@ -57,4 +57,13 @@ public class DateUtils {
 	public static String optional(long dmy, String unit) {
 		return dmy > 0 ? dmy + " " + unit : " ";
 	}
+	public static int weeknumber(Calendar c) {
+		int count = 0;
+		for(int i = 0; i <= 11; i++) {
+			c.set(Calendar.MONTH, i);
+			count += c.get(Calendar.WEEK_OF_MONTH);
+			
+		}
+		return count;
+	}
 }
