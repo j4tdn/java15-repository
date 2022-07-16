@@ -11,7 +11,7 @@ public class Ex03Formatter {
 		System.out.println("default locate :" + Locale.getDefault());
 		Locale.setDefault(new Locale("vi", "VN"));
 		
-		DateFormat df = new SimpleDateFormat("dd//MM/yyyy hh:mm:ss a");
+		DateFormat df = new SimpleDateFormat("dd//MM/yyyy");
 		// date --> String
 		Date date = new Date();
 		String dateFormat = df.format(date);

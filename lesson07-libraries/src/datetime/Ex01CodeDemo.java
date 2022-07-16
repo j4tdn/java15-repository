@@ -25,9 +25,9 @@ public class Ex01CodeDemo {
 		
 		Calendar cWithTime = Calendar.getInstance();
 		cWithTime.set(2025, Calendar.AUGUST, 19);
-		cWithTime.set(Calendar.MONTH, Calendar.JANUARY);
-		cWithTime.set(Calendar.YEAR, 2022);
-		cWithTime.add(Calendar.DAY_OF_MONTH, -6);
+		//cWithTime.set(Calendar.MONTH, Calendar.JANUARY);
+		//cWithTime.set(Calendar.YEAR, 2022);
+		//cWithTime.add(Calendar.DAY_OF_MONTH, -6);
 		System.out.println("now :" + cWithTime);
 
 	}
