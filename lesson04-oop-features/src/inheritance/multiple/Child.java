@@ -18,6 +18,12 @@ public class Child implements Dad,Mom{
 		
 	}
 	
+	@Override
+	public void gaming() {
+		Dad.super.gaming();
+		Mom.super.gaming();
+	}
+
 	public static void main(String[] args) {
 		Child son = new Child();
 		son.smoking();
