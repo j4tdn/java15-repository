@@ -9,7 +9,7 @@ import utils.DateUtils;
 public class Ex04PrintTheCurrentDate {
 	public static void main(String[] args) {
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy E");
-		Calendar c = DateUtils.getInStance(Calendar.AUGUST, 2022);
+		Calendar c = DateUtils.getInstance(Calendar.AUGUST, 2022);
 		
 		int datesInMonth = c.getActualMaximum(Calendar.DAY_OF_MONTH);	
 		
