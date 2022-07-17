@@ -8,6 +8,7 @@ public class Ex03 {
 		Calendar calendar = Calendar.getInstance();
 		calendar.set(Calendar.DAY_OF_WEEK, 3);
 		String dayOfWeeks[] = { "chủ nhật", "thứ hai", "thứ ba", "thứ tư", "thứ năm", "thứ sáu", "thứ bảy" };
+		System.out.println(calendar.get(Calendar.DAY_OF_WEEK));
 		System.out.println(dayOfWeeks[dayOfWeek(calendar) - 1]);
 
 	}
