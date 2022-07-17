@@ -1,0 +1,29 @@
+1. Đóng gói Encapsulation
+Khái niệm: Tính chất đóng gói được thể hiện qua access modifier. Nếu
++ private ==> class
++ protected/default ==> packet
+  ==> Thừa kế - Inheritance
+  Khi lớp cha có phương thức, thuộc tính mang access modifier là:
+ . protected: class con trong cùng packet hoặc ngoài packet đều kế thừa được
+ . default : ngoài packet không kế thừa được
++ public ==> mọi nơi
+
+
+2. Đa hình - Polymorphsim
++ Phương thức:
+	.Overloading:
+	Hai hay nhiều phương thức được gọi là Overloading khi
+	-Thuộc 1 class
+	-Cùng tên
+	-Khác số tham số
+	-Khác KDL truyền vào
+	.Overriding:
+	-Khi override lại thì supper. là gọi hàm trong class cha
++ Đối tượng:
+	. Biến thì không override đc nên sẽ theo KDL khi compile
+	. Phương thức override đc nên sẽ theo kiểu dữ liệu lúc runtime
+	-Tại sao không khai báo trực tiếp cha-cha con-con?
+	.cd: API, hidden construction... kiểu như họ cung cấp tài nguyên và tài nguyên đó chứa trong hàm
+	mình chỉ cần new là dùng được
+	-Lấy KDL của con new cha được không?
+	
