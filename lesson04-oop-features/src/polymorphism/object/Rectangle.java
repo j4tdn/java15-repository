@@ -1,6 +1,6 @@
 package polymorphism.object;
 
-public class Rectangle extends Shape{
+public class Rectangle implements Shape{
 	
 	
 	void setBackground() {
