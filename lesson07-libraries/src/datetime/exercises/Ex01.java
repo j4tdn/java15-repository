@@ -1,4 +1,4 @@
-package exercises;
+package datetime.exercises;
 
 import java.util.Calendar;
 
