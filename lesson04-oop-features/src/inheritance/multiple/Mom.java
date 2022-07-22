@@ -3,5 +3,5 @@ package inheritance.multiple;
 
 public interface Mom {
 	void shopping();
-	void playSpOrt();
+	void playSport();
 }

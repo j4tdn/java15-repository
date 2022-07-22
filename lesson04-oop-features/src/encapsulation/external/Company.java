@@ -23,4 +23,4 @@ public class Company {
 		Employee employee = new Employee();
 		System.out.println("employee name: " + employee.name());
 	}
-} từ từ a nam bin gõ theo ảnh xí
+} 

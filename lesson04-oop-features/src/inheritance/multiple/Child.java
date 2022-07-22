@@ -14,10 +14,7 @@ public class Child implements Dad, Mom{
 	public void playSport() {
 	}
 	
-	@Override
-	public void playSpOrt() {
-		
-	}
+	
 	
 	public static void main(String[] args) {
 		Child son = new Child();

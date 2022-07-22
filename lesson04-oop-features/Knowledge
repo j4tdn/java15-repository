@@ -32,7 +32,18 @@ Khái niệm: Tính chất đóng gói được thể hiện qua access modifier
 	-Lấy KDL của con new cha được không?
 	không
 	-enum : enumeration: là kiểu dữ liệu mà tại đó tạo ra các đối tượng là hằng số
+
+.Thừa kế:
+    -this, super
+    Kiểu kế thừa:
+    + Class extends class
+    + Class extends Abstractclass
+    + Class extends Class implements Interface
+    ==>Interface: bao gồm abstract methods
+    ==> Abstract class: bao gồm abstract và phương thức thường
+	==> class: bao gồm abstract và phương thức thường
 	
 .Trườu tượng
     Hàm trườu tượng là hàm không có thân hàm, chỉ có khai báo
 
+Từ JAVA 8 1 interface có thể chứa hàm có thân hàm
