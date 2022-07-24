@@ -47,3 +47,9 @@ Khái niệm: Tính chất đóng gói được thể hiện qua access modifier
     Hàm trườu tượng là hàm không có thân hàm, chỉ có khai báo
 
 Từ JAVA 8 1 interface có thể chứa hàm có thân hàm
+
+4. Tính trườu tượng:
+Khái niệm: Tính chất trườu tượng sẽ được thể hiện qua class, interface, abstract class, method
+ví dụ:+ sinh viên bao gồm nhiều thuộc tính... mình chưa biết nó thế nào
+	  + interface: có các hàm trườu tượng phải tùy chương trình mà override lại
+

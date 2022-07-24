@@ -2,6 +2,14 @@ package inheritance.multiple;
 // public class Child extends Father, Mother{
 public class Child implements Dad, Mom{
 	
+	
+	@Override
+	public void gaming() {
+		// TODO Auto-generated method stub
+		Dad.super.gaming();
+		//Mom.super.gaming();
+	}
+	
 	@Override
 	public void shopping() {
 	}
@@ -20,6 +28,7 @@ public class Child implements Dad, Mom{
 		Child son = new Child();
 		son.smoking();
 		son.playSport();
+		son.gaming();
 	}
 
 	
