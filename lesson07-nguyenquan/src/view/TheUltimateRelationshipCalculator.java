@@ -23,24 +23,24 @@ public class TheUltimateRelationshipCalculator {
 		do {
 		try{
 			
-		System.out.print("bạn đang hẹn hò/chia tay(0/1):");
+		System.out.print("báº¡n Ä‘ang háº¹n hÃ²/chia tay(0/1):");
 		select = sc.nextInt();
 		if (select == 0) {
-			System.out.println("nhập ngày hẹn hò:");
+			System.out.println("nháº­p ngÃ y háº¹n hÃ²:");
 			startDate = formatDate();
-			System.out.println("nhập thời gian hẹn hò:");
+			System.out.println("nháº­p thá»�i gian háº¹n hÃ²:");
 			startTime= formatTime();
 			
 			endDate = LocalDate.now();
 			endTime = LocalTime.now();
 		} else {
-			System.out.println("nhập ngày hẹn hò:");
+			System.out.println("nháº­p ngÃ y háº¹n hÃ²:");
 			startDate = formatDate();
-			System.out.println("nhập thời gian hẹn hò:");
+			System.out.println("nháº­p thá»�i gian háº¹n hÃ²:");
 			startTime= formatTime();
-			System.out.println("nhập ngày chia tay:");
+			System.out.println("nháº­p ngÃ y chia tay:");
 			endDate = formatDate();
-			System.out.println("nhập thời gian chia tay:");
+			System.out.println("nháº­p thá»�i gian chia tay:");
 			endTime  =formatTime();
 		}
 		Dateutils.check(startDate, endDate);
@@ -62,7 +62,7 @@ public class TheUltimateRelationshipCalculator {
 			period = Period.between(startDate, endDate);
 			
 		}System.out.println(startDate.getDayOfWeek());
-		System.out.println("===============thời gian hẹn hò là============");
+		System.out.println("===============thá»�i gian háº¹n hÃ² lÃ ============");
 		System.out.println(
 				 optional(period.getYears(), "years")
 				+ optional(period.getMonths(), "months")
