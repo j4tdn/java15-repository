@@ -1,7 +1,10 @@
 package localdatetime;
 
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
 import static utils.DateUtils.*;
 
 public class Ex02LocalTime {
@@ -19,5 +22,13 @@ public class Ex02LocalTime {
 				+ optinal(duration.toHoursPart(), "hours")
 				+ optinal(duration.toMinutesPart(), "minutes")
 				+ optinal(duration.toSecondsPart(), "seconds"));
+		
+		String formatter = "HH:mm:ss";
+		DateTimeFormatter df = DateTimeFormatter.ofPattern(formatter);
+		LocalTime date = LocalTime.now();
+		System.out.println("format: " + df.format(date));
+		
+		LocalTime parsedTime = LocalTime.parse("15:20:45", df);
+		System.out.println("parseTime: " + parsedTime);
 	}
 }
