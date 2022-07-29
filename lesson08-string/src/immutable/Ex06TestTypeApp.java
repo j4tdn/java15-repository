@@ -17,12 +17,15 @@ public class Ex06TestTypeApp {
 	 for(char letter: letters) {
 		 if(Character.isUpperCase(letter)) {
 			 nberOfUcLetters++;
+			 continue;
 		 }
 		 if(Character.isLowerCase(letter)) {
 			 nberOfLcLetters++;
+			 continue;
 		 }
 		 if(Character.isDigit(letter)) {
 			 nberOfDigitLetters++;
+			 continue;
 		 }
 	 }
 	 StringCounter counter = new StringCounter();
