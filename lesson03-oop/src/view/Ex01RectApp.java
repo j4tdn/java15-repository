@@ -11,6 +11,7 @@ public class Ex01RectApp {
 		r1.setHeight(4);
 		
 		Rectangle r2 = new Rectangle();
+		
 		//r2.width = 15;
 		//r2.height = 10;
 		//Rectangle r3=new Rectangle(12,17);

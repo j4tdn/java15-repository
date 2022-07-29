@@ -1,0 +1,20 @@
+JAVA07:
+Calendar
+Date
+--> d/M/y/H/m/s/ms ...
+DateFormat, SimpleDateFormat
+
+JAVA08:
+LocalDate -> d/M/y
+LocalTime -> H/m/s
+
+LocalDateTime --> d/M/y/H/m/s
+DatetimeFormatter
+
+
+
+Solved
++month 1-12
++d/M/y H/m/s
++ period(localdate), duration
+
