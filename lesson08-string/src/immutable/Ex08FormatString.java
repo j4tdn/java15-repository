@@ -15,6 +15,7 @@ public class Ex08FormatString {
 		String formattedText="";
 		String[] words=text.split("[\\s,-]{1,}");
 		for(String word:words) {
+			
 		String formattedWord=	Character.toUpperCase(word.charAt(0))+ word.substring(1).toLowerCase();
 		formattedText+=formattedWord+" ";
 		}
