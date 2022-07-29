@@ -7,7 +7,7 @@ import java.util.Currency;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import Util.DateUtils;
+import utils.DateUtils;
 
 public class Ex07 {
 	public static void main(String[] args) {

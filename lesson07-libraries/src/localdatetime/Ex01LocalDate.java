@@ -1,9 +1,10 @@
 package localdatetime;
 
+import static utils.DateUtils.*;
+
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
-import static Util.DateUtils.*;
 public class Ex01LocalDate {
 
 	public static void main(String[] args) {

@@ -2,8 +2,8 @@ package datetime.exercises;
 
 import java.util.Calendar;
 
-import Util.DateUtils;
 import common.Holiday;
+import utils.DateUtils;
 
 public class Ex06 {
 private static final int BUDGET = 110;
