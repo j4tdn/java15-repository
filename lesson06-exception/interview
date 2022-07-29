@@ -1,0 +1,20 @@
+1. How many exception types ? 2
++ Compile - Checked
++ Runtime - Unchecked
+
+2. Difference between checked and Unchecked?
++ Checked --> Require handle at compile, coding time.
++ Unchecked --> Optional
+
+3. When you throw new Compile Exception, what do you need?
+- When I get 1 Checked exception, I must throws or try/catch it - obligate
+
+4.How many ways to handle exception ? 
+-Validate before exception.
+-Try/catch
+-Throw/throws --> throw error before processing.
+
+5.What is finally means? 
+-Finally is 1 block code that is usually implemented although it happens exception or not.
+
+6.When you throws pass many times, you must fix error in main function. Without it will error.

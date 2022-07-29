@@ -1,0 +1,14 @@
+Các loại lỗi:
+ -Lỗi biên dịch - compile time
+ -Lỗi thực thi - runtime
+	+Lỗi logic
+
+ -Lỗi ngoại lệ - exception
+ +Both
+ 
+ throws ArithmeticException ---> do not obligate treatment - runtime exception do not obligate to fix it, do not need throws it
+ throws IOException ----> obligate treatment
+ 
+ -Finally: is 1 block code that usually implements although it happens exception.
+ 		   
+ 

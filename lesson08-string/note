@@ -1,0 +1,5 @@
+		//immutable cannot change about memory area valid at HEAP
+		//object is always created one memory area
+		//literal can create one memory area if it is not created.
+		//immutable --> literal(HEAP - constant pool) & object(HEAP)
+//immutable: when you assign variable for literal, it will point to new memory area.
