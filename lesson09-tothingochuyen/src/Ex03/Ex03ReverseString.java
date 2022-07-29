@@ -1,5 +1,12 @@
 package Ex03;
 
+/**
+ * Cho dãy kí tự chứa các kí tự thường và khoảng trắng.
+Viết chương trình loại bỏ khoảng trắng thừa và đảo chuỗi như sau:
+Example: 
+input: Welcome to JAVA10 class
+output: emocleW ot 01AVAJ ssalc
+ * */
 public class Ex03ReverseString {
 	public static void main(String[] args) {
 		String input = "Welcome to JAVA10 class";

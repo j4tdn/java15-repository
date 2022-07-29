@@ -2,6 +2,16 @@ package Ex04;
 
 import java.util.Scanner;
 
+/**
+ * Viết chương trình thực hiện chức năng đăng ký tài khoản
+B1. Nhập tên tài khoản ví dụ byztkhx256
+B2. Nhập mật khẩu admin123
+Yêu cầu mật khẩu như sau:
+1. Độ dài mật khẩu: >= 8
+2. Có ít nhất 1 chữ số, 1 kí tự in hoa, và một kí tự đặc biệt (~!@#$%^&*)
+3. Không được trùng quá 3 ký tự với tên tài khoản [Đăng ký khi bắt đầu chương trình]
+Sau khi đã thỏa mãn yêu cầu thông báo đăng ký tài khoản thành công
+ * */
 public class Ex04RegisterAccount {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
