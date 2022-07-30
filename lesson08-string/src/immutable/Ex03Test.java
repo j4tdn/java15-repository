@@ -23,5 +23,11 @@ public class Ex03Test {
 		System.out.println((o1==o2));
 		System.out.println((o1==o3));
 		System.out.println(o1.equals(o2));
+		
+		System.out.println("===============");
+		String text01 = "acbc23";
+		String text02 = "ad";
+		System.out.println("compare:  " + text01.compareTo(text02));
+		
 	}
 }
