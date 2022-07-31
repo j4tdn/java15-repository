@@ -15,7 +15,7 @@ package mutable;
  * */
 public class Ex07 {
 	public static void main(String[] args) {
-		String string = "aabbgggggccdda";
+		String string = "aaabaaabbaaaaa";
 		char[] arr = string.toCharArray();
 		Treatment(arr);
 	}
