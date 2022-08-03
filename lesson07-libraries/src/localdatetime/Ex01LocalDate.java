@@ -3,6 +3,7 @@ package localdatetime;
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.Period;
+import java.time.format.DateTimeFormatter;
 
 public class Ex01LocalDate {
 	public static void main(String[] args) {
@@ -21,6 +22,13 @@ public class Ex01LocalDate {
 				+ optional (period.getYears( ), "years")
 				+ optional (period.getMonths ( ),"months" )
 				+ optional (period.getDays(),"days" ) ) ;
+		
+		System.out.println("==========format==========");
+		DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		
+		LocalDate date = LocalDate.now();
+		System.out.println("formated: "+df.format(date));
+		
 	}
 	
 	private static String optional (int dmy, String unit) {
