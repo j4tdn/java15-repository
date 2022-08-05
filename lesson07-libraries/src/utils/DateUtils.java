@@ -19,7 +19,7 @@ public class DateUtils {
 	
 	public static String optional(long dmy, String unit) {
 		return dmy > 0 
-			   ? (dmy + " " + unit + " ") 
+			   ? (dmy + " " + unit + " ")
 			   : " ";
 	}
 	
