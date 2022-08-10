@@ -16,7 +16,7 @@ public class Ex01MutableVsInmutable {
 		sb.append(" Teo");
 		System.out.println("sb value: " + sb);
 		System.out.println("sb2 hash: " + System.identityHashCode(sb));
-		
+		// .reverse() ==> đảo chuổi ngược lại
 		
 	}
 }
