@@ -1,16 +1,16 @@
 package bean;
 
+import common.Rank;
+
 public class Student {
 	private int id;
 	private String name;
-	private Ranking rank;
-	
-	public Student() {
+	private Rank rank;
 
+	public Student() {
 	}
 
-	public Student(int id, String name, Ranking rank) {
-		super();
+	public Student(int id, String name, Rank rank) {
 		this.id = id;
 		this.name = name;
 		this.rank = rank;
@@ -32,18 +32,29 @@ public class Student {
 		this.name = name;
 	}
 
-	public Ranking getRank() {
+	public Rank getRank() {
 		return rank;
 	}
 
-	public void setRank(Ranking rank) {
+	public void setRank(Rank rank) {
 		this.rank = rank;
 	}
 
 	@Override
 	public String toString() {
-		return "Student [id = " + id + ", name = " + name + ", rank = " + rank + "]";
+		return "Student [id = " + id + ", name = " + name + ", rank = " + rank + "]\n";
 	}
-	
-	
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!(obj instanceof Student)) {
+			return false;
+		}
+		Student that = (Student) obj;
+		return getId() == that.getId();
+	}
+
 }
