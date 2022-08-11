@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Ex02ValidNumbers {
 	public static void main(String[] args) {
-		String[] elements = { "aa01a2b3456cde478a", "aa6b326c6e22"};
+		String[] elements = { "aa01a2b3456cde478a", "aa6b326c6e22", "1"};
 		for (String element: elements) {
 			String[] numbersAsString = getValidNumbersAsString(element);
 			int max = max(numbersAsString);
