@@ -5,9 +5,12 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.concurrent.TimeUnit;
 
+import common.WeekDayType;
+
 public class DateUtils {
 	
 	private static GregorianCalendar gc = new GregorianCalendar();
+	private static WeekDayType[] weekDays = WeekDayType.values();
 
 	public DateUtils() {
 	}
@@ -60,6 +63,11 @@ public class DateUtils {
 		return c;
 	}
 	
+	public static WeekDayType getWdAsVnmese(Calendar c) {
+		int dowAsInt = c.get(Calendar.DAY_OF_WEEK);
+		return weekDays[dowAsInt -1];
+	}
+
 	public static String optional(int dmy, String unit) {
 		return dmy > 0 ? dmy + " " + unit + " " : " ";
 	}
