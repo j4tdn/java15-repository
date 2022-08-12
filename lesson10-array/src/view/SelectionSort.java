@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import utils.SortUtils;
 
-public class Ex03SelectionSort {
+public class SelectionSort {
 	public static void main(String[] args) {
 		int[] numbers = { 1, 5, 11, 9, 4, 6 };
 		sort(numbers);
