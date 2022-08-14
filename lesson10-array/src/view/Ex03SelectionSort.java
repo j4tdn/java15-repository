@@ -2,7 +2,7 @@ package view;
 
 import java.util.Arrays;
 
-import utils.CompareHelper;
+import utils.CompareIntHelper;
 import utils.CompareHelperAsc;
 import utils.SortUtils;
 
@@ -22,7 +22,7 @@ public class Ex03SelectionSort {
 	// 1, 4, 5, 6, 11, 9 (3)
 	// 1, 4, 5, 6, 9, 11 (4)
 
-	private static void sort(int[] source, CompareHelper helper) {
+	private static void sort(int[] source, CompareIntHelper helper) {
 		for (int i = 0; i < source.length - 1; i++) {
 			int minIndex = i;
 			for (int j = i + 1; j < source.length; j++) {

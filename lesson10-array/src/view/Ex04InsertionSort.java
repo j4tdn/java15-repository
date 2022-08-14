@@ -2,7 +2,7 @@ package view;
 
 import java.util.Arrays;
 
-import utils.CompareHelper;
+import utils.CompareIntHelper;
 import utils.CompareHelperAsc;
 import utils.SortUtils;
 
@@ -16,7 +16,7 @@ public class Ex04InsertionSort {
 		System.out.println(Arrays.toString(numbers));
 	}
 
-	private static void sort(int[] source, CompareHelper helper) {
+	private static void sort(int[] source, CompareIntHelper helper) {
 		for (int i = 1; i < source.length; i++) {
 			for (int j = 0; j < i; j++) {
 				if (helper.compare(source[i], source[j])) {
