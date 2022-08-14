@@ -2,16 +2,16 @@ package view;
 
 import java.util.Arrays;
 
-import utils.CompareHelper;
+import utils.CompareIntHelper;
 import utils.SortUtils;
 
-public class Ex02BubbleSort {
+public class Ex02BubbleSortWithInt {
 
 	public static void main(String[] args) {
 		int[] numbers = {1,5,11,9,4,6};
 
 		// anonymous class
-		sort(numbers, new CompareHelper() {
+		sort(numbers, new CompareIntHelper() {
 			
 			public boolean compare(int prev, int next) {
 				return prev > next;
@@ -23,11 +23,11 @@ public class Ex02BubbleSort {
 		});
 		System.out.println(Arrays.toString(numbers));
 		// short lambda expression
-		sort(numbers, (int prev,int  next) -> prev < next);
+		sort(numbers, (prev, next) -> prev < next);
 		System.out.println(Arrays.toString(numbers));
 	}
 	
-	private static void sort(int[] source, CompareHelper helper)
+	private static void sort(int[] source, CompareIntHelper helper)
 	{
 		for(int round = 0 ; round < source.length ; round++)
 		{

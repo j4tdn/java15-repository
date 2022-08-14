@@ -1,6 +1,6 @@
 package utils;
 
 @FunctionalInterface
-public interface CompareHelper {
+public interface CompareIntHelper {
 	boolean compare(int prev,int next);
 }
