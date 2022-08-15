@@ -7,8 +7,8 @@ import ultis.SortUtils;
 
 public class Ex04_BubbleSortWithString {
 	public static void main(String[] args) {
-		String[] sequences = { "Alex", null, null, "Terry", "Rivaldo", null, "Blue", "Zill" };
-		sortHandleNullLast(sequences);
+		String[] sequences = { "Alex", null, null, "Terry", "Rivaldo", null, "Blue", "Zill", "6","3", "-2" };
+		sortHandleNullValues(sequences);
 		System.out.println(Arrays.toString(sequences));
 		System.out.println("===================");
 		
@@ -94,6 +94,7 @@ public class Ex04_BubbleSortWithString {
 		for (int i = 0; i < source.length; i++) {
 			for (int j = 0; j < source.length - i - 1; j++) {
 				// Handle: selection null first
+				
 				if (source[j] == null) {
 					continue;
 				}
