@@ -1,21 +1,19 @@
 package inheritance;
 
-
 public class Book {
 	private String id;
 	private String name;
 	private double price;
 	private String publisher;
+	
+	public Book() {
+	}
 
 	public Book(String id, String name, double price, String publisher) {
 		this.id = id;
 		this.name = name;
 		this.price = price;
 		this.publisher = publisher;
-	}
-
-	public Book() {
-
 	}
 
 	public String getId() {
@@ -54,5 +52,4 @@ public class Book {
 	public String toString() {
 		return "Book [id=" + id + ", name=" + name + ", price=" + price + ", publisher=" + publisher + "]";
 	}
-
 }

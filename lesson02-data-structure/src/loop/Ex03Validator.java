@@ -6,27 +6,29 @@ public class Ex03Validator {
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
 		
-		int incorretInputAmount = 0;
+		// Validation
 		String numberAsText = "";
+		int incorrectInputAmount = 0;
 		do {
-			System.out.println("Enter valid number: ");
+			System.out.print("Enter valid number: ");
 			numberAsText = ip.nextLine();
 			
-			if(numberAsText.matches("\\d+")) {
+			if (numberAsText.matches("\\d+")) {
 				break;
 			}
-			incorretInputAmount++;
-			if(incorretInputAmount == 3) {
-				System.out.println("Wrong inpuut amount excedds 3 times");
+			
+			incorrectInputAmount++;
+			if (incorrectInputAmount == 3) {
+				System.out.println("\n>>Wrong input amount exceeds 3 times");
 				System.out.println("Exit");
 				System.exit(0);
 			}
-		}
-		while(true );
+			
+		} while(true);
+		
 		int number = Integer.parseInt(numberAsText);
 		
-		System.out.println("==================");
+		System.out.println("===========");
 		System.out.println("Value: " + number);
-		
 	}
 }

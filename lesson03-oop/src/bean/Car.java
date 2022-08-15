@@ -3,7 +3,8 @@ package bean;
 public class Car {
 	private String color;
 	public static String model;
-
+	
+	// constructor
 	public Car() {
 	}
 
@@ -11,6 +12,7 @@ public class Car {
 		this.color = color;
 	}
 
+	// getter, setter
 	public String getColor() {
 		return color;
 	}
@@ -19,9 +21,8 @@ public class Car {
 		this.color = color;
 	}
 
+	@Override
 	public String toString() {
 		return "Car [color=" + color + ", model=" + model + "]";
 	}
-	
-	
 }

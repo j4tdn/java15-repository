@@ -6,8 +6,9 @@ public class CustomInteger {
 	public CustomInteger(int value) {
 		this.value = value;
 	}
+	
+	@Override
 	public String toString() {
 		return "" + this.value;
 	}
-
 }

@@ -1,27 +1,23 @@
 package structure;
 
+import bean.CustomInteger;
+import bean.Item;
+
 public class Ex12 {
 	public static void main(String[] args) {
+		// Kiểu đối tượng
+		
+		// Kiểu có sẵn của Java: Integer, String, Double ..
+		int i = 7;
 		Integer a = 5;
-		System.out.println("a1 hash: " + System.identityHashCode(a));
-		a = 15;
-		System.out.println("a2 hash: " + System.identityHashCode(a));
-		System.out.println("a value: " + a);
+		Integer b = new Integer(55);
 		
-		String s1 = "hello";
-		String s2 = "Welcom";
-		String s3 = "hello";
 		
-		System.out.println("s1 hash: " + System.identityHashCode(s1));
-		System.out.println("s2 hash: " + System.identityHashCode(s2));
-		System.out.println("s3 hash: " + System.identityHashCode(s3));
-
-		String s11 = new String("hello");
-		String s21 = new String("Welcom");
-		String s31 = new String("hello");
 		
-		System.out.println("s1 hash: " + System.identityHashCode(s11));
-		System.out.println("s2 hash: " + System.identityHashCode(s21));
-		System.out.println("s3 hash: " + System.identityHashCode(s31));
+		// Kiểu do mình tạo ra: Item, Employee, CustomInteger
+		// CustomInteger c = 8;
+		CustomInteger d = new CustomInteger(8);
+		
+		Item item = new Item(123, "Item 123", 100);
 	}
 }

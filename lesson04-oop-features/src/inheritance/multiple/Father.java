@@ -6,6 +6,6 @@ public class Father {
 	}
 	
 	void playSport() {
-		System.out.println("Father --> play football");
+		System.out.println("Father -> play football");
 	}
 }

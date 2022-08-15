@@ -2,7 +2,6 @@ package encapsulation.inside;
 
 public class Company {
 	public String name;
-	int numberofEmpls;
+	protected int numberOfEmpls;
 	private String policy;
-	
 }

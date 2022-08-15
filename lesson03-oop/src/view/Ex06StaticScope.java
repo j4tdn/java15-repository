@@ -1,24 +1,38 @@
 package view;
 
+// Internal
+
 public class Ex06StaticScope {
+	
 	public static void main(String[] args) {
 		add();
-		//sub();
-		mul();
-		//div();
+		// subtract();
+		multiply();
+		// divide();
+		
+		Ex06StaticScope o6 = new Ex06StaticScope();
+		o6.subtract();
+		
+		Ex06StaticScope.add();
 	}
+	
+	// timing: static >> non-static
+
+	// static --> static
 	private static void add() {
-		mul();
-		//sub();
+		multiply();
+		// divide();
 	}
-	private void sub() {
-		mul();
-		div();
+
+	// non --> static, non
+	private void subtract() {
+		multiply();
+		this.divide();
 	}
-	private static void mul() {
-		
+
+	private static void multiply() {
 	}
-	private void div() {
-		
+
+	private void divide() {
 	}
 }

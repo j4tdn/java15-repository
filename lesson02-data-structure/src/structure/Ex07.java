@@ -1,19 +1,22 @@
 package structure;
 
-import bean.CustomInteger;
-
+// Hoán vị 2 phần tử số nguyên(int, Integer)
 public class Ex07 {
 	public static void main(String[] args) {
-		CustomInteger a = new CustomInteger(5);
-		CustomInteger b =new CustomInteger(7);
-
-		swap(a, b);	
-	}
-	private static void swap(CustomInteger a, CustomInteger b){
-		int f = a.value;
-		a.value = b.value;
-		b.value = f;
-		System.out.println(a);
-		System.out.println(b);
+		int a = 12;
+		int b = 36;
+		
+		System.out.println("a: " + a);
+		System.out.println("b: " + b);
+		
+		System.out.println("====AFTER SWAP====");
+		
+		// Case 1 ==> Code in MAIN method ==> hard code
+		int tmp = a; // tmp = 5
+		a = b; // a = 7, b = 7
+		b = tmp; // a = 7, b = 5
+		
+		System.out.println("a: " + a);
+		System.out.println("b: " + b);
 	}
 }

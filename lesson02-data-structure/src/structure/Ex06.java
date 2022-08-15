@@ -3,20 +3,27 @@ package structure;
 import bean.Item;
 
 public class Ex06 {
+	
 	public static void main(String[] args) {
+		// final --> cannot update value at STACK
 		final float PI = 3.14f;
 		
-		Item ItemX = new Item(123, "Item 123", 250);
-		System.out.println("Item Address: " + System.identityHashCode(ItemX));
+		// wrong update
+		// PI = 6.28f;
 		
-		Item ItemY = new Item(456, "Item 456", 650);
-		System.out.println("Item Address: " + System.identityHashCode(ItemY));
+		final Item itemX = new Item(123, "Item 123", 250);
+		System.out.println("ItemX address: " 
+					+ System.identityHashCode(itemX));
 		
-		ItemX = ItemY;
+		Item itemY = new Item(234, "Item 234", 360);
+		System.out.println("ItemY address: " 
+					+ System.identityHashCode(itemY));
 		
-		System.out.println("Item Address: " + System.identityHashCode(ItemX));
+		// itemX = itemY;
+		System.out.println("ItemX address: " 
+				+ System.identityHashCode(itemX));
 		
-		ItemX.name = "Update Item ";
-		System.out.println(ItemX);
+		itemX.name = "Updated Item";
+		System.out.println(itemX);
 	}
 }

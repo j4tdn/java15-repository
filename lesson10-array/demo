@@ -1,0 +1,23 @@
+Ex01: Crud
+
+Ex02: Bubble sort with int and strategy pattern for ASC/DESC
++ CompareHelper#compare
+
+Ex03: Bubble sort with String
++ Handle null values: NULL FIRST/LAST
++ Using strategy
+
+Ex04: Bubble sort with ItemDetail(storeId, itemId, name, price)
++ Handle null values: NULL FIRST/LAST
++ Ascending by storeId
++ Ascending by storeId, Descending by itemId if same storeId
+
+====================================
+Explain quick sort first
+====================================
+
+Ex04: Using JAVA function
+
+Ex03: Using JAVA function
+
+Ex02: Using JAVA function
