@@ -16,6 +16,7 @@ public class DataModel {
 			new ItemDetail(401, 4, "Item401", 35),
 			new ItemDetail(102, 1, "Item102", 35),
 			new ItemDetail(202, 2, "Item202", 35),
+			null,
 			new ItemDetail(302, 3, "Item302", 35)};
 	}
 }

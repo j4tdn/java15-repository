@@ -10,10 +10,7 @@ public class Ex06_ArraysSortWithItemDetail {
 	public static void main(String[] args) {
 		ItemDetail[] item = DataModel.getItemDetail();
 		
-		Arrays.sort(item, new Comparator<ItemDetail>() {
-
-			@Override
-			public int compare(ItemDetail i1, ItemDetail i2) {
+		Arrays.sort(item,(ItemDetail i1, ItemDetail i2)-> {
 				if(i1 == null) {
 					return -1;
 				}
@@ -29,7 +26,7 @@ public class Ex06_ArraysSortWithItemDetail {
 				int itemId2 = i2.getItemId();
 				return itemId2 - itemId1;
 			}
-		});
+		);
 		System.out.println(Arrays.toString(item));
 	}
 }
