@@ -1,74 +1,89 @@
-/**
- * Viết chương trình nhập vào một chuỗi kí tự bất kì 
- * sau đó thực hiện các công việc sau :
-Yêu cầu: Chuỗi chỉ chứa các kí tự tiếng việt có dấu, phím space.
-In ra mỗi kí tự trên một dòng
-In ra mỗi từ trên mỗi dòng
-In ra chuỗi đảo ngược theo kí tự
-In ra chuỗi đảo ngược theo từ
+package Ex01;
+/*
+ * Bài 1: Tạo mảng số nguyên ngẫu nhiên gồm n phần tử. Viết các phương thức:
+Loại bỏ những phần tử trùng nhau VD: {1,2,3,4,3,1} Kết quả: {2,4}
+So sánh giá trị trung bình của n/2 phần tử đầu tiên với n/2 phần tử cuối cùng
+Tìm số lớn thứ 3 trong mảng. Lưu ý trường hợp các phần tử lớn nhất trùng
+nhau VD: {7 8 8 8 6 2 5 1} Kết quả: 6
  */
 
-package Ex01;
-
-import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.Arrays;
 
 public class Ex01 {
-
-	public static boolean validateInput(String input) {
-		//kí tự tiếng việt có dấu, phím space
-		String regex = ".*[A-Za-z]|\\s";
-		Pattern p = Pattern.compile(regex);
-		if (input == null) {
-	        return false;
-	    }
-		Matcher m = p.matcher(input);
-		return m.matches();
-	}
-	
- public static void main(String[] args) {
-	Scanner sc = new Scanner(System.in);
-	System.out.println("Nhập vào chuỗi ký tự bất kỳ: ");
-	String input = sc.nextLine();
-	while(!validateInput(input)) {
-		System.out.println("Nhập vào chuỗi ký tự bất kỳ chỉ chứa các kí tự tiếng việt có dấu, phím space: ");
-		input = sc.nextLine();
-	}
-
-	
-	int defaulLength = input.length();
-	
-	//1.1
-	for (int i = 0; i < defaulLength; i++) {
-		char c = input.charAt(i);
-		System.out.println(c);
-	}
-	
-	//1.2
-	String[] noSpaceInput = input.split("\s");
-	for (int i = 0; i < noSpaceInput.length; i++) {
-		System.out.println(noSpaceInput[i]);
-	}
-	
-	//1.3
-//	char[] newInput = input.toCharArray();
-//	for (int i=0; i<defaulLength; i++) {
-//		System.out.print(newInput[defaulLength-i-1]);
-//	}
-	
-	String reverseString = "";
-	for (int i = 0; i < defaulLength; i++) {
-		char c = input.charAt(i);
-		reverseString = Character.toString(c) + reverseString;
-	}
-	System.out.println(reverseString);
-	
-	//1.4
-	for (int i = 0; i < noSpaceInput.length; i++) {
-		System.out.println(noSpaceInput[defaulLength-i-1]);
+	public static void main(String[] args) {
+		int[] numbers= {1,2,3,4,3,1};
+		
+		int[] remove=delete(numbers);
+		System.out.println(Arrays.toString(remove));
+		
+		compare(numbers);
+		
+		System.out.println(max3rd(numbers));
 		
 	}
+	private static int max3rd(int[] numbers) {
+		sortASC(numbers);
+		int index=0;
+		for(int i=numbers.length-1; i>=0;i--) {
+			if(numbers[i]!=numbers[i-1]) {
+				index++;
+			}
+			if(index==3) {
+				return numbers[i];
+			}
+		}
+		return numbers[numbers.length];
+	}
+	public static void sortASC(int [] arr) {
+        int tmp = arr[0];
+        for (int i = 0 ; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    tmp = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = tmp;
+                }
+            }
+        }
+    }
+	private static void compare (int[] numbers) {
+		int sumdau = 0,sumcuoi=0;
+		for(int i=0;i<numbers.length/2;i++) {
+			sumdau+=numbers[i];
+		}
+		for(int i=numbers.length/2;i<numbers.length;i++) {
+			sumcuoi+=numbers[i];
+		}
+		if(sumdau==sumcuoi) {
+			System.out.println("n/2 phan tu dau bang n/2 phan tu cuoi");
+			return;
+		}
+		if (sumdau>sumcuoi) {
+			System.out.println("n/2 phan tu dau lon hon n/2 phan tu cuoi");
+			return;
+		}
+		System.out.println("n/2 phan tu dau nho hon n/2 phan tu cuoi");
+		return;
+	}
+	private static int[] delete(int[] numbers) {
+		int[] result = new int[numbers.length] ;
+		int len = 0;
+		int tmp;
+		for(int i=0;i<numbers.length;i++) {
+			tmp=0;
+			for(int j=0;j<numbers.length;j++) {
+				if(i!=j && numbers[i]==numbers[j]) {
+					tmp++;
+					break;
+				}
+			}
+			if(tmp==0) {
+				result[len]=numbers[i];
+				len++;
+			}
+		}
+		return Arrays.copyOfRange(result, 0, len);
+	}
 	
- }
+
 }
