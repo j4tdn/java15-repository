@@ -1,7 +1,10 @@
 package view;
 
+import static java.util.Comparator.comparing;
+import static java.util.Comparator.nullsLast;
+import static java.util.Comparator.reverseOrder;
+
 import java.util.Arrays;
-import static java.util.Comparator.*;
 
 import bean.ItemDetail;
 import model.DataModel;
@@ -29,6 +32,7 @@ public class Ex06ArraysSortWithItemDetailV2 {
 						          comparing(ItemDetail::getStoreId, reverseOrder())
 						     .thenComparing(ItemDetail::getItemId))
 						   );
+		
 		System.out.println(Arrays.toString(items));
 	}
 }
