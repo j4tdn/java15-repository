@@ -1,0 +1,16 @@
+1. How array data structure work?
++ index-base
++ fixed-length
+
+2. Can we add, remove an element in array ? 
++ no
++ add, remove --> create new instance
+
+3. Difference between Comparator and Comparable?
+
+4. How Arrays.sort(...) and Arrays.sort(... , Comparator<T>) work?
+5. Logic
+
+Restriction of Array 
++fixed-length
++not support basic CRUD operations(add, remove)
