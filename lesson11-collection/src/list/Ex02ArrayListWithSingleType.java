@@ -9,6 +9,7 @@ public class Ex02ArrayListWithSingleType {
 		// int Integer, double Double ... 
 		List<Integer> numbers = new ArrayList<>();
 		
+		
 		int x = 5; 
 		numbers.add(1);
 		numbers.add(2);
