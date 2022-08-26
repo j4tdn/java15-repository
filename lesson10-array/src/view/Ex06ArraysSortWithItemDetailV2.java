@@ -23,7 +23,9 @@ public class Ex06ArraysSortWithItemDetailV2 {
 	            (i1, i2) -> i1.getItemId().compareTo(i2.getItemId());
 	     }
 		 */
-		
+	
+		// itemDetail -> itemDetail.getPrice() ==> ItemDetail::getPrice ==> method reference
+		// ORDER BY storeId DESC, itemId ASC
 		ItemDetail[] items = DataModel.getItemDetailsWithNull();
 
 		Arrays.sort(items,nullsLast(
