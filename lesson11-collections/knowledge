@@ -1,0 +1,17 @@
+Collection 
+--> Support object type
+
+-List<T>
+--> need to override T's equals method when using contains, remove  in List
+--> prefer using ArrayList
+
++ ArrayList
+ . Array
+ . size <= length
+ . capacity
+ 
+ + LinkedList(1) vs ArrayList(2)
+ . get/set --> (2)
+ . add
+ . remove
+ 
