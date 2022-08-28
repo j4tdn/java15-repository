@@ -1,6 +1,6 @@
 package generic;
 
-public class Ex01GenericMethod {
+public class Ex01GenericMethodArray {
 	public static void main(String[] args) {
 		Integer[] integers = {1,2,3,4,5};
 		Double[] doubles = {1.1d, 2.2d, 3.3d, 4.4d, 5.5d};
