@@ -9,6 +9,9 @@ public class Ex02ArrayListWithSingleType {
 		// int Integer, double Double ...
 		
 		//  this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
+		// new ArrayList<>() --> first add --> elemenData with length = default capacity
+		// new ArrayList<>(20) --> first add --> elemenData with length = input capacity
+		// size: real elements in elementData
 		List<Integer> numbers = new ArrayList<>();
 		numbers.add(1);
 		numbers.add(2);
