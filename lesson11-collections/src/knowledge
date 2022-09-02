@@ -1,0 +1,16 @@
+Collection
+
+- List<T>
+--> need to override equals T's method when using contains, remove in list
+
+
+
++ ArrayList
+	. <Array> with fixed size
+	. size <= length
+	. capacity
+	
++ LinkedList(1) vs ArrayList(2)
+	. get/set --> (2)
+	. add 
+	. remove 
