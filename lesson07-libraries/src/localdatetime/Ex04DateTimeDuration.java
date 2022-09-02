@@ -23,7 +23,7 @@ public class Ex04DateTimeDuration {
 		LocalTime timeEnd = datetimeEnd.toLocalTime();
 
 
-		Duration duration = Duration.between(datetimeStart, datetimeEnd);
+		Duration duration = Duration.between(timeStart, timeEnd);
 		Period period = Period.between(dateStart, dateEnd);
 		
 		if(timeEnd.isBefore(timeStart)) {
