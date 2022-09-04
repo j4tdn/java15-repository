@@ -1,0 +1,13 @@
+Collection
+--> Supported object type
+
+ List<T>
+ --> need to override T's equals method when using contains , remove in List
+ 
+ ++ ArrayList
+  ArrayList with fixed size
+  ArrayList with dynamic size
+  ArrayList always has size lower than length
+  Capacity in ArrayList ( first : 10 , rest : Integer.MAX_VALUE - 8 )
+  
+  + Linked List
