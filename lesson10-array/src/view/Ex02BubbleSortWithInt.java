@@ -10,7 +10,7 @@ public class Ex02BubbleSortWithInt {
 		for (int i = 0; i < numbers.length; i++) {
 			for (int j = 0; j < numbers.length - i - 1; j++) {
 				if (numbers[j] > numbers[j + 1]) {
-					SortUtils.swap(numbers, j, j+1);
+	//				SortUtils.swap(numbers, j, j+1);
 				}
 			}
 
