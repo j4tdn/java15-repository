@@ -1,4 +1,4 @@
-//package view;
+package view;
 
 import java.time.Year;
 import java.util.Scanner;
@@ -23,16 +23,15 @@ public class Ex01AgeCalculatorAsTryCatch {
 				break;
 			} catch (NumberFormatException e) {
 				System.out.println("Nhap sai roi Bro, nhap lai nha");
-				//e.printStackTrace();
+				// e.printStackTrace();
 			}
 
-		}while(true);
-		
-		
+		} while (true);
+
 		// int bYear = Integer.parseInt(ip.nextLine());
-		System.out.println("Anh nho em");
+		// System.out.println("Anh nho em");
 		int age = Year.now().getValue() - bYear;
-		System.out.println("Tuoi cua ban la: " + age);
+		System.out.println("tuoi cua ban la: " + age);
 
 	}
 }
