@@ -30,12 +30,7 @@ public class Ex07_ArraysSortWithItemDetailV2 {
       return (Comparator<T> & Serializable)
           (c1, c2) -> keyExtractor.apply(c1).compareTo(keyExtractor.apply(c2));
   		}
-  */
-
-		
-		
-		
-		
+  */		
 		Arrays.sort(items, nullsFirst(
 				
 				comparing(ItemDetail::getStoreId, reverseOrder())
