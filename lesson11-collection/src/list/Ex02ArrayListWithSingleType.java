@@ -5,8 +5,14 @@ import java.util.List;
 
 public class Ex02ArrayListWithSingleType {
 	public static void main(String[] args) {
-		List<Integer> numbers = new ArrayList<>();
 		
+		// >JAVA 1.5 --> auto(boxing, unboxing)
+		// int Integer, double Double ...
+		
+		// this.elementData = DEFAULTCAPACITY_EMPTY_ELEMENTDATA;
+		// new ArrayList<>() --> first add -->elementData with length = default capacity
+		// size: real elements in elementData
+		List<Integer> numbers = new ArrayList<>();
 		numbers.add(1);
 		numbers.add(2);
 		numbers.add(3);
@@ -15,3 +21,4 @@ public class Ex02ArrayListWithSingleType {
 		System.out.println("size: " + numbers.size());
 	}
 }
+	
