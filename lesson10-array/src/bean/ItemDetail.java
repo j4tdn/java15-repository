@@ -1,4 +1,4 @@
-package bean;
+package src.bean;
 
 public class ItemDetail {
 	private int itemId;
