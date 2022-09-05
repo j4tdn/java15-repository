@@ -14,7 +14,7 @@ public class Ex02ManagementApp {
 		CDs.add(new CDDetail(004,"Pop", "Soobin Hoàng Sơn",30,2200000));
 		CDs.add(new CDDetail(005,"Ballad", " Thùy Chi",30,600000));
 		
-		System.out.println("==========");
+		System.out.println("============");
 		System.out.println(addCD(CDs, new CDDetail(005, "Vpop", "Mỹ Tâm", 16, 520000)));
 		
 		System.out.println("===============");
@@ -24,7 +24,7 @@ public class Ex02ManagementApp {
 		
 		System.out.println("Total price CD : " + sumPrice(CDs));
 		
-		System.out.println("============");
+		System.out.println("==============");
 	}
 	
 	private static boolean addCD(List<CDDetail> listCD, CDDetail cd) {
