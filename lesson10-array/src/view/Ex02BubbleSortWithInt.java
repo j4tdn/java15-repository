@@ -15,6 +15,8 @@ public class Ex02BubbleSortWithInt {
 		
 		sort(numbers, new CompareHelperAsc());
 		System.out.println(Arrays.toString(numbers));
+		
+		sort(numbers);
 	}
 
 	// strategy pattern

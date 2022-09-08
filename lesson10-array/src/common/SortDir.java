@@ -1,8 +1,7 @@
 package common;
 
-public enum SortDir {	
+public enum SortDir {
+	// ascending
+	// descending
 	ASC, DESC
-	//ASCENDING
-	//DESCENDING
-
 }

@@ -1,13 +1,12 @@
 package bean;
 
-public class ItemDetail {
+public class ItemDetail implements Comparable<ItemDetail>{
 	private int itemId;
 	private int storeId;
 	private String name;
-	private String price;
-
-	public ItemDetail(int itemId, int storeId, String name, String price) {
-		super();
+	private double price;
+	
+	public ItemDetail(int itemId, int storeId, String name, double price) {
 		this.itemId = itemId;
 		this.storeId = storeId;
 		this.name = name;
@@ -38,17 +37,24 @@ public class ItemDetail {
 		this.name = name;
 	}
 
-	public String getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(String price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 
 	@Override
 	public String toString() {
-		return "ItemDetail [itemId=" + itemId + ", storeId=" + storeId + ", name=" + name + ", price=" + price + "]";
+		return "\nItemDetail [itemId=" + itemId + ", storeId=" + storeId + ", name=" + name + ", price=" + price + "]";
 	}
 
+	@Override
+	public int compareTo(ItemDetail o) {
+		ItemDetail i1 = this;
+		ItemDetail i2 = o;
+		// return Double.compare(i1.getPrice(), i2.getPrice());
+		return i1.getItemId() - i2.getItemId();
+	}
 }
