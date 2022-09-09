@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.Objects;
+
 public class Item {
 	private int itemId;
 	private String name;
@@ -58,6 +60,13 @@ public class Item {
 	@Override
 	public String toString() {
 		return "Item [itemId=" + itemId + ", name=" + name + ", price=" + price + ", storeId=" + storeId + "]";
+	}
+	
+	@Override
+	public int hashCode() {
+		// Objects.hash --> áp dụng "công thức" hashing để hash item id ra 
+		// hashed value --> dãy số
+		return Objects.hash(getItemId());
 	}
 	
 	@Override

@@ -1,6 +1,6 @@
 package map;
 
-import java.security.KeyStore.Entry;
+import java.util.Map.Entry;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,11 +23,12 @@ public class Ex01ModelMap {
 	}
 
 	private static void loopByEntry(Map<Integer, String> map) {
-		System.out.println("=======Loop By Entry=========");
+		System.out.println("==== Loop By Entry ====");
 		Set<Entry<Integer, String>> entrySet = map.entrySet();
-		
-		
-
+		for(Entry<Integer, String> entry: entrySet) {
+			System.out.print(entry.getKey() + ", " + entry.getValue() + "  -- ");
+		}
+		System.out.println();
 	}
 	
 	private static void loopByValue(Map<Integer, String> map) {
