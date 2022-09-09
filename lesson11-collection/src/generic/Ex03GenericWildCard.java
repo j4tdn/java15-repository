@@ -1,4 +1,4 @@
-package generic.ftclass;
+package generic;
 
 import java.util.Arrays;
 import java.util.List;

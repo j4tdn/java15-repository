@@ -15,5 +15,4 @@ public interface IList<E> {
 	void set(int index, E value);
 	void iterate(Consumer<E> consumer);
 	int getCapacity();
-	
 }

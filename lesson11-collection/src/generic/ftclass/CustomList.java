@@ -15,27 +15,20 @@ public class CustomList<E> implements IList<E>{
 	}
 	
 	public CustomList(int capacity) {
-		if(capacity <= 0) {
-			throw new IllegalArgumentException("Capacity must be > 0");
+		if (capacity <= 0) {
+			throw new IllegalArgumentException("Capacity must be >= 0");
 		}
 		elements = createArrayInstance(capacity);
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
 		return size;
 	}
 
 	@Override
 	public boolean add(E e) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean add(int index, E e) {
-		if(size == elements.length) {
+		if (size == elements.length) {
 			elements = grow(size);
 		}
 		elements[size++] = e;
@@ -43,37 +36,38 @@ public class CustomList<E> implements IList<E>{
 	}
 
 	@Override
+	public boolean add(int index, E e) {
+		return false;
+	}
+
+	@Override
 	public boolean addIf(E e, Predicate<E> predicate) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean remove(int index) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean remove(E e) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public boolean removeIf(Predicate<E> predicate) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
 	public E get(int index) {
-		return E[index];
+		return elements[index];
 	}
 
 	@Override
 	public void set(int index, E value) {
-		
+		elements[index] = value;
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -81,30 +75,24 @@ public class CustomList<E> implements IList<E>{
 		return (E[])Array.newInstance(Object.class, length);
 	}
 	
-	private E[] grow(int currentSize) {
-		E[] newElememts = createArrayInstance(elements.length + defaultCapacity*2);
-		for(int i = 0; i < currentSize; i++) {
-			newElememts[i] = elements[i];
-		}
-		return newElememts;
-	}
-
 	@Override
 	public void iterate(Consumer<E> consumer) {
-		for(int i = 0; i < size; i++) {
+		for (int i = 0; i < size; i++) {
 			consumer.accept(elements[i]);
 		}
 	}
-
+	
 	@Override
 	public int getCapacity() {
-		// TODO Auto-generated method stub
-		return 0;
+		return elements.length;
 	}
-
-	@Override
-	public void set(int index, E value) {
-		// TODO Auto-generated method stub
-		
+	
+	private E[] grow(int currentSize) {
+		E[] newElements = createArrayInstance(currentSize + defaultCapacity*2);
+		// copyOfRange --> copy elements and new array size = number of copied elements
+		for (int i = 0; i < currentSize; i++) {
+			newElements[i] = elements[i];
+		}
+		return newElements;
 	}
 }
