@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.Objects;
+
 public class Item {
 	private int itemId;
 	private String name;
@@ -57,6 +59,12 @@ public class Item {
 		if(!(o instanceof Item)) return false;
 		Item that = (Item)o;
 		return getItemId() == that.getItemId();
+	}
+	
+	@Override
+	public int hashCode() {
+		//Objects.hash --> từ input sẽ áp dụng công thức hash để hash ItemId ra mã hash
+		return Objects.hash(getItemId());
 	}
 	@Override
 	public String toString() {

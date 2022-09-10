@@ -1,0 +1,23 @@
+Collection
+--> Only support Object type
+
+-List
+--> need to override T's equals method when using contains, remove in List
+
++ArrayList
+	.It is a Array with fixed size
+	.size <= length
+	.capacity
+	
++LinkedList
+	.Deque(lined up): can add Head or Tail
+	
++ LinkedList(1) vs ArrayList(2):
+	.get/set --> 2 faster
+	.add 
+	.remove
+	if add/remove at last or mid index => 2
+	if add/remove at first index => 1
+	.speed
+	
+ ? support both top limited and bottom limited
