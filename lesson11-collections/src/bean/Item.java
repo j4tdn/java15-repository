@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.Objects;
+
 public class Item {
 	private int itemId;
 	private String name;
@@ -54,21 +56,28 @@ public class Item {
 		this.price = price;
 		this.storeId = storeId;
 	}
-
+	
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) {
 			return true;
 		}
-//		if (!(o instanceof Item)) {
-//			return false;
-//		}
-		if(o == null || o.getClass() != Item.class)
-		{
+		if (!(o instanceof Item)) {
 			return false;
 		}
+//		if(o == null || o.getClass() != Item.class)
+//		{
+//			return false;
+//		}
 		Item that = (Item) o;
 		
 		return that.getItemId() == getItemId();
+	}
+	
+	@Override
+	public int hashCode() {
+		// Objects.hash --> Áp dụng công thức hashing để hash item id ra
+		// hashed balue --> dãy số
+		return Objects.hash(getItemId());
 	}
 }
