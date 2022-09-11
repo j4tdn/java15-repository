@@ -1,0 +1,21 @@
+package immutable;
+
+public class Ex02SpeedTest {
+	private static final int RUNNING = 100000;
+	public static void main(String[] args) {
+		long start = System.currentTimeMillis();
+		String immutable = "";
+		for (int i = 0; i < RUNNING; i++) {
+			immutable += i;
+		}
+		System.out.println("duration 1 " + (System.currentTimeMillis() - start) + "ms");
+		StringBuilder mutable = new StringBuilder();
+		start = System.currentTimeMillis();
+
+		for (int i = 0; i < RUNNING; i++) {
+			mutable.append(i);
+		}
+		System.out.println("duration 2 " + (System.currentTimeMillis() - start) + "ms");
+
+	}
+}

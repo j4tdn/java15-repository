@@ -1,0 +1,16 @@
+1. how many exception tyles?
+ +compile - checked 
+ +runtime - unchecke
+ 
+ 
+ 2. difference between checked and unchecked exception:
+ +checked --> require handle at compile, coding time
+ +Unchecked --> optional
+ 
+ 3. how many ways to handle exception ?
+  +validate before exception
+  + try / catch
+  +Throw / Throws --> throw error before processing
+  
+  4. what does fanally mean ? Example
+ 
