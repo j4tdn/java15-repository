@@ -5,21 +5,24 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.function.Function;
 
 public class App {
 	public static void main(String[] args) {
 		List<Transaction> transactions = getTransactions();
 		
 		System.out.println("\n1. transactionIn2021 sort by value: " + 
-												getTransactionIn2021(transactions));
+							getTransactionIn2021(transactions));
 		
 		System.out.println("\n2. transactionInValue sort by city: " +
-												getTransactionInValue(transactions));
+							getTransactionInValue(transactions));
 		
 		System.out.println("\n3. getCitiesTraderWork: " + getCitiesTraderWork(transactions));
 		
 		System.out.println("\n4. transactionInCambridge sort by name desc: " +
-												getTransactionInCambridge(transactions));
+							getTransactionInCambridge(transactions));
 		
 		System.out.println("\n5. allTradesName: " + getAllTradersName(transactions));
 		
@@ -103,22 +106,20 @@ public class App {
 				result.add(transaction);
 			}
 		}			
-		
-		Collections.sort(result,(o1, o2) -> 
-					(o2.getTrader().getName()).compareTo(o1.getTrader().getName()));
-		
+//		Collections.sort(result,(o1, o2) -> 
+//					(o2.getTrader().getName()).compareTo(o1.getTrader().getName()));
+
+		result.sort(Comparator.comparing(o1 ->(o1.getTrader().getName()), Collections.reverseOrder()));
 		return result;
 	}
 	
 	// 5. Return a string of all traders’ names sorted alphabetically.
-	public static List<String> getAllTradersName(List<Transaction> transactions){
-		List<String> result = new ArrayList<>();
+	public static Set<String> getAllTradersName(List<Transaction> transactions){
+		Set<String> result = new TreeSet<>();
 		for(Transaction transaction : transactions) {
 			result.add(transaction.getTrader().getName());
 		}
-		
-		Collections.sort(result, (o1, o2) -> o1.compareTo(o2));
-		
+				
 		return result;
 	}
 	
@@ -138,7 +139,7 @@ public class App {
 		int count = 0;
 		for(Transaction transaction : transactions) {
 			if (transaction.getTrader().getCity().equals(city) 
-								&& !result.contains(transaction.getTrader().getCity())) {
+					&& !result.contains(transaction.getTrader().getCity())) {
 				result.add(transaction.getTrader().getCity());
 				count++;
 			}
