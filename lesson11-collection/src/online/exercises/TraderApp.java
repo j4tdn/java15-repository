@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -28,8 +29,8 @@ public class TraderApp {
 		// System.out.println(function6(transactions));
 		// function7(traders);
 		// function8(transactions);
-		// function9(transactions);
-		function10(transactions);
+		 function9(transactions);
+		// function10(transactions);
 	}
 
 	public static void function1(List<Transaction> transactions) {
@@ -130,9 +131,11 @@ public class TraderApp {
 		for (Transaction transaction : transactions) {
 			if (transaction.getPrice() > value) {
 				value = transaction.getPrice();
-
+				System.out.println(transaction);
 			}
 		}
+		Optional<Double> highestValue = transactions.stream().map(Transaction::getPrice).reduce(Double::max);
+        System.out.println(highestValue);
 		System.out.println("The highest value of all transactions :" + value);
 	}
 
