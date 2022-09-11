@@ -10,64 +10,30 @@ public class App {
 	public static void main(String[] args) {
 		List<Transaction> transactions = getTransactions();
 		
-		// 1. Find all transactions in the year 2011 and sort them by value (small to high).
-		List<Transaction> transactionIn2021 = getTransactionIn2021(transactions);
-		Collections.sort(transactionIn2021, new Comparator<Transaction>() {
-			@Override
-			public int compare(Transaction o1, Transaction o2) {
-				return Double.compare(o1.getValue(), o2.getValue());
-			}
-		});
-		System.out.println("\n1. transactionIn2021 sort by value: " + transactionIn2021);
+		System.out.println("\n1. transactionIn2021 sort by value: " + 
+												getTransactionIn2021(transactions));
 		
-		// 2. Find all transactions have value greater than 300 and sort them by trader’s city
-		List<Transaction> transactionInValue = getTransactionInValue(transactions);
-		Collections.sort(transactionInValue, new Comparator<Transaction>() {
-			@Override
-			public int compare(Transaction o1, Transaction o2) {
-				return (o1.getTrader().getCity()).compareTo(o2.getTrader().getCity());
-			}
-		});
-		System.out.println("\n2. transactionInValue sort by city: " + transactionInValue);
+		System.out.println("\n2. transactionInValue sort by city: " +
+												getTransactionInValue(transactions));
 		
-		// 3. What are all the unique cities where the traders work?
 		System.out.println("\n3. getCitiesTraderWork: " + getCitiesTraderWork(transactions));
-		// 4. Find all traders from Cambridge and sort them by name desc.
-		List<Transaction> transactionInCambridge = getTransactionInCambridge(transactions);
-		Collections.sort(transactionInCambridge, new Comparator<Transaction>() {
-			@Override
-			public int compare(Transaction o1, Transaction o2) {
-				return (o2.getTrader().getName()).compareTo(o1.getTrader().getName());
-			}
-		});
-		System.out.println("\n4. transactionInCambridge sort by name desc: " + transactionInCambridge);
 		
-		// 5. Return a string of all traders’ names sorted alphabetically.
-		List<String> allTradesName = getAllTradersName(transactions);
-		Collections.sort(allTradesName, new Comparator<String>() {
-			@Override
-			public int compare(String o1, String o2) {
-				return o1.compareTo(o2);
-			}
-		});
-		System.out.println("\n5. allTradesName: " + allTradesName);
+		System.out.println("\n4. transactionInCambridge sort by name desc: " +
+												getTransactionInCambridge(transactions));
 		
-		// 6. Are any traders based in Milan?
+		System.out.println("\n5. allTradesName: " + getAllTradersName(transactions));
+		
 		System.out.println("\n6. testCityOfTraders: " + testCityOfTraders(transactions, "Milan"));
 		
-		// 7. Count the number of traders in Milan.
 		System.out.println("\n7. countNumberOfTradersInCity: " + 
 							countNumberOfTradersInCity(transactions, "Milan"));
 		
-		// 8. Print all transactions’ values from the traders living in Cambridge.
 		System.out.println("\n8. sumValueOfTradersInCity: " +
 							sumValueOfTradersInCity(transactions, "Cambridge"));
 		
-		// 9. What’s the highest value of all the transactions?
 		System.out.println("\n9. getHighestValueTranSactions: " + 
 							getHighestValueTranSactions(transactions));
 		
-		// 10. Find the transaction with the smallest value.
 		System.out.println("\n10. getSmallestValueTranSactions: " + 
 				getSmallestValueTranSactions(transactions));
 	}
@@ -85,12 +51,12 @@ public class App {
 			new Transaction(mario, 2012, 700d), 
 			new Transaction(alan, 2012, 950d)
 		);
+		
 		return transactions;
 	}
 	
-	// 1
-	public static List<Transaction> getTransactionIn2021(List<Transaction> transactions){
-		
+	// 1. Find all transactions in the year 2011 and sort them by value (small to high).
+	public static List<Transaction> getTransactionIn2021(List<Transaction> transactions){	
 		List<Transaction> result = new ArrayList<>();
 		for(Transaction transaction : transactions) {
 			if(transaction.getYear() == 2011) {
@@ -98,12 +64,13 @@ public class App {
 			}
 		}
 		
+		Collections.sort(result, (o1, o2) ->  Double.compare(o1.getValue(), o2.getValue()));
+		
 		return result;
 	}
 	
-	// 2
+	// 2. Find all transactions have value greater than 300 and sort them by trader’s city
 	public static List<Transaction> getTransactionInValue(List<Transaction> transactions){
-		
 		List<Transaction> result = new ArrayList<>();
 		for(Transaction transaction : transactions) {
 			if(transaction.getValue() > 300) {
@@ -111,12 +78,14 @@ public class App {
 			}
 		}
 		
+		Collections.sort(result,(o1, o2) ->
+					(o1.getTrader().getCity()).compareTo(o2.getTrader().getCity()));
+	
 		return result;
 	}
 	
 	// 3. What are all the unique cities where the traders work?
-	public static List<String> getCitiesTraderWork(List<Transaction> transactions){
-		
+	public static List<String> getCitiesTraderWork(List<Transaction> transactions){	
 		List<String> result = new ArrayList<>();
 		for(Transaction transaction : transactions) {
 			if(!result.contains(transaction.getTrader().getCity())) {
@@ -126,31 +95,34 @@ public class App {
 		
 		return result;
 	}
-	// 4
+	// 4. Find all traders from Cambridge and sort them by name desc.
 	public static List<Transaction> getTransactionInCambridge(List<Transaction> transactions){
-		
 		List<Transaction> result = new ArrayList<>();
 		for(Transaction transaction : transactions) {
 			if(transaction.getTrader().getCity().equals("Cambridge")) {
 				result.add(transaction);
 			}
-		}
+		}			
+		
+		Collections.sort(result,(o1, o2) -> 
+					(o2.getTrader().getName()).compareTo(o1.getTrader().getName()));
 		
 		return result;
 	}
 	
-	// 5
+	// 5. Return a string of all traders’ names sorted alphabetically.
 	public static List<String> getAllTradersName(List<Transaction> transactions){
-		
 		List<String> result = new ArrayList<>();
 		for(Transaction transaction : transactions) {
 			result.add(transaction.getTrader().getName());
 		}
 		
+		Collections.sort(result, (o1, o2) -> o1.compareTo(o2));
+		
 		return result;
 	}
 	
-	// 6
+	// 6. Are any traders based in Milan?
 	public static boolean testCityOfTraders(List<Transaction> transactions, String city){	
 		for(Transaction transaction : transactions) {
 			if (transaction.getTrader().getCity().equals(city)) {
@@ -160,12 +132,13 @@ public class App {
 		return false;
 	}
 	
-	// 7
+	// 7. Count the number of traders in Milan.
 	public static int countNumberOfTradersInCity(List<Transaction> transactions, String city){	
 		List<String> result = new ArrayList<>();
 		int count = 0;
 		for(Transaction transaction : transactions) {
-			if (transaction.getTrader().getCity().equals(city) && !result.contains(transaction.getTrader().getCity())) {
+			if (transaction.getTrader().getCity().equals(city) 
+								&& !result.contains(transaction.getTrader().getCity())) {
 				result.add(transaction.getTrader().getCity());
 				count++;
 			}
@@ -173,7 +146,7 @@ public class App {
 		return count;
 	}
 	
-	// 8
+	// 8. Print all transactions’ values from the traders living in Cambridge.
 	public static double sumValueOfTradersInCity(List<Transaction> transactions, String city){	
 		double sum = 0;
 		for(Transaction transaction : transactions) {
@@ -184,7 +157,7 @@ public class App {
 		return sum;
 	}
 	
-	// 9
+	// 9. What’s the highest value of all the transactions?
 	public static double getHighestValueTranSactions(List<Transaction> transactions){
 		List<Double> result = new ArrayList<>();
 		double max = Double.MIN_VALUE;
@@ -199,7 +172,7 @@ public class App {
 		return max;
 	}
 	
-	// 10
+	// 10. Find the transaction with the smallest value.
 	public static double getSmallestValueTranSactions(List<Transaction> transactions){
 		List<Double> result = new ArrayList<>();
 		double min = Double.MAX_VALUE;
