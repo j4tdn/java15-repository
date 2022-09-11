@@ -1,5 +1,7 @@
 package online.exercises;
 
+import bean.Warehouse;
+
 public class Transaction {
 	private Trader trader;
 	private int year;
@@ -44,4 +46,14 @@ public class Transaction {
 		return "\nTransaction [trader=" + trader + ", year=" + year + ", value=" + value + "]";
 	}
 	
+	public boolean equals(Object o) {
+		if(this == o) {
+			return true;
+		}
+		if(!(o instanceof Transaction)) {
+			return false;
+		}
+		Transaction that = (Transaction) o;
+		return getTrader().equals(that.getTrader());
+	}
 }
