@@ -5,7 +5,7 @@ package online.exercises;
 public class Transaction {
 	private Trader traders;
 	private int year;
-	int value;
+	double value;
 	public Transaction(Trader traders, int year, int value) {
 		this.traders = traders;
 		this.year = year;
@@ -23,7 +23,7 @@ public class Transaction {
 	public void setYear(int year) {
 		this.year = year;
 	}
-	public int getValue() {
+	public double getValue() {
 		return value;
 	}
 	public void setValue(int value) {
