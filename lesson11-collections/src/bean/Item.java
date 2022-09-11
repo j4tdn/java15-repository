@@ -1,5 +1,7 @@
 package bean;
 
+import java.util.Objects;
+
 public class Item {
 	private int itemId;
 	private String name;
@@ -49,6 +51,11 @@ public class Item {
 		}
 		Item that = (Item) o;
 		return getItemId() == that.getItemId();
+	}
+	@Override
+	public int hashCode() {
+		//Objects.hash --> Áp dụng công thức hashing
+		return Objects.hash(getItemId());
 	}
 	@Override
 	public String toString() {
