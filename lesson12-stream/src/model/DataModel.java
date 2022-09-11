@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -23,6 +24,21 @@ public class DataModel {
 				new Apple(17, "red", 600, "Vietnam"),	
 				new Apple(6, "green", 100, "Thailand")	
 		);
+	}
+	
+	public static List<Trader> getTraders(){
+		List<Trader> traders = new ArrayList<Trader>();
+		Trader raoul = new Trader("Raoul", "Cambridge");
+		Trader mario = new Trader("Mario", "Milan");
+		Trader alan = new Trader("Alan", "Cambridge");
+		Trader brian = new Trader("Brian", "Cambridge");
+		
+		traders.add(raoul);
+		traders.add(brian);
+		traders.add(alan);
+		traders.add(mario);
+		
+		return traders;
 	}
 	
 	public static List<Dish> getDishes() {
