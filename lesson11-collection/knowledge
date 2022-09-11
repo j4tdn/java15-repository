@@ -1,0 +1,14 @@
+Collection
+-List
+-->need to overide T's equals method when using contains, remove in List
+ 
+
++ArrayList
+	.Array with fixed size
+	. size<= length
+	.capacity
++LinkedList(1)	vs Array List(2)
+
+	. get/set ---> 2 
+	.add ~
+	.remove ~
