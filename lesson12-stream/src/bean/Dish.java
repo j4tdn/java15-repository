@@ -91,4 +91,5 @@ public class Dish {
 	public static boolean isMeat(Dish dish) {
 		return Kind.MEAT.equals(dish.getKind());
 	}
+
 }

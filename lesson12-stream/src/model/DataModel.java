@@ -1,7 +1,10 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import bean.Apple;
 import bean.Dish;
@@ -12,6 +15,16 @@ import bean.Transaction;
 public class DataModel {
 	private DataModel() {
 		
+	}
+	
+	public static Map<Integer, String> getVehicleModelMap() {
+		Map<Integer, String> vnMotorBikeModel = new HashMap<>();
+		vnMotorBikeModel.put(43, "Đà Nẵng");
+		vnMotorBikeModel.put(73, "Quảng Bình");
+		vnMotorBikeModel.put(74, "Quảng Trị");
+		vnMotorBikeModel.put(75, "Thừa Thiên Huế");
+		vnMotorBikeModel.put(92, "Quảng Nam");
+		return vnVehicleModel;
 	}
 	
 	public static List<Apple> getApples() {
@@ -34,6 +47,21 @@ public class DataModel {
 				new Dish("5", "D5", 480, Kind.MEAT, false),
 				new Dish("6", "D6", 480, Kind.MEAT, false),
 				new Dish("7", "D7", 818, Kind.MEAT, false));
+	}
+	
+	public static List<Trader> getTraders() {
+		List<Trader> traders = new ArrayList<>();
+		Trader raoul = new Trader("Raoul", "Cambridge");
+		Trader mario = new Trader("Mario", "Milan");
+		Trader alan = new Trader("Alan", "Cambridge");
+		Trader brian = new Trader("Brian", "Cambridge");
+		
+		traders.add(raoul);
+		traders.add(mario);
+		traders.add(alan);
+		traders.add(brian);
+		
+		return traders;
 	}
 	
 	public static List<Transaction> getTransactions() {

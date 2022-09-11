@@ -15,12 +15,15 @@ public class Ex02ObjectMap {
 		// Note: number of attributes in hashcode, equals must be the same
 		Map<Warehouse, List<Item>> warehouses = inventory();
 		
+		// System.identityHashCode(ox) = ox.hashCode()
+		// override --> hashed value from attributes
+		
 		warehouses.put(
 				new Warehouse("WH 4", "Đà Nẵng"), 
 				Arrays.asList(new Item(11, "AA", 110, 1011)));
 		
 		warehouses.put(
-				new Warehouse("WH 1", "Vũng Tàu"), 
+				new Warehouse("WH 4", "Đà Nẵng"), 
 				Arrays.asList(new Item(1, "A", 10, 101)));
 		
 		loop(warehouses);
