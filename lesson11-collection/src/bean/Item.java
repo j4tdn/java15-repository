@@ -5,7 +5,7 @@ public class Item {
 	private String name;
 	private double price;
 	private int storeId;
-	
+
 	public Item() {
 	}
 
@@ -47,18 +47,24 @@ public class Item {
 	public void setStoreId(int storeId) {
 		this.storeId = storeId;
 	}
-	
+
+	@Override
+	public int hashCode() {
+
+		return super.hashCode();
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) {
 			return true;
 		}
-		
+
 		if (o == null || o.getClass() != Item.class) {
 			return false;
 		}
-		
-		Item that = (Item)o;
+
+		Item that = (Item) o;
 		return getItemId() == that.getItemId();
 	}
 
