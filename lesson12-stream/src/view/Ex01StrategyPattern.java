@@ -10,9 +10,7 @@ import model.DataModel;
 public class Ex01StrategyPattern {
 	public static void main(String[] args) {
 		List<Apple> inventory = DataModel.getApples();
-		List<Apple> redApples = findApples(inventory, (Apple apple) -> {
-			return "red".equals(apple.getColor());
-		});
+		List<Apple> redApples = findApples(inventory, a -> "red".equals(a.getColor()));
 		redApples.forEach(System.out::println);
 		
 		System.out.println("====================");
