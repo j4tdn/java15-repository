@@ -2,7 +2,9 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import bean.Apple;
 import bean.Dish;
@@ -66,5 +68,16 @@ public class DataModel {
 			new Transaction(alan, 2012, 950)
 		);
 		return transactions;
+	}
+	
+	public static Map<Integer, String> getVehicleModelMap(){
+		Map<Integer, String> vnVehicleModel = new HashMap<>();
+		vnVehicleModel.put(43, "Đà Nẵng");
+		vnVehicleModel.put(73, "Quảng Bình");
+		vnVehicleModel.put(74, "Quảng Trị");
+		vnVehicleModel.put(75, "Thừa Thiên Huế");
+		vnVehicleModel.put(92, "Quảng Nam");
+		
+		return vnVehicleModel;
 	}
 }
