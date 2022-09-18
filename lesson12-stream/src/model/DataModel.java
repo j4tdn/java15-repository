@@ -2,7 +2,9 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import bean.Apple;
 import bean.Dish;
@@ -13,6 +15,16 @@ import bean.Transaction;
 public class DataModel {
 	private DataModel() {
 		
+	}
+	
+	public static Map<Integer, String> getVehicleModelMap() {
+		Map<Integer, String> vnVehicleModel = new HashMap<>();
+		vnVehicleModel.put(43, "Đà Nẵng");
+		vnVehicleModel.put(75, "Thừa Thiên Huế");
+		vnVehicleModel.put(74, "Quảng Trị");
+		vnVehicleModel.put(73, "Quảng Bình");
+		vnVehicleModel.put(92, "Quảng Nam");
+		return vnVehicleModel;
 	}
 	
 	public static List<Apple> getApples() {
