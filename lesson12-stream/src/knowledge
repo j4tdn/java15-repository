@@ -1,0 +1,13 @@
+Stream
+
+Stream: fixed data
+		1 stream chỉ có thể duyệt 1 lần
+		
+stream có 2 operations:
+Intermediate operations : các operation vẫn trả về stream (filter, map, ...), code chưa thực thi
+Terminal operation: operation có chức năng ngắt , trả về một dữ liệu khác stream ( collect), code mới bắt đầu
+					thực thi
+
+Khác nhau giữa Stream và Collection
+Collection lưu trữ dữ liệu, truy cập, lưu trữ
+Stream hỗ trợ các thao tác dữ liệu
