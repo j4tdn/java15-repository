@@ -8,12 +8,14 @@ public class Ex07StreamOperations {
 		List<String> students =  Arrays.asList("Smith", "Terry", "Adam");
 		
 		// collector(Collectors.toList, Map, Set, joinning
-		students.stream()
+		String[] stu = students.stream()
 			.filter(student ->{
 				System.out.println("Handling " + student);
 				return student.length() == 5; // Stream<String>
-			}); // .toArray(String[]::new);
-		
+			}).toArray(String[]::new);
+		for(String st: stu) {
+			System.out.println(st);
+		}
 		System.out.println("Finished ....");
 	}
 }

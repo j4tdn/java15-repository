@@ -47,12 +47,12 @@ public class Store {
         this.referenceStoreId = referenceStoreId;
     }
     
-    public BigDecimal getNonNullStockPreviousDay() {
-    	return stockPreviousDay == null ? BigDecimal.ZERO : stockPreviousDay;
-    }
-
     public BigDecimal getStockPreviousDay() {
         return stockPreviousDay;
+    }   
+    
+    public BigDecimal getNonNullStockPreviousDay() {
+    	return stockPreviousDay == null ? BigDecimal.ZERO : stockPreviousDay;
     }
 
     public void setStockPreviousDay(final BigDecimal stockPreviousDay) {
@@ -68,7 +68,7 @@ public class Store {
     }
     
     public BigDecimal getNonNullExpectedSales() {
-    	return expectedSales == null ? BigDecimal.ZERO : getExpectedSales();
+    	return expectedSales == null ? BigDecimal.ZERO : expectedSales;
     }
 
 
