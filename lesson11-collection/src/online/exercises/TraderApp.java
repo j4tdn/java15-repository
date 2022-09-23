@@ -29,7 +29,7 @@ public class TraderApp {
 		// System.out.println(function6(transactions));
 		// function7(traders);
 		// function8(transactions);
-		 function9(transactions);
+		// function9(transactions);
 		// function10(transactions);
 	}
 
@@ -134,8 +134,6 @@ public class TraderApp {
 				System.out.println(transaction);
 			}
 		}
-		Optional<Double> highestValue = transactions.stream().map(Transaction::getPrice).reduce(Double::max);
-        System.out.println(highestValue);
 		System.out.println("The highest value of all transactions :" + value);
 	}
 
