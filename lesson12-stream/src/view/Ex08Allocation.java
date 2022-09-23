@@ -18,11 +18,11 @@ import model.DataModel;
 public class Ex08Allocation {
 	public static void main(String[] args) {
 		List<Store> stores = DataModel.getStores();
-//		System.out.println("1. Get all stores which have stock previous day greater than 15 "); 
-//		List<Store> ex01 = stores.stream()
-//				.filter(store -> store.getStockPreviousDay().compareTo(bd(15)) > 0)
-//				.collect(Collectors.toList());
-//		ex01.forEach(System.out::println);
+		System.out.println("1. Get all stores which have stock previous day greater than 15 "); 
+		List<Store> ex01 = stores.stream()
+				.filter(store -> store.getStockPreviousDay().compareTo(bd(15)) > 0)
+				.collect(Collectors.toList());
+		ex01.forEach(System.out::println);
 		
 		System.out.println(" 2. Get all stores which have stock previous day greater than expected"
 				+ " sales today and sort them store id descending ");
@@ -97,17 +97,21 @@ public class Ex08Allocation {
 		List<BigDecimal> controllingExpectedSales = stores.stream()
 				.map(Store::getExpectedSales)
 				.collect(Collectors.toList());
+		System.out.println(controllingExpectedSales);
+//		List<Store> storeWithNonNullRefs = stores.stream()
+//				.filter(store -> store.getReferenceStoreId() != null)
+//				.collect(Collectors.toList());
 		
 		for(Store store: stores) {
 			if(store.getExpectedSales() == null) {
 				for(int i = 0; i < controllingExpectedSales.size(); i++) {
-					if(stores.get(i).getStoreId().equals(store.getReferenceStoreId())
-								&& stores.get(i).getExpectedSales() != null ) {
+					if(store.getReferenceStoreId() != null && controllingExpectedSales.get(i) != null
+							&& store.getReferenceStoreId().equals(stores.get(i).getStoreId())) {
 						store.setExpectedSales(controllingExpectedSales.get(i));
 					}else
 						store.setExpectedSales(avg);
 					}
-				}
+			}
 		}
 		stores.forEach(System.out::println);
 		
