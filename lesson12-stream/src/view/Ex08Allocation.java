@@ -89,6 +89,19 @@ public class Ex08Allocation {
 		 */
 		System.out.println(" 8.");
 		
+		// Map<Long, BigDecimal>
+		// 1 12
+		// 2 23
+		// 3 N
+		// 4 23
+		
+		/*
+		 * 1 N 12
+		 * 2 N 23
+		 * 3 2 N
+		 * 4 N 23
+		 */
+
 		List<BigDecimal> expect = stores.stream()
 				.map(Store::getNonNullExpectedSales)
 				.collect(Collectors.toList());
@@ -97,10 +110,6 @@ public class Ex08Allocation {
 		List<BigDecimal> controllingExpectedSales = stores.stream()
 				.map(Store::getExpectedSales)
 				.collect(Collectors.toList());
-		System.out.println(controllingExpectedSales);
-//		List<Store> storeWithNonNullRefs = stores.stream()
-//				.filter(store -> store.getReferenceStoreId() != null)
-//				.collect(Collectors.toList());
 		
 		for(Store store: stores) {
 			if(store.getExpectedSales() == null) {
@@ -108,11 +117,13 @@ public class Ex08Allocation {
 					if(store.getReferenceStoreId() != null && controllingExpectedSales.get(i) != null
 							&& store.getReferenceStoreId().equals(stores.get(i).getStoreId())) {
 						store.setExpectedSales(controllingExpectedSales.get(i));
+						break;
 					}else
 						store.setExpectedSales(avg);
 					}
 			}
 		}
+
 		stores.forEach(System.out::println);
 		
 		System.out.println(" 9. Calculate sum of expected sales today ");
@@ -147,7 +158,7 @@ public class Ex08Allocation {
 		}
 		
 		BigDecimal bdList = BigDecimal.valueOf(list.size());
-		return avg.divide(bdList,2 , RoundingMode.HALF_UP);
+		return avg.divide(bdList, 2, RoundingMode.HALF_UP);
 	}
 	
 	public static <T, R> Predicate<T> distinctBy(Function<T, R> function){
