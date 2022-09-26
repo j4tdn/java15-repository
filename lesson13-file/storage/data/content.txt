@@ -1,0 +1,6 @@
+1, Susan, 28, Milan
+2, Toto, 18, Porto
+3, Henry, 22, Paris
+4, Smith, 35, London
+5, Totti, 43, Lepzig
+6, Tata, 23, Danang

@@ -50,6 +50,10 @@ public class Store {
     public BigDecimal getStockPreviousDay() {
         return stockPreviousDay;
     }
+    
+    public BigDecimal getNonNullStockPreviousDay() {
+        return stockPreviousDay == null ? BigDecimal.ZERO : stockPreviousDay;
+    }
 
     public void setStockPreviousDay(final BigDecimal stockPreviousDay) {
         this.stockPreviousDay = stockPreviousDay;
@@ -57,6 +61,10 @@ public class Store {
 
     public BigDecimal getExpectedSales() {
         return expectedSales;
+    }
+    
+    public BigDecimal getNonNullExpectedSales() {
+        return expectedSales == null ? BigDecimal.ZERO : expectedSales;
     }
 
     public void setExpectedSales(final BigDecimal expectedSales) {
@@ -79,11 +87,13 @@ public class Store {
 
         final Store store = (Store) o;
 
+        // stock previous day
         return getStoreId().equals(store.getStoreId());
     }
 
     @Override
     public int hashCode() {
+    	// stock previous day
         return Objects.hash(storeId);
     }
 

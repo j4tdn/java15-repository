@@ -15,5 +15,6 @@ public class Ex07SttreamOperations {
 				}).toArray(String[]::new);
 		
 		System.out.println("Finished ...");
+		
 	}
 }
