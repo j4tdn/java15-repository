@@ -13,7 +13,7 @@ public class Ex03_ConstructorReference {
 		List<String> cities = Arrays.asList("Milan", "LonDon", "NewYork");
 	//	List<Trader> traders = map1(name, cities,(t,u) -> new Trader(t,u));
 		List<Trader> traders = map1(names, cities,Ex03_ConstructorReference::any);
-		//List<Trader> traders = map1(name, cities,Trader::new);
+		//List<Trader> traders = map1(name, cities,Trader::new);//method reference
 		traders.forEach(System.out::println);
 	}
 

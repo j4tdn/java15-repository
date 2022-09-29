@@ -51,7 +51,7 @@ public class Ex03_SortedMap {
 	}
 	private static Map<Integer, String> findAll(){
 		//HashMap: unordered,unsorted
-		//TreeMap: sortedByKey -> kew implemrnts Comparable<K>
+		//TreeMap: sortedByKey -> key implements Comparable<K>
 		Comparator<Integer> keyComparator =(k1, k2) -> k2 - k1;
 		Map<Integer, String> vnMotorBikeModel = new TreeMap<>(keyComparator);
 		vnMotorBikeModel.put(43, "Da Nang");
