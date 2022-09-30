@@ -1,5 +1,3 @@
-Thông tin khách hàng
-=====================
 1, Susan, 28, Milan
 2, Toto, 18, Porto
 3, Henry, 22, Paris

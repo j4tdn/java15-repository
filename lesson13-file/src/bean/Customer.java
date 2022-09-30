@@ -6,18 +6,31 @@ import common.FileTransfer;
 
 public class Customer implements FileTransfer, Serializable {
 	
-	private static final long serialVersionUID = -4913253650103641864L;
-	
+	private static final long serialVersionUID = 8850948998201363543L;
+
 	private int id;
 	private String name;
 	private int age;
-	private String address;
-	
+	// not save to serialize data
+	private transient String address;
+
 	public Customer() {
 	}
 
+	public Customer(String line) {
+		String[] elements = line.split(", ");
+		if (elements.length != 4) {
+			System.out.println(line + "... has ... wrong format !!!");
+		} else {
+			this.id = Integer.parseInt(elements[0]);
+			this.name = elements[1];
+			this.age = Integer.parseInt(elements[2]);
+			this.address = elements[3];
+		}
+
+	}
+
 	public Customer(int id, String name, int age, String address) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
@@ -55,28 +68,27 @@ public class Customer implements FileTransfer, Serializable {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	public Customer transfer(String line) {
+
+	public static Customer transfer(String line) {
 		String[] elements = line.split(", ");
-		if(elements.length != 4) {
+		if (elements.length != 4) {
 			System.out.println(line + "... has ... wrong format !!!");
 			return null;
 		}
-		
 		return new Customer(
-				Integer.parseInt(elements[0]),
-				elements[1],
-				Integer.parseInt(elements[2]),
+				Integer.parseInt(elements[0]), 
+				elements[1], 
+				Integer.parseInt(elements[2]), 
 				elements[3]);
 	}
-	
-	public String toLine(){
+
+	@Override
+	public String toLine() {
 		return getId() + ", " + getName() + ", " + getAge() + ", " + getAddress();
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Customer [id=" + id + ", name=" + name + ", age=" + age + ", address=" + address + "]";
 	}
-	
 }

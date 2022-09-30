@@ -11,9 +11,9 @@ import model.DataModel;
 public class Ex02MethodReference {
 	public static void main(String[] args) {
 		List<Trader> traders = DataModel.getTraders();
-		Set<String> cities = map(traders, trader -> trader.getCity());
+		// Set<String> cities = map(traders, trader -> trader.getCity());
 		// Set<String> cities = map(traders, Trader::getCity);
-		// Set<String> cities = map(traders, Ex02MethodReference::any);
+		Set<String> cities = map(traders, Ex02MethodReference::any);
 		cities.forEach(System.out::println);
 	}
 	

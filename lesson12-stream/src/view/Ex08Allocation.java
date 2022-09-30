@@ -4,10 +4,13 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Comparator;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
+import java.util.Map.Entry;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -88,35 +91,42 @@ public class Ex08Allocation {
 		 *     --> use average of store's expected sales with it's own(reference store not count)
 		 */
 		System.out.println(" 8.");
-		
-		// Map<Long, BigDecimal>
-		// 1 12
-		// 2 23
-		// 3 N
-		// 4 23
-		
-		/*
-		 * 1 N 12
-		 * 2 N 23
-		 * 3 2 N
-		 * 4 N 23
-		 */
 
 		List<BigDecimal> expect = stores.stream()
 				.map(Store::getNonNullExpectedSales)
 				.collect(Collectors.toList());
 		BigDecimal avg = avg(expect);
 		
+		/* c1
 		List<BigDecimal> controllingExpectedSales = stores.stream()
 				.map(Store::getExpectedSales)
 				.collect(Collectors.toList());
-		
+
 		for(Store store: stores) {
 			if(store.getExpectedSales() == null) {
 				for(int i = 0; i < controllingExpectedSales.size(); i++) {
 					if(store.getReferenceStoreId() != null && controllingExpectedSales.get(i) != null
 							&& store.getReferenceStoreId().equals(stores.get(i).getStoreId())) {
 						store.setExpectedSales(controllingExpectedSales.get(i));
+						break;
+					}else
+						store.setExpectedSales(avg);
+					}
+			}
+		}
+		*/		
+		
+		// c2
+		Map<Long, BigDecimal> idAndExpectedsales = stores.stream()
+				.collect(Collectors.toMap(Store::getStoreId, Store::getNonNullExpectedSales));
+		
+		Set<Entry<Long, BigDecimal>> entrySet = idAndExpectedsales.entrySet();
+		
+		for(Store store: stores) {
+			if(store.getExpectedSales() == null) {
+				for(Entry<Long, BigDecimal> entry: entrySet){
+					if(store.getReferenceStoreId() == entry.getKey() && entry.getValue() != bd(0)) {
+						store.setExpectedSales(entry.getValue());
 						break;
 					}else
 						store.setExpectedSales(avg);

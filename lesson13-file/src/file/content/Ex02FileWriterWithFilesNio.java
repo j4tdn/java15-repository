@@ -21,7 +21,7 @@ public class Ex02FileWriterWithFilesNio {
 				.map(Customer::toLine)
 				.collect(Collectors.toList());
 		
-		lines.add(0, "ThÙng tin kh·ch h‡ng");
+		lines.add(0, "Th√¥ng tin kh√°ch h√†ng");
 		lines.add(1, "=====================");
 		
 		try {
