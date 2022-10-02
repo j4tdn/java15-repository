@@ -1,0 +1,6 @@
+thông tin khách hàng
+=================
+1,Susan, 28, Milan
+2,toto, 18, Porto
+3,Henry, 52, Milan
+4,tata,23,Danang
