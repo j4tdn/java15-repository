@@ -1,0 +1,20 @@
+package file.structure;
+
+import java.io.File;
+
+public class Ex02DirCreator {
+	// structure\\data ---> mkdirs
+	// data ---> mkdir
+	private static String pathname = "structure\\data";
+	public static void main(String[] args) {
+		File dir = new File(pathname);
+		if (!dir.exists()) {
+			Boolean isCreated = dir.mkdirs();
+			System.out.println("isCreated: " + isCreated);
+		} else {
+			System.out.println("Dir: " + dir.getName() + " is existed !!!");
+		}
+		System.out.println("Finished !!!");
+	}
+
+}
