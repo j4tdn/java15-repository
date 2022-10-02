@@ -72,7 +72,7 @@ public class Ex03SortedMap {
 				return k2-k1;
 			}
 		};
-		Map<Integer, String> vnMotorBikeModel = new TreeMap<>(keyComparator);
+		Map<Integer, String> vnMotorBikeModel = new TreeMap<>((k1,k2) -> k2-k1);
 		
 		// không thể put key null
 		vnMotorBikeModel.put(43, "Da Nang");

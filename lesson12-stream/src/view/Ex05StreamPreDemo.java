@@ -21,8 +21,8 @@ public class Ex05StreamPreDemo {
 		
 		System.out.println("1. Get dishes which have calories > 400g");
 		List<Dish> weightCalories = menu.stream()
-			.filter(d->d.getCalories() > 400)
-			.collect(Collectors.toList());
+									.filter(d->d.getCalories() > 400)
+									.collect(Collectors.toList());
 		weightCalories.forEach(System.out::println);
 		
 		

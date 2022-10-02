@@ -1,0 +1,1 @@
+serialVersionUID để tránh khi gặp trường hợp 2 object giống nhau thì khi dịch sẽ biết được class nào

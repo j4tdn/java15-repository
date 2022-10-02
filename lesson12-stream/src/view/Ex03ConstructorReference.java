@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 
 import bean.Trader;
 
@@ -23,7 +24,6 @@ public class Ex03ConstructorReference {
 	//Trader: new 2 param --> Bifunction
 	//Trader: new 1 param --> function
 	//Trader: new 0 param --> Supplier
-	
 	private static <T,U> List<Trader> map(List<T> ts, List<U> us, BiFunction<T, U, Trader> bf) {
 		List<Trader> traders = new ArrayList<>();
 		for (int i = 0; i < ts.size(); i++) {
