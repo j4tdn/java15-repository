@@ -9,7 +9,7 @@ import java.util.Locale;
 public class Ex03Formatter {
 	public static void main(String[] args) {
 		System.out.println("default locate :" + Locale.getDefault());
-		Locale.setDefault(new Locale("vi", "VN"));
+	//	Locale.setDefault(new Locale("vi", "VN"));
 		
 		DateFormat df = new SimpleDateFormat("dd//MM/yyyy");
 		// date --> String
