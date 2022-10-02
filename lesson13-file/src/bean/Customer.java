@@ -6,7 +6,7 @@ import java.util.function.Function;
 import common.FileTransfer;
 
 public class Customer implements FileTransfer, Serializable {
-	private static final long serialVersionUID = 8850948998201363543;
+	private static final long serialVersionUID;
 	private int id;
 	private String name;
 	private int age;

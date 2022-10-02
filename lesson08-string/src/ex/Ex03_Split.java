@@ -12,6 +12,7 @@ public class Ex03_Split {
 		for (int i = 0; i < aaa.length; i++) {
 			System.out.println(aaa[i]);
 		}
+		System.out.println();
 		for (int i = 0; i < s.length; i++) {
 			for (int j = 0; j < aaa.length; j++) {
 				if(s[i].substring(0, s[i].indexOf("-")).equals(aaa[j]) == false){

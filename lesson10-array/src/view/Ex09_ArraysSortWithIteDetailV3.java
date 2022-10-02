@@ -9,7 +9,7 @@ import model.DataModel;
 public class Ex09_ArraysSortWithIteDetailV3 {
 	public static void main(String[] args) {
 		ItemDetail[] items = DataModel.getItemDetail();
-		Arrays.sort(items);
+	//	Arrays.sort(items);
 		System.out.println("1st sorted items" + Arrays.toString(items));
 		
 		Arrays.sort(items, new Comparator<ItemDetail>() {

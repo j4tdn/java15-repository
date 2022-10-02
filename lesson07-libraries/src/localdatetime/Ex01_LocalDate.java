@@ -11,6 +11,7 @@ public class Ex01_LocalDate {
 		LocalDate dateStart = LocalDate.now().withMonth(8).withYear(2023).withDayOfYear(10);
 		System.out.println("===="+dateStart);
 		LocalDate dateEnd = LocalDate.of(2023, Month.FEBRUARY, 22).plusDays(4);
+		System.out.println("=====dayend: " +dateEnd);
 		if (dateStart.isAfter(dateEnd)) {
 			throw new IllegalArgumentException("date start cannot exceed date end");
 		}
