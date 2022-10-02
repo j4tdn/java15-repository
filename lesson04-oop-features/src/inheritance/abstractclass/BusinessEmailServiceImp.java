@@ -13,13 +13,7 @@ public class BusinessEmailServiceImp extends EmailService implements Transformer
 		System.out.println("BusinessEmailServiceImp --> login");
 	}
 
-	@Override
-	void loginWith2Steps() {
-		// TODO Auto-generated method stub
-		System.out.println("BusinessEmailServiceImp --> loginWith2Steps");
-		super.loginWith2Steps();
-	}
-
+	
 	@Override
 	public void sending(boolean isSafe) {
 		// TODO Auto-generated method stub
