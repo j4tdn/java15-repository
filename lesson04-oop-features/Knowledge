@@ -4,8 +4,8 @@ Khái niệm: Tính chất đóng gói được thể hiện qua access modifier
 + protected/default ==> packet
   ==> Thừa kế - Inheritance
   Khi lớp cha có phương thức, thuộc tính mang access modifier là:
- . protected: class con trong cùng packet hoặc ngoài packet đều kế thừa được
- . default : ngoài packet không kế thừa được
+ . protected: class con trong cùng package hoặc ngoài packet đều kế thừa được
+ . default : ngoài package không kế thừa được
 + public ==> mọi nơi
 
 

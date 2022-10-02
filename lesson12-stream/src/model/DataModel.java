@@ -22,7 +22,7 @@ public class DataModel {
 	private static BigDecimal bd(long value) {
         return BigDecimal.valueOf(value);
     }
-	
+	//storeId, referenceStoreId, BigDecimal stockPreviousDay, BigDecimal expectedSales, Boolean isSelected
 	public static List<Store> getStores() {
         return Arrays.asList(
             new Store(1L, null, bd(18), bd(40), Boolean.TRUE),

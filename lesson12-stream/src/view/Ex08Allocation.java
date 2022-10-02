@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
@@ -77,14 +78,16 @@ public class Ex08Allocation {
 		/* 
 		 * 8. Calculate and return list of store's expected sales which has no expected sales
 		 * - store has not expected sales but
+		 * 
 		 *   + has reference store which maintained expected sales 
 		 *     --> use expected sales of reference store
-		 *   + has reference store which no maintained expected sales 
-		 *     --> use average of store's expected sales with it's own(reference store not count)
 		 *     
 		 *   + has reference store which no maintained expected sales 
 		 *     --> use average of store's expected sales with it's own(reference store not count)
+		 *     
 		 */
+		System.out.println("=================8======================");
+								
 		
 		// 9. Calculate sum of expected sales today
 		System.out.println("========================9=====================");

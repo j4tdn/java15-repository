@@ -1,14 +1,17 @@
 package view;
 
-import java.util.Comparator;
+import static java.util.Comparator.*;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.function.Predicate;
 import java.util.Set;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import bean.Dish;
+import bean.Dish.Kind;
 import model.DataModel;
 
 import static java.util.Comparator.*;
@@ -22,39 +25,40 @@ public class Ex05StreamPreDemo {
 		// stream --> traversable once
 		
 		System.out.println("1. Get dishes which have calories > 400g");
-		List<Dish> weightCalories = menu.stream() // Stream<Dish>
-		    .filter(d -> d.getCalories() > 400) // Stream<Dish>
-		    .collect(Collectors.toList());
-		weightCalories.forEach(System.out::println);
+		List<Dish> e1 = menu.stream() // Stream<Dish>
+			.filter(d -> d.getCalories() > 400)
+			.collect(Collectors.toList());
+		e1.forEach(System.out::println);
 		
 		System.out.println("2. Get name of dishes");
-		Set<String> nameOfDishes = menu.stream() // Stream<Dish>   
-			.map(Dish::getName) // Stream<String>
-			.collect(Collectors.toSet());
-		nameOfDishes.forEach(System.out::println);
+		Set<String> e2 = menu.stream()
+						.map(Dish::getName)
+						.collect(Collectors.toSet());
 		
-		String names = menu.stream()
-				.map(Dish::getName) // Stream<String>
-				.collect(Collectors.joining(", "));
+		 String names = menu.stream()
+				   .map(Dish::getName) 
+				   .collect(Collectors.joining("|"));
+		e2.forEach(System.out::println);
 		System.out.println(names);
 		
 		System.out.println("3. Get name of dishes which are vegie food");
-		Set<String> nameOfVegieDishes = menu.stream() // Stream<Dish>   
-				.filter(Dish::isVegetarian) // Stream<Dish>
-				.map(Dish::getName) // Stream<String>
+		Set<String> e3 = menu.stream()
+				.filter(Dish::isVegetarian)
+				.map(Dish::getName)
 				.collect(Collectors.toSet());
-		nameOfVegieDishes.forEach(System.out::println);
+        e3.forEach(System.out::println);
 		
+       
 		System.out.println("4. Sort a vehicle model map");
-		// map --> set --> list   -sortbyKV- --> linkedhashmap
-		// map --> set --> stream - sortbyKV --> linkedhashmap
+		// map --> set --> list - sort --> linkedhashmap
+		// map --> set --> strea - sort --> linkedhashmap
 		Map<Integer, String> modelMap = DataModel.getVehicleModelMap();
-		Map<Integer, String> sortedMap = modelMap.entrySet() // Set<Entry<K, V>>
-		        .stream()  // Stream<Entry<K, V>>
-		        .sorted(comparing(Entry::getValue)) // Stream<Entry<K, V>> Stream<T>
-		        .collect(Collectors.toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
-		System.out.println("instance: " + sortedMap.getClass());
-		sortedMap.forEach((k, v) -> System.out.println(k + " --> " + v));
+		Map<Integer, String> sortedMap = modelMap.entrySet()//Set<entry<k,v>
+				.stream()//Stream<entry<k,v>
+				.sorted(comparing(Entry::getValue))//Stream<entry<k,v>
+				.collect(Collectors.toMap(Entry::getKey, Entry::getValue, (a1, a2) -> a1, LinkedHashMap::new));
+		System.out.println(sortedMap.getClass());		
+		sortedMap.forEach((k,v) -> System.out.println(k + "---" + v));
 		
 		// Stream<Item(itemId, storeId, name)>
 		// 1, S1, Item 1 --> (e1, e2) -> e1

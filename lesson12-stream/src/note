@@ -1,0 +1,19 @@
+
+
+-Stream is a data structure appear from JAVA 8, it support many available methods in Stream
+-All methods like, all need functional interface
+
+Stream versus Collection:
+-Same:
++Both stream and collection are datastructure
+-Difference:
++Collection: focus to data(save data - list, set, map)
++Stream:focus handle data
+
+From java 8:
+Java supports functional programming (ex: function dot anything)
+
+Intermediate operations vs Terminal operation
+Intermediate operations:  1 function return stream type. 
+Terminal operation: from Stream function when you dot it, it change to difference type
+
