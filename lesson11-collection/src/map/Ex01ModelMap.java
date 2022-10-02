@@ -1,6 +1,11 @@
 package map;
 
+
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -9,40 +14,47 @@ import com.sun.source.tree.ContinueTree;
 
 public class Ex01ModelMap {
 	public static void main(String[] args) {
+		// Map<K, V> --> HashMap, TreeMap, LinkedHashMap
 		Map<Integer, String> vnMotorBikeModel = new HashMap<>();
-		vnMotorBikeModel.put(43, "Da Nang");
-		vnMotorBikeModel.put(75, "Hue");
-		vnMotorBikeModel.put(92, "Quang Nam");
-		vnMotorBikeModel.put(74, "Quang Tri");
-		vnMotorBikeModel.put(73, "Quang Binh");
+		vnMotorBikeModel.put(43, "Đà Nẵng");
+		vnMotorBikeModel.put(73, "Quảng Bình");
+		vnMotorBikeModel.put(74, "Quảng Trị");
+		vnMotorBikeModel.put(75, "Thừa Thiên Huế");
+		vnMotorBikeModel.put(92, "Quảng Nam");
+		vnMotorBikeModel.putIfAbsent(43, "Liên Chiểu");
 
-		lookByKey(vnMotorBikeModel);
-		lookByValue(vnMotorBikeModel);
+		System.out.println("size: " + vnMotorBikeModel.size());
+
+		// Loop by Key, Value, Entry<K, V>
+		loopByKey(vnMotorBikeModel);
+		loopByValue(vnMotorBikeModel);
+		loopByEntry(vnMotorBikeModel);
 	}
 
-	private static void lookByValue(Map<Integer, String> map) {
-		Map<Integer, String> vnMotorBikeModel = new HashMap<>();
+	private static void loopByEntry(Map<Integer, String> map) {
+		System.out.println("==== Loop By Entry ====");
+		Set<Entry<Integer, String>> entrySet = map.entrySet();
+		for (Entry<Integer, String> entry : entrySet) {
+			System.out.print(entry.getKey() + ", " + entry.getValue() + "  -- ");
+		}
+		System.out.println();
+	}
+
+	private static void loopByValue(Map<Integer, String> map) {
+		System.out.println("==== Loop By Value ====");
 		Collection<String> values = map.values();
-		System.out.println("size: " + vnMotorBikeModel.size());
-
 		for (String value : values) {
-			System.out.println(value + " ");
+			System.out.print(value + " ");
 		}
 		System.out.println();
 	}
 
-	private static void lookByKey(Map<Integer, String> map) {
-		Map<Integer, String> vnMotorBikeModel = new HashMap<>();
-		Set<Integer> keySet = vnMotorBikeModel.keySet();
-		System.out.println("size: " + vnMotorBikeModel.size());
-
+	private static void loopByKey(Map<Integer, String> map) {
+		System.out.println("==== Loop By Key ====");
+		Set<Integer> keySet = map.keySet();
 		for (Integer key : keySet) {
-			System.out.println(key + " ");
+			System.out.print(key + " ");
 		}
 		System.out.println();
-	}
-	private static void lookByEntry(Map<Integer, String> map) {
-		Set<Entry<Integer, String>> entry = map.entrySet();
-		for(Entry )
 	}
 }
