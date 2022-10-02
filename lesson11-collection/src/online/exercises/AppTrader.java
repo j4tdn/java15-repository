@@ -80,7 +80,7 @@ public class AppTrader {
 				new Transaction(alan, 2012, 950));
 		return trans;
 	}
-
+	//1
 	private static List<Transaction> findTrans2011(List<Transaction> trans) {
 		List<Transaction> list = new ArrayList<>();
 		for (Transaction tran : trans) {
@@ -91,7 +91,7 @@ public class AppTrader {
 		return list;
 
 	}
-
+	//2
 	private static List<Transaction> findTransGreater(List<Transaction> trans) {
 		List<Transaction> list = new ArrayList<>();
 		for (Transaction tran : trans) {
@@ -101,7 +101,7 @@ public class AppTrader {
 		}
 		return list;
 	}
-
+	//3
 	private static Set<String> findCountry(List<Trader> traders) {
 		Set<String> countries = new HashSet<>();
 		for (Trader trader : traders) {
@@ -109,7 +109,7 @@ public class AppTrader {
 		}
 		return countries;
 	}
-
+	//4
 	private static List<Trader> findTraderCambridge(List<Trader> traders) {
 		List<Trader> list = new ArrayList<>();
 		for (Trader trader : traders) {
@@ -119,7 +119,7 @@ public class AppTrader {
 		}
 		return list;
 	}
-
+	//5
 	private static String findTraderName(List<Trader> traders) {
 		List<Trader> list = new ArrayList<>();
 		list.addAll(traders);
@@ -132,7 +132,7 @@ public class AppTrader {
 
 		return string.toString();
 	}
-
+	//6
 	private static boolean haveMilan(List<Trader> traders) {
 		for (Trader trader : traders) {
 			if (trader.getCountry() == "Milan") {
@@ -142,6 +142,7 @@ public class AppTrader {
 		return false;
 
 	}
+	//7
 	private static int countMilan(List<Trader> traders) {
 		int count=0;
 		for(Trader trader:traders) {
@@ -152,6 +153,7 @@ public class AppTrader {
 		}
 		return count;
 	}
+	//8
 	private static List<Double> ValueOfCambridge(List<Transaction> trans){
 		List<Double> values= new ArrayList<>();
 		for(Transaction tran:trans) {
@@ -161,6 +163,7 @@ public class AppTrader {
 		}
 		return values;
 	}
+	//9
 	private static Double highestValue(List<Transaction> trans) {
 		Double highestValue=0d;
 		for(Transaction tran:trans) {
@@ -170,6 +173,7 @@ public class AppTrader {
 		}
 		return highestValue;
 	}
+	//10
 	private static void smallestValue(List<Transaction> trans) {
 		Transaction smallestTranbyValue= trans.stream()
 											.min(Comparator.comparingDouble(Transaction::getValue))
