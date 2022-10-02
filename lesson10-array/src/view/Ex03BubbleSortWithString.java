@@ -29,9 +29,9 @@ public class Ex03BubbleSortWithString {
 		});
         System.out.println(Arrays.toString(items));
 		System.out.println("================================================================================");
-		String[] textArray = { "Alex", "Terry", "Rivaldo", "Blue", "Zill" };
-		selectionSortKeepCurrentNullValues(sequences);
-		System.out.println(Arrays.toString(sequences));
+		String[] textArray = { "Alex", null, null, "Terry", "Rivaldo", "Blue", "Zill", null };
+		selectionSortKeepCurrentNullValues(textArray);
+		System.out.println(Arrays.toString(textArray));
 	}
 
 	// using strategy pattern

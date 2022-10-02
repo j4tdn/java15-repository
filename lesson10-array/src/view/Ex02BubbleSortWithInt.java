@@ -1,21 +1,48 @@
 package view;
 
+import utils.CompareIntHelper;
+import utils.SortUtils;
+
 import java.util.Arrays;
-import java.util.Iterator;
-import utils.*;
+
+import utils.CompareHelperAsc;
+
 public class Ex02BubbleSortWithInt {
 	public static void main(String[] args) {
 		int[] numbers = { 1, 5, 11, 9, 4, 6 };
+
+		sort(numbers, (pre, next) -> pre < next);
+		System.out.println(Arrays.toString(numbers));
 		
-		for (int i = 0; i < numbers.length; i++) {
-			for (int j = 0; j < numbers.length - i - 1; j++) {
-				if (numbers[j] > numbers[j + 1]) {
-	//				SortUtils.swap(numbers, j, j+1);
+		sort(numbers, new CompareHelperAsc());
+		System.out.println(Arrays.toString(numbers));
+		
+		sort(numbers);
+	
+	}
+	
+
+// strategy pattern
+// callback function
+	private static void sort(int[] source, CompareIntHelper helper) {
+		for (int round = 0; round < source.length; round++) {
+			for (int i = 0; i < source.length - round - 1; i++) {
+				if (helper.compare(source[i], source[i + 1])) {
+	//				SortUtils.swap(source, i, i + 1);
 				}
 			}
-
 		}
-		System.out.println("" + Arrays.toString(numbers));
-		
 	}
+
+// default --> asc
+	private static void sort(int[] source) {
+		for (int round = 0; round < source.length; round++) {
+			for (int i = 0; i < source.length - round - 1; i++) {
+				if (source[i] > source[i + 1]) {
+	//				SortUtils.swap(source, i, i + 1);
+				}
+			}
+		}
+	}
+
 }

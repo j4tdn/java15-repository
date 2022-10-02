@@ -28,7 +28,7 @@ public class Ex07ArraySortWithString {
 		System.out.println("sorted sequences :" + Arrays.toString(sequences));
 		sequences = new String[] {"a","b","c", null , "x" , "k" , "z" , null};
 		// seq -> seq <--> Function.identity() neu chi co 1 thuoc tinh
-		Arrays.sort(sequences, comparing(seq -> seq, reverseOrder()) );
+	//	Arrays.sort(sequences, comparing(seq -> seq, reverseOrder()) );
 		Arrays.sort(sequences, nullsFirst(comparing(Function.identity(), reverseOrder())));
 		System.out.println(Arrays.toString(sequences));
 	}
