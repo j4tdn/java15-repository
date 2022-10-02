@@ -17,11 +17,11 @@ public class App {
 		List<Student> Students = readFile(file.toPath());
 		Students.forEach(System.out::println);
 		System.out.println();
-		System.out.println("1: List the student with GBA from low to high:");
-		Students.stream().sorted(Comparator.comparing(GBA -> GBA.getPoint())).forEach(System.out::println);
+		System.out.println("1: List the student with GPA from low to high:");
+		Students.stream().sorted(Comparator.comparing(GPA -> GPA.getPoint())).forEach(System.out::println);
 		System.out.println();
 		System.out.println("2: studen with GBA > 8 :\n");
-		Students.stream().filter(GBA -> GBA.getPoint() > 8).forEach(System.out::println);
+		Students.stream().filter(GPA -> GPA.getPoint() > 8).forEach(System.out::println);
 		System.out.println();
 		System.out.println("3: Female Student: ");
 		Students.stream().filter(sex -> sex.getSex().equals("Female")).forEach(System.out::println);
