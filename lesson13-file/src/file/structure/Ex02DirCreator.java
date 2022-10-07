@@ -2,7 +2,7 @@ package file.structure;
 
 import java.io.File;
 
-public class Ex02DirCreator {
+public class Ex02DirCreator{
 	// structure\\data ---> mkdirs
 	// data --> mkdir, mkdirs
 	private static String pathname = "structure\\data";

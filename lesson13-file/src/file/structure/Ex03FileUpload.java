@@ -7,7 +7,7 @@ import java.nio.file.Path;
 
 import utils.FileUtils;
 
-public class Ex03FileUpload {
+public class Ex03FileUpload{
 	
 	private static String sourcePathName = String.join(File.separator, 
 			"storage", "template", "image", "root-flower.png");
