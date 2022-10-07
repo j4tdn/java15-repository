@@ -33,5 +33,4 @@ public class Trader {
 		return "Trader [name=" + name + ", city=" + city + "]";
 	}
 	
-
 }
