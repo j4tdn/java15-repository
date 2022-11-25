@@ -66,7 +66,7 @@ public class App {
 	private static void func3(List<Transaction> transactions) {
 		List<String> citys = transactions.stream()
 		.map(t -> t.getTrader().getCity())
-		.distinct()
+//		.distinct()
 		.collect(Collectors.toList());
 		citys.forEach(System.out::println);
 		

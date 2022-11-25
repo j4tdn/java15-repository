@@ -7,7 +7,7 @@ public class Ex05_Coding02 {
 		//1. Kiem tra chuoi s1 co phai la chuoi bat dau || ket thuc cu chuoi s hay khong?
 		System.out.println("startWith: " + s.startsWith(s1));
 		System.out.println("endWith: " + s.endsWith(s1));
-		// 2.
+		// 2.Chuoi thay the
 		s1 = " ";
 		String s2 = "";
 		s = s.replace(s1, s2);
