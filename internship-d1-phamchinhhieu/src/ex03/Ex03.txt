@@ -1,0 +1,14 @@
+1. Relationship between tables Student and Class is 1-n;
+
+2. select name, gender, cl.name	 from Student st
+join Class cl on st.class_id= cl.id;
+
+3. select cl.teacher, count(st.gender) from Class cl
+join Student st on cl.id = st.class_id
+where cl.name like %'12A'% and st.gender like %'male'%;
+
+4.select st.name,  rs.score from Result rs
+join Student st on st.id = rs.student_id
+join Class cl on cl.id = st.class_id
+where cl.name like %'12B'%;
+
