@@ -21,26 +21,28 @@ public class Bai1 {
 		String[] inputHandle = source.split("\r\n");
 		int round = Integer.parseInt(inputHandle[0]);
 		Map<Integer, Integer> recordMissIt = new HashMap<>();
+		
 		for (int i=1; i <= round ; i++)
 		{
 			String[] splitRecord = inputHandle[i].split("\\s+");
+			int point = 3;
 			for ( int j = 1 ; j <= Integer.parseInt(splitRecord[0]) ; j++)
 			{
 				int MissCode = Integer.parseInt(splitRecord[j]);
 				if(recordMissIt.containsKey(MissCode))
 				{
-					recordMissIt.put(MissCode, recordMissIt.get(MissCode) + 1);					
+					recordMissIt.put(MissCode, recordMissIt.get(MissCode) + point);					
 				}else {
-					recordMissIt.put(MissCode, 0);
+					recordMissIt.put(MissCode, point);
 				}
+				point--;
 			}
 		}
-		System.out.println(recordMissIt);
 		int maxPoint = findMaxPointMissIt(recordMissIt);
 		recordMissIt.entrySet().stream().forEach(t -> {
 			if(t.getValue() == maxPoint)
 			{
-//				System.out.println(t.getKey());
+				System.out.println(t.getKey());
 			}
 		});
 		

@@ -12,7 +12,6 @@ public class Bai2 {
 			sum += Math.pow(value%10, 2);
 			value /= 10;
 		}
-//		System.out.println(sum);
 		return sum;
 	}
 	public static void handleHappyNumber(int input) {
