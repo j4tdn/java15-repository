@@ -1,0 +1,29 @@
+Exception: Class trong JAVA sẽ dc JVM tự động ném 
+khi chương trình xảy ra ngoại lệ
+
+ví dụ: phép toán chia 0
+	truy cập đến phần tử index > length
+	
+Khi bị exception --> chương trình bị crash, dừng ngay
+lập tức
+
+Có 2 loại exception
+1.Check/ Compile Exception
+	+ Những Exception class kế thừa từ class Exception/IOException
+	+ bắt buộc xử lý tại compile
+
+--> khắc phục : xử lý ngoại lệ để chương trình tiếp
+tục --> in ra thông tin lỗi
+1.Tiền xử lý
++ thực hiện validation để đảm bảo input 0 bị lỗi
+
+2.Hậu xử lý
+	+Input có thể bị lỗi
+	+ Khi bị exception thì mình sẽ in ra lỗi và tiếp tục
+	-->2.1 Using try/catch/finally
+	-->2.2 Using throw/throws để ném lỗi ra chỗ khác xử lý
+	Vì sao phải ném : Có thể input đúng hoặc sai, nếu dùng try/catch
+	thì sẽ thừa cho th dữ liệu đúng nên mình cứ throw/throws ra.chỗ nào
+	chứa validate dữ liệu thì bắt lỗi,chỗ nào đã validate thì k cần bắt lỗi
+	
++

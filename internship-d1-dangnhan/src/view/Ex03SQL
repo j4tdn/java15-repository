@@ -1,0 +1,32 @@
+create database student_management;
+use student_management;
+
+create table student(
+		student_id int not null,
+        student_name varchar(50) not null,
+        gender varchar (15) not null,
+        class_id int,
+        
+		constraint pk_std primary key (student_id)
+        );
+create table class(
+		class_id int,
+        class_name varchar(50),
+        teacher varchar(50),
+        constraint pk_class primary key (class_id)
+);
+create table result(
+		student_id int,
+        subject varchar(50),
+        score int,
+        
+        constraint pk_result primary key (student_id, subject)
+        
+);
+create table student_result (
+		student_id int,
+        class_id int,
+        constraint pk_stdresult primary key (student_id, class_id),
+        constraint fk_std foreign key (student_id) references student(student_id),
+        constraint fk_class foreign key (class_id) references class(class_id)
+)
