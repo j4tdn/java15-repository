@@ -12,7 +12,7 @@ public class ItemView {
 	
 	public static void main(String[] args) {
 		System.out.println("1. Get items by ig name");
-		itemService.getItems("áo").forEach(System.out::println);
+		itemService.getItems("Áo").forEach(System.out::println);
 		System.out.println("\n\n");
 	}
 }

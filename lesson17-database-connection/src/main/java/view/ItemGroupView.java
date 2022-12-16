@@ -13,6 +13,7 @@ public class ItemGroupView {
 		itemGroupService = new ItemGroupServiceImpl();
 	}
 	
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		System.out.println("1. Save or update");
 		itemGroupService.saveOrUpdate(new ItemGroup(1234, "Loai Hang 1234"));
@@ -28,10 +29,12 @@ public class ItemGroupView {
 		System.out.println("GEt_IG_BY_ID -->" + GET_IG_BY_ID);
 		
 		System.out.println("\n\n 3. Search IG by name");
-		String sqlName = "Thắt Lưng";
+		String sqlName = "Thắt lưng";
 		String sqlInjection = "...' OR '1=1";
 		List<ItemGroup> igsByName = itemGroupService.search(sqlInjection);
 		igsByName.forEach(System.out::println);
 		
+		System.out.println("\n\n 4. Get IG(s) details");
+		itemGroupService.getItemGroupDetails().forEach(System.out::println);
 	}
 }

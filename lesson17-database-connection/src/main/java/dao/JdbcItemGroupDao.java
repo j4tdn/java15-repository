@@ -9,10 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import connection.DbConnection;
-import persistence.Group;
 import persistence.ItemGroup;
 import utils.SqlUtils;
-
 public class JdbcItemGroupDao implements ItemGroupDao {
 
 	private final Connection conn;

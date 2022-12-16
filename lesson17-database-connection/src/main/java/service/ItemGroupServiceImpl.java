@@ -1,6 +1,5 @@
 package service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -8,6 +7,7 @@ import java.util.stream.Collectors;
 
 import dao.ItemDao;
 import dao.ItemGroupDao;
+import dao.JdbcItemDao;
 import dao.JdbcItemGroupDao;
 import persistence.Item;
 import persistence.ItemGroup;
@@ -19,6 +19,7 @@ public class ItemGroupServiceImpl implements ItemGroupService{
 
 	public ItemGroupServiceImpl() {
 		itemGroupDao = new JdbcItemGroupDao();
+		itemDao = new JdbcItemDao();
 	}
 	
 	@Override
@@ -28,7 +29,7 @@ public class ItemGroupServiceImpl implements ItemGroupService{
 	
 	@Override
 	public ItemGroup get(int id) {
-		return itemGroupDao.get(10);
+		return itemGroupDao.get(id);
 	}
 	
 	@Override

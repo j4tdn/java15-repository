@@ -20,10 +20,8 @@
     <fullyQualifiedTypeName name="persistence.ItemGroup"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="dao.JdbcItemDao"/>
     <fullyQualifiedTypeName name="connection.DbConnection"/>
     <fullyQualifiedTypeName name="persistence.Item"/>
     <fullyQualifiedTypeName name="service.ItemService"/>
@@ -33,7 +31,9 @@
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="dao.ItemDao"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="dao.JdbcItemDao"/>
 </qualifiedTypeNameHistroy>

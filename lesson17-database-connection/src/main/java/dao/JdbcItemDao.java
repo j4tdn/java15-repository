@@ -16,6 +16,7 @@ import utils.SqlUtils;
 public class JdbcItemDao implements ItemDao {
 	
 	private Connection connection;
+	@SuppressWarnings("unused")
 	private Statement st;
 	private PreparedStatement pst;
 	private ResultSet rs;
@@ -26,7 +27,7 @@ public class JdbcItemDao implements ItemDao {
 	
 	@Override
 	public List<Item> getItems(String igName) {
-		List<Item> result = new ArrayList<Item>();
+		List<Item> result = new ArrayList<>();
 		
 		String sql = ""
 				+ "SELECT * \n"
@@ -56,7 +57,29 @@ public class JdbcItemDao implements ItemDao {
 
 	@Override
 	public List<Item> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Item> result = new ArrayList<>();
+		
+		String sql = ""
+				+ "SELECT * \n"
+				+ "FROM MatHang mh \n"
+				+ "JOIN LoaiHang lh ON mh.MaLH = lh.MaLH\n";
+		try {
+			pst = connection.prepareStatement(sql);
+			rs = pst.executeQuery();
+			while(rs.next()) {
+				ItemGroup ig = new ItemGroup(rs.getInt("MaLH"), rs.getString("TenLH"));
+				Item item = new Item(
+						rs.getInt("MaMH"),
+						rs.getString("TenMH"),
+						rs.getString("MauSac"), ig);
+				result.add(item);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(rs, pst);
+		}
+
+		return result;
 	}
 }
