@@ -3,9 +3,12 @@ package dao;
 import java.util.List;
 
 import persistence.ItemGroup;
+import persistence.ItemGroupRawData;
 
 public interface ItemGroupDao {
 	List<ItemGroup> getAll();
+	
+	List<ItemGroupRawData> getItemGroups();
 
 	ItemGroup get(int id);
 

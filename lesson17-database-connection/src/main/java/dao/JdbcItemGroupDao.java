@@ -10,6 +10,7 @@ import java.util.List;
 
 import connection.DbConnection;
 import persistence.ItemGroup;
+import persistence.ItemGroupRawData;
 import utils.SqlUtils;
 public class JdbcItemGroupDao implements ItemGroupDao {
 
@@ -21,6 +22,18 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 	public JdbcItemGroupDao() {
 		conn = DbConnection.getConnection();
 	}
+	
+	private static final String GET_ITEM_GROUPS = ""
+			+ "WITH ThongTinMatHang as(\n"
+			+ "	SELECT mh.MaMH, mh.TenMH, sum(ctmh.SoLuong) SoLuong, lh.*\n"
+			+ "    FROM loaihang lh\n"
+			+ "    JOIN mathang mh ON lh.MaLH = mh.MaLH\n"
+			+ "    JOIN chitietmathang ctmh ON ctmh.MaMH = mh.MaMH\n"
+			+ "    GROUP BY mh.MaMH\n"
+			+ ")\n"
+			+ "SELECT ttmh.MaLH, ttmh.TenLH, sum(ttmh.SoLuong) SoLuong, GROUP_CONCAT(concat(ttmh.TenMH,'-', ttmh.SoLuong)) DanhSachMatHang\n"
+			+ "FROM ThongTinMatHang ttmh\n"
+			+ "GROUP BY ttmh.MaLH;";
 
 	@Override
 	public List<ItemGroup> getAll() {
@@ -120,5 +133,29 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 		} finally {
 			SqlUtils.close(pst);
 		}
+	}
+
+	@Override
+	public List<ItemGroupRawData> getItemGroups() {
+		List<ItemGroupRawData> result = new ArrayList<>();
+		try {
+			st = conn.createStatement();
+			rs = st.executeQuery(GET_ITEM_GROUPS);
+			while (rs.next()) {
+				ItemGroupRawData rawData = new ItemGroupRawData(
+						rs.getInt("MaLH"),
+						rs.getString("TenLH"),
+						rs.getInt("SoLuong"),
+						rs.getString("DanhSachMatHang")
+				);
+				result.add(rawData);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(rs, st);
+		}
+
+		return result;
 	}
 }
