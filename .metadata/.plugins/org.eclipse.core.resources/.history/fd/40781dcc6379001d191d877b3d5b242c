@@ -1,0 +1,35 @@
+package service;
+
+import java.util.List;
+import java.util.Optional;
+
+import dao.ItemDao;
+import dao.JdbcItemDao;
+import persistence.Item;
+
+public class ItemServiceImpl implements ItemService {
+	private ItemDao itemDao;
+	private ItemGroupDao itemGroupdao;
+	
+	public ItemServiceImpl() {
+		itemDao = new JdbcItemDao();
+	}
+
+	@Override
+	public List<Item> getItems(String igName) {
+		Object itemGroupDao;
+		if(Optional.ofNullable(itemGroupDao.get(itemGroup.getId())).isPresent()) {
+			System.out.println("ig is existed --> executing update ...");
+			itemGroupDao.update(itemGroup);
+		} else {
+			System.out.println("ig is not existed --> executing save ...");
+			itemGroupDao.save(itemGroup);
+		}
+	}
+
+	@Override
+	public List<Item> getAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

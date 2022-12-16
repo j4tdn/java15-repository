@@ -1,0 +1,22 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.List;
+
+import persistence.Item;
+
+public class JdbcItemDao implements ItemDao {
+	
+	private Connection conn;
+	private Statement st;
+	private PreparedStatement pst;
+	private ResultSet rs;
+	
+	@Override
+	public List<Item> getItems(String igName) {
+		return null;
+	}
+}

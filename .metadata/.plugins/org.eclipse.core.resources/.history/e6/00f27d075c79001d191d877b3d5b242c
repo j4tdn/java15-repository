@@ -1,0 +1,44 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import connection.DbConnection;
+import persistence.Item;
+
+public class JdbcItemDao implements ItemDao {
+	
+	private Connection connection;
+	private Statement st;
+	private PreparedStatement pst;
+	private ResultSet rs;
+	
+	public JdbcItemDao() {
+		connection = DbConnection.getConnection();
+	}
+	
+	@Override
+	public List<Item> getItems(String igName) {
+		List<Item> result = new ArrayList<Item>();
+		
+		String sql = ""
+				+ "SELECT * \n"
+				+ "FROM MatHang mh \n"
+				+ "JOIN LoaiHang lh ON mh.MaLH = lh.MaLH\n"
+				+ "WHERE lh.TenLH LIKE ?";
+		try {
+			pst = connection.prepareStatement(sql);
+			pst.setString(1, "%" + igName + "%");
+			rs = pst.executeQuery();
+			while(rs.next()) {
+				Item item = new Item();
+				result.add(item);
+			}
+		}
+		return result;
+	}
+}

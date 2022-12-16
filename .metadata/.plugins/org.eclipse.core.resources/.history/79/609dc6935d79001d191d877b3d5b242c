@@ -1,0 +1,9 @@
+package service;
+
+public class ItemServiceImpl {
+	private ItemDao itemDao;
+	
+	pulic ItemServiceImpl() {
+		itemDao = new JdbcItemDao();
+	}
+}

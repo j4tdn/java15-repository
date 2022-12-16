@@ -1,0 +1,52 @@
+package persistence;
+
+import java.util.List;
+
+public class Group {
+	private Integer id;
+	private String name;
+	
+	private List<Item> items; // mapping 1-N
+	
+	public Group() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Group(Integer id, String name, List<Item> items) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.items = items;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public List<Item> getItems() {
+		return items;
+	}
+
+	public void setItems(List<Item> items) {
+		this.items = items;
+	}
+
+	@Override
+	public String toString() {
+		return "Group [id=" + id + ", name=" + name + ", items=" + items + "]";
+	}
+	
+
+}

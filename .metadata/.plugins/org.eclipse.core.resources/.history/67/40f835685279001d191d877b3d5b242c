@@ -1,0 +1,42 @@
+package service;
+
+import java.util.List;
+import java.util.Optional;
+
+import dao.ItemGroupDao;
+import dao.JdbcItemGroupDao;
+import persistence.ItemGroup;
+
+public class ItemGroupServiceImpl implements ItemGroupService{
+	
+	private ItemGroupDao itemGroupDao;
+
+	public ItemGroupServiceImpl() {
+		itemGroupDao = new JdbcItemGroupDao();
+	}
+	
+	@Override
+	public List<ItemGroup> getAll() {
+		return itemGroupDao.getAll();
+	}
+	
+	@Override
+	public ItemGroup get(int id) {
+		return itemGroupDao.get(10);
+	}
+
+	@Override
+	public void save(ItemGroup itemGroup) {
+//		if(itemGroupDao.get(itemGroup.getId()) == null) {
+//			itemGroupDao.save(itemGroup);
+//		} else {
+//			itemGroupDao.update(itemGroup);
+//		}
+//		
+		if(Optional.ofNullable(itemGroupDao.get(itemGroup.getId())).isPresent()) {
+			itemGroupDao.update(itemGroup);
+		} else {
+			itemGroupDao.save(itemGroup);
+		}
+	}
+}
