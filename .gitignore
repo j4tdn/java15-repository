@@ -1,5 +1,6 @@
 # Ignore .metadata folder
 .metadata
+target
 
 # Ignore Eclipse configuration file
 *.project
