@@ -25,7 +25,7 @@ public class JdbcItemDao implements ItemDao {
 	
 	private static final String GET_TOP_3 = ""
 			+ "WITH ThongTinDonHang AS \n"
-			+ "(SELECT mh.MaMH, mh.TenMH, sum(ctdh.SoLuong) as SoLuongBan\n"
+			+ "(SELECT dh.MaDH, mh.MaMH, mh.TenMH, sum(ctdh.SoLuong) as SoLuongBan\n"
 			+ "FROM mathang mh\n"
 			+ "JOIN chitietdonhang ctdh ON ctdh.MaMH = mh.MaMH\n"
 			+ "JOIN donhang dh ON dh.MaDH = ctdh.MaDH\n"
