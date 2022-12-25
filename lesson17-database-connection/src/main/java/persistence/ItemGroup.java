@@ -17,6 +17,14 @@ public class ItemGroup {
 		this.items = items;
 	}
 	
+	public ItemGroup(String fileLine) {
+		String[] tokens = fileLine.split(", ");
+		if(tokens.length == 2) {
+			this.id = Integer.parseInt(tokens[0]);
+			this.name = tokens[1];
+		}
+	}
+	
 	public ItemGroup(Entry<ItemGroup, List<Item>> entry) {
 		this(entry.getKey(), entry.getValue());
 	}

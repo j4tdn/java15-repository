@@ -36,5 +36,8 @@ public class ItemGroupView {
 		
 		System.out.println("\n\n 4. Get IG(s) details");
 		itemGroupService.getItemGroupDetails().forEach(System.out::println);
+		
+		System.out.println("\n\n 5. Get IG-DTO(s)");
+		itemGroupService.getItemGroups().forEach(System.out::println);
 	}
 }
