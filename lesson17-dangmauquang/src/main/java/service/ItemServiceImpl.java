@@ -20,7 +20,7 @@ public class ItemServiceImpl implements ItemService {
 	}
 
 	@Override
-	public List<Item> getTop3(LocalDate orderYear) {
+	public List<Item> getTop3(int orderYear) {
 		return itemDao.getTop3(orderYear);
 	}
 }

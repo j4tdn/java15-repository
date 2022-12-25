@@ -19,7 +19,7 @@ public class ItemView {
 		System.out.println("1. Get items by order date");
 		itemService.getItems(orderDate).forEach(System.out::println);
 		
-		LocalDate orderYear = LocalDate.of(2020, Month.DECEMBER, 17);
+		int orderYear = 2020;
 		System.out.println("\n\n2. Get items by sell number");
 		itemService.getTop3(orderYear).forEach(System.out::println);
 	}

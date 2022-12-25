@@ -7,5 +7,5 @@ import persistence.Item;
 
 public interface ItemDao {
 	List<Item> getItems(LocalDate orderDate);
-	List<Item> getTop3(LocalDate orderDate);
+	List<Item> getTop3(int orderYear);
 }

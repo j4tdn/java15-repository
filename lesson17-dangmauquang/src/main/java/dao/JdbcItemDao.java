@@ -29,7 +29,7 @@ public class JdbcItemDao implements ItemDao {
 			+ "FROM mathang mh\n"
 			+ "JOIN chitietdonhang ctdh ON ctdh.MaMH = mh.MaMH\n"
 			+ "JOIN donhang dh ON dh.MaDH = ctdh.MaDH\n"
-			+ "WHERE date(dh.ThoiGianDatHang) = ?\n"
+			+ "WHERE year(dh.ThoiGianDatHang) = ?\n"
 			+ "GROUP BY mh.MaMH\n"
 			+ "ORDER BY SoLuongBan DESC\n"
 			+ "),\n"
@@ -76,11 +76,11 @@ public class JdbcItemDao implements ItemDao {
 	}
 	
 	@Override
-	public List<Item> getTop3(LocalDate orderDate) {
+	public List<Item> getTop3(int orderYear) {
 		List<Item> result = new ArrayList<>();
 			try {
 				pst = connection.prepareStatement(GET_TOP_3);
-				pst.setDate(1, DateUtils.toSDate(orderDate));
+				pst.setInt(1, orderYear);
 				rs = pst.executeQuery();
 				while(rs.next()) {
 					OrderDetail orderDetail = new OrderDetail(rs.getInt("MaDH"), rs.getInt("SoLuongBan"));
