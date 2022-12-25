@@ -1,7 +1,0 @@
-package service;
-
-import java.util.List;
-
-public class ItemService {
-	List<Item> getItems(String igName);
-}
