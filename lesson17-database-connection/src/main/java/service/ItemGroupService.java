@@ -9,12 +9,16 @@ import persistence.ItemGroupDto;
 
 public interface ItemGroupService {
 	List<ItemGroup> getAll();
-List<ItemGroupDto> getItemgroups();
+
+	List<ItemGroupDto> getItemgroups();
+
 	ItemGroup get(int id);
 
 	List<ItemGroup> getIg();
 
 	void saveOrUpdate(ItemGroup itemGroup);
+	
+	void save(List<ItemGroup> itemGroups);
 
 	List<ItemGroup> search(String name);
 

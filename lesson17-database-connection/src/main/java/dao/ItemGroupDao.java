@@ -17,9 +17,13 @@ public interface ItemGroupDao {
 	List<ItemGroup> search(String name);
 
 	void save(ItemGroup itemGroup);
+	
+	void save(List<ItemGroup> itemGroups);
 
 	void update(ItemGroup itemGroup);
 
 	void store(ItemDetail itemDetail);
+	
+	void update(List<ItemGroup> itemGroups);
 
 }

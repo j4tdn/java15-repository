@@ -18,6 +18,13 @@ public class ItemGroup {
 		this.name = name;
 	}
     
+	public ItemGroup(String fileLines) {
+		String[] tokens = fileLines.split(", ");
+		if (tokens.length== 2) {
+			this.id = Integer.parseInt(tokens[0]);
+			this.name = tokens[1];
+		}
+	}
 
 	public ItemGroup(ItemGroup that , List<Item> items) {
 		
