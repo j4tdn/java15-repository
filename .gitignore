@@ -1,9 +1,6 @@
 # Ignore .metadata folder
 .metadata
-<<<<<<< HEAD
 target
-=======
->>>>>>> d23e226 (lesson17-persistence 16-12.2022)
 
 # Ignore Eclipse configuration file
 *.project
