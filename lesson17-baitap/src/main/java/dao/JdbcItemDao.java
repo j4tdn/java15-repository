@@ -29,7 +29,7 @@ public class JdbcItemDao implements ItemDao {
 			+ "FROM mathang mh\n"
 			+ "JOIN chitietdonhang ctdh ON ctdh.MaMH = mh.MaMH\n"
 			+ "JOIN donhang dh ON dh.MaDH = ctdh.MaDH\n"
-			+ "WHERE dh.ThoiGianDatHang = ?"
+			+ "WHERE date(dh.ThoiGianDatHang) = ?\n"
 			+ "GROUP BY mh.MaMH\n"
 			+ "ORDER BY SoLuongBan DESC\n"
 			+ "),\n"
@@ -43,6 +43,7 @@ public class JdbcItemDao implements ItemDao {
 			+ "    SELECT *\n"
 			+ "    FROM ThongTinDonHang\n"
 			+ "    WHERE SoLuongBan = (SELECT MIN(SoLuongBan) FROM TOP_3)";
+
 			
 
 	String sql = ""
