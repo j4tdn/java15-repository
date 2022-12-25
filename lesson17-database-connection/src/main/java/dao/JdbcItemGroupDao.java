@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import connection.DbConnection;
@@ -155,6 +156,31 @@ public class JdbcItemGroupDao implements ItemGroupDao{
 	}
 	
 	@Override
+	public void save(List<ItemGroup> itemGroups) {
+		String sql = "INSERT INTO LoaiHang(MaLH, TenLH)\n"
+				   + "VALUES(?, ?)";
+		int batchCount = 0;
+		try {
+			pst = conn.prepareStatement(sql);
+			for(ItemGroup itemGroup : itemGroups) {				
+				// update
+				pst.setInt(1, itemGroup.getId());
+				pst.setString(2, itemGroup.getName());
+				pst.addBatch();
+				if(++batchCount % 100 == 0) {
+					pst.executeBatch();
+				}
+			}
+			int[] affectedRows = pst.executeBatch();
+			System.out.println(Arrays.toString(affectedRows));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(pst);
+		}
+	}
+	
+	@Override
 	public void update(ItemGroup itemGroup) {
 		String sql = ""
 				+ "UPDATE LoaiHang\n"
@@ -164,6 +190,27 @@ public class JdbcItemGroupDao implements ItemGroupDao{
 			pst = conn.prepareStatement(sql);
 			pst.setString(1, itemGroup.getName());
 			pst.setInt(2, itemGroup.getId());
+			
+			pst.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			SqlUtils.close(pst);
+		}
+	}
+	
+	@Override
+	public void update(List<ItemGroup> itemGroups) {
+		String sql = ""
+				+ "UPDATE LoaiHang\n"
+				+ "   SET TenLH = ?\n"
+				+ " WHERE MaLH = ?";
+		try {
+			for(ItemGroup itemGroup : itemGroups) {
+				pst = conn.prepareStatement(sql);
+				pst.setString(1, itemGroup.getName());
+				pst.setInt(2, itemGroup.getId());				
+			}
 			
 			pst.executeUpdate();
 		} catch (SQLException e) {

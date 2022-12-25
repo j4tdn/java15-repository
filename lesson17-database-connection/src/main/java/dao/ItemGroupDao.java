@@ -16,6 +16,11 @@ public interface ItemGroupDao {
 
 	void save(ItemGroup itemGroup);
 
+	void save(List<ItemGroup> itemGroups);
+
 	void update(ItemGroup itemGroup);
+	
+	void update(List<ItemGroup> itemGroups);
+
 		
 }

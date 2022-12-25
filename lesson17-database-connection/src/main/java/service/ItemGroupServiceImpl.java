@@ -68,6 +68,11 @@ public class ItemGroupServiceImpl implements ItemGroupService{
 	}
 	
 	@Override
+	public void save(List<ItemGroup> itemGroups) {
+		itemGroupDao.save(itemGroups);
+	}
+	
+	@Override
 	public void saveOrUpdate(ItemGroup itemGroup) {
 		if (Optional.ofNullable(itemGroupDao.get(itemGroup.getId())).isPresent()) {
 			System.out.println("ig is existed --> executing update ...");
