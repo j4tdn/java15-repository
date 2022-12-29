@@ -4,6 +4,7 @@ import java.util.Objects;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
+
 public class SqlUtils {
 	public SqlUtils() {
 		// TODO Auto-generated constructor stub
