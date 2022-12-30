@@ -8,6 +8,10 @@ public class ItemGroup {
 		// TODO Auto-generated constructor stub
 	}
 
+	public ItemGroup(String igName) {
+		this.igName = igName;
+	}
+	
 	public ItemGroup(Integer igId, String igName) {
 		super();
 		this.igId = igId;
