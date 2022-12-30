@@ -76,6 +76,10 @@ public class ItemGroupServiceImpl implements ItemGroupService{
 			System.out.println("ig is not exist --> executing save ...");
 			itemGroupDao.save(itemGroup);
 		}
-		
+	}
+	
+	@Override
+	public void save(List<ItemGroup> itemGroups) {
+		itemGroupDao.save(itemGroups);
 	}
 }
