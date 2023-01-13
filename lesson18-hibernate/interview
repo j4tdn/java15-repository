@@ -1,0 +1,27 @@
+JDBC
++ support native query(mysql, oracle)
+
+Jpa/Hibernate
++ support native query
++ support jpql,hql(java persistence/hibernate query language)
+  --> hybrid language
+  
+Class --> Entity
++ 1. @Entity, @Table, @Column
++ 2. Configuration: <mapping class="..."/>
++ 3. Require: empty constructor
+
+RelationMapping
++ @ManyToOne
+  --> default: Fetch Eager
+  			   --> SELECT items
+  			       --> auto select item_group(s)
+  			       --> performance --> SELECT (1 + N) problem
+  			       
+  Fetch Lazy:  --> SELECT items
+  			       --> no select item_group(s)
+  			   --> actually get data of item_group attribute
+  			       in class Item --> select
+  			       
++ @OneToMany
+  --> default: Fetch Lazy
