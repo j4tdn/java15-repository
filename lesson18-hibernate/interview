@@ -11,6 +11,11 @@ Class --> Entity
 + 2. Configuration: <mapping class="..."/>
 + 3. Require: empty constructor
 
+Quan trọng: Không bắt buộc phải mapping 100% các table với object trong Java
+--> Chỉ mapping khi có các câu truy vấn select, insert, update, delete
+và lấy/trả về table --> mapping enity để tự động convert 2 chiều đỡ mất
+công mapping manually
+
 RelationMapping
 + @ManyToOne
   --> default: Fetch Eager
@@ -25,3 +30,38 @@ RelationMapping
   			       
 + @OneToMany
   --> default: Fetch Lazy
+  
++ @OneToOne --> Tương tự @OneToMany @ManyToOne
+            --> @OneToOne -> @JoinColumn ở bảng chứa FK --> bảng con
+            --> @OneToOne(mappedBy = "") ở bảng cha
+   
++ Database: N-N luôn tạo bảng mới         
++ @ManyToMany có 2 trường hợp
+  . TH1: bảng mới chỉ có 2 khóa từ 2 bảng liên kết
+    --> Sử dụng @ManyToMany, @JoinTable ở 1 Entity bất kỳ
+        Sử dụng @ManyToMany(mappedBy="") ở Entity còn lại
+    
+  . TH2: bảng mới có 2 khóa từ 2 bảng liên kết và có thêm các column khác
+    --> Tạo 1 Entity mới cho bảng N-N
+        + Khóa chính có nhiều hơn 1 column --> 
+        + Quan hệ N-1 với 2 bảng liên kết
+
+  
+  Hibernate/JPA supports 'native query'
+  ==> native query --> query(ngôn ngữ truy vấn) chỉ thực hiện được trên 1 hệ quản trị csdl nào đó
+  ==> hql/jpql --> hibernate query language/java persistence query language
+      --> ngôn ngữ truy vấn dựa trên tên của các entity(kèm các thuộc tính bên trong đó)
+      VD: SELECT * FROM LoaiHang WHERE MaLH = :x --> native query
+          FROM ItemGroup, SELECT ig ItemGroup ig WHERE ig.id = :x --> JPQL/HQL
+          
+          --> dịch ra native query lúc thực thi(sử dụng trên mọi HQT CSDL)
+          Hạn chế: Thường thì chỉ thực thi những câu truy vấn đơn giản(ko hỗ trợ)
+                   Phải học thêm cú pháp(#native) của JPQL/HQL
+                   Khó fix bug khi gặp lỗi
+                   
+            
+                   
+                   
+                   
+  
+  
