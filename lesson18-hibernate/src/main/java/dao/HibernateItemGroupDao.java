@@ -1,6 +1,7 @@
 package dao;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -120,8 +121,6 @@ public class HibernateItemGroupDao extends AbstractHibernateDao implements ItemG
 		ItemGroup s1Ig4 = session1.get(ItemGroup.class, 4); // GET from DB
 		System.out.println("s1Ig4 --> " + s1Ig4);
 		
-		// session1.evict(s1Ig2);
-		session1.clear();
 		System.out.println();
 		
 		ItemGroup s1Ig2Again = session1.get(ItemGroup.class, 2); // GET from 1st cache
@@ -132,8 +131,21 @@ public class HibernateItemGroupDao extends AbstractHibernateDao implements ItemG
 		
 		System.out.println();
 		
+		doTask(5);
+		
 		ItemGroup s2Ig2 = session2.get(ItemGroup.class, 2); // GET from DB
 		System.out.println("s2Ig2 --> " + s2Ig2);
+		
+		// proxy, call procedure, function
+	}
+	
+	private static void doTask(int seconds) {
+		try {
+			TimeUnit.SECONDS.sleep(seconds);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }

@@ -3,7 +3,5 @@
 <ehcache>
     <cache name="persistence.ItemGroup"  
     	maxElementsInMemory="1000"
-    	timeToIdleSeconds="3"
-    	timeToLiveSeconds="20"
     />
 </ehcache>

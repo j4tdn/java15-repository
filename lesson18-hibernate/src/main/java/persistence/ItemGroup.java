@@ -10,6 +10,9 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 /*
  Entity: Java class --> mapping 'table' in database
  JPA/Hibernate
@@ -18,6 +21,7 @@ import javax.persistence.Table;
 */
 @Entity
 @Table(name = "LoaiHang")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 @NamedQueries(
 		@NamedQuery(name = ItemGroup.GET_ITEM_GROUPS, 
 					query = "SELECT ig FROM ItemGroup ig WHERE ig.id < :maxIgId")
