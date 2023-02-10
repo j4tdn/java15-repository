@@ -30,6 +30,8 @@ public class ItemGroup {
 	@OneToMany(mappedBy = "itemGroup")
 	List<Item> items;
 	
+	
+	
 	public ItemGroup() {
 		// TODO Auto-generated constructor stub
 	}

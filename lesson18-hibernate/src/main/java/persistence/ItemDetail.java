@@ -30,6 +30,7 @@ public class ItemDetail {
 	@Column(name = "GiaMua")
 	private Double buyPrice;
 
+	
 	@Column(name = "SoLuong")
 	private Integer amount;
 
