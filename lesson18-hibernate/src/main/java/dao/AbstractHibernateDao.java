@@ -44,6 +44,4 @@ public class AbstractHibernateDao {
 		return (List<T>) query.getResultList();
 	}
 	
-	
-	
 }

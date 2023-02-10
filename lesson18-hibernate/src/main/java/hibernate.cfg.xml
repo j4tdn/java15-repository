@@ -18,11 +18,14 @@
 
 		<!-- Set the current session context getCurrentSession -->
 		<property name="current_session_context_class">thread</property>
+		
+			<!-- 2nd level cache -->
+		<!-- 2nd level cache -->
 	
 		<!-- Entity Mapping -->
 		<mapping class="persistence.ItemGroup"/>
 		<mapping class="persistence.Item"/>
-		
+		<mapping class="persistence.ItemDetail"/>
 	</session-factory>
 
 </hibernate-configuration>
