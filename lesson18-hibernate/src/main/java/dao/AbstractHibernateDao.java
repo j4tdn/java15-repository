@@ -1,7 +1,13 @@
 package dao;
 
+import java.util.List;
+import java.util.function.Consumer;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.mysql.cj.Query;
 
 import connection.HibernateProvider;
 
@@ -20,5 +26,21 @@ public class AbstractHibernateDao {
 	Session getCurrentSession() {
 		return sessionFactory.getCurrentSession();
 	}
+
+	void executeInTransaction(Consumer<Session> consumer) {
+		Session session = openSession();
+		Transaction transaction = session.beginTransaction();
+		try {
+			consumer.accept(session);
+			transaction.commit();
+		}catch (Exception e) {
+			e.printStackTrace();
+			transaction.rollback();
+		}
+	}
 	
+//	@SuppressWarnings("unchecked")
+//	public <T> List<T> safeList(Query query){
+//		
+//	}
 }
