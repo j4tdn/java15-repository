@@ -5,8 +5,13 @@ import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 /*
  Entity: Java class --> mapping 'table' in database
@@ -16,7 +21,14 @@ import javax.persistence.Table;
 */
 @Entity
 @Table(name = "LoaiHang")
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@NamedQueries(
+		@NamedQuery(name = ItemGroup.GET_ITEM_GROUPS, 
+					query = "SELECT ig FROM ItemGroup ig WHERE ig.id < :maxIgId")
+)
 public class ItemGroup {
+	
+	public static final String GET_ITEM_GROUPS = "GET_ITEM_GROUPS";
 
 	@Id
 	@Column(name = "MaLH")

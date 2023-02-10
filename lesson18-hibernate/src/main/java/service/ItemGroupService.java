@@ -7,7 +7,10 @@ import persistence.ItemGroup;
 
 public interface ItemGroupService {
 	List<ItemGroup> getAll();
-	void saveOrUpdate(ItemGroup itemGroup);
+
 	List<ItemGroupDto> getItemGroups();
+	
+	void saveOrUpdate(ItemGroup itemGroup);
+
 	void demo1stLevelCache();
 }

@@ -3,6 +3,7 @@ package view;
 import java.util.Collection;
 import java.util.List;
 
+import dto.ItemGroupDto;
 import persistence.Item;
 import persistence.ItemGroup;
 import service.ItemGroupService;
@@ -26,14 +27,13 @@ public class ItemGroupView {
 		List<Item> items = ig.getItems();
 		printf(items);
 		
-		System.out.println("... *** Câu 4: Liệt kê tất cả các mặt hàng theo mã loại ...	");
-
+		System.out.println("... *** Câu 5: Liệt kê số lượng mặt hàng của mỗi loại hàng *** ...");
+		List<ItemGroupDto> amountOfItemsPerItemGroups = itemGroupService.getItemGroups();
+		printf(amountOfItemsPerItemGroups);
 		
-		System.out.println("... *** Câu 6: Tạo mới một loại hàng *** ...");
-		ItemGroup igNew = new ItemGroup(24, "Loai Hang 24");
+		System.out.println("... *** Câu 6: Thêm mới loại hàng *** ...");
+		ItemGroup igNew = new ItemGroup(24, "Loai Hang 2442");
 		itemGroupService.saveOrUpdate(igNew);
-		
-
 	}
 	
 	private static <E> void printf(Collection<E> collection) {
