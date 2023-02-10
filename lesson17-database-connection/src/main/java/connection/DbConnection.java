@@ -2,10 +2,6 @@ package connection;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.Properties;
-
-import com.mysql.cj.jdbc.Driver;
 
 public class DbConnection {
 	private static Connection connection = null;
