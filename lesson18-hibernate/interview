@@ -1,0 +1,48 @@
+JDBC
++ support native query(mysql, oracle)
+
+Jpa/Hibernate
++ support native query
++ support jpql,hql(java persistence/hibernate query language)
+  --> hybrid language
+  
+Class --> Entity
++ 1. @Entity, @Table, @Column
++ 2. Configuration: <mapping class="..."/>
++ 3. Require: empty constructor
+
+QUAN TRỌNG: không bắt buộc phải mapping 100% các table với các object trong java
+--> Chỉ mapping khi có các câu truy vấn select, insert, update, delete
+và lấy/trả về table --> mapping entity để tự động convert 2 chiều đỡ mất công mapping manually
+
+RelationMapping
++ @ManyToOne
+  --> default: Fetch Eager
+  			   --> SELECT items
+  			       --> auto select item_group(s)
+  			       --> performance --> SELECT (1 + N) problem
+  			       
+  Fetch Lazy:  --> SELECT items
+  			       --> no select item_group(s)
+  			   --> actually get data of item_group attribute
+  			       in class Item --> select
+  			       
++ @OneToMany
+  --> default: Fetch Lazy
+  
++ @OneToOne --> tương tự @OneToMany @ManyToOne
+			--> @OneToOne -> @JoinColumn ở bảng chứa FK --> Bảng con
+			--> @OneToOne(mappedBy = " ") ở bảng cha
+
++ Database: N-N luôn tạo bảng mới
++ @ManyToMany có 2 trường hợp
+	+ TH1: bảng mới chỉ có 2 khóa với 2 khóa từ 2 bảng liên kết
+	--> Sử dụng @ManyToMany, @JoinTable ở 1 Entity bất kỳ
+		Sử dụng @ManyToMany(mappedBy = " ") ở Entity còn lại
+	
+	+ TH2: bảng mới có 2 kháo từ 2 bảng liên kết và có thêm các column khác
+	--> Tạo 1 Entity mới cho bảng N-N
+		+ Khóa chính có nhiều hơn 1 column
+		+ Quan hệ N-1 với 2 bảng liên kết
+			
++ cache, proxy, call procedure, function
