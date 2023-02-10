@@ -2,6 +2,7 @@
 .metadata
 target
 
+
 # Ignore Eclipse configuration file
 *.project
 *.classpath
