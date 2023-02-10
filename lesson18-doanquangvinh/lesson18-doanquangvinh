@@ -1,0 +1,6 @@
+use `lesson18-doanquangvinh`;
+-- 1. What is primary key of Result Table 
+-- student_id , subject
+-- 2. 
+select sd.name , sd.gender , cs.teacher from student sd join class cs on sd.class_id = cs.id ;
+select cs.teacher , count(sd.name) numberOfStudent from class cs join student sd on cs.id = sd.class_id where cs.name = '12C';
