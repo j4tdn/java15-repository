@@ -13,8 +13,12 @@ public class ItemServiceImpl implements ItemService {
 		itemDao = new JdbcItemDao();
 	}
 	@Override
-	public List<Item> getItemWithOrderDate(LocalDate ld) {
-		return itemDao.getItemWithOrderDate(ld);
+	public List<Item> getAll() {
+		return itemDao.getAll();
+	}
+	@Override
+	public List<Item> getItemWithOrderTime(LocalDate ld) {
+		return itemDao.getItemWithOrderTime(ld);
 	}
 
 }

@@ -6,5 +6,7 @@ import java.util.List;
 import persistence.Item;
 
 public interface ItemDao {
-	 List<Item> getItemWithOrderDate(LocalDate ld);
+	 List<Item> getAll();
+	 List<Item> getItemWithOrderTime(LocalDate ld);
+	 
 }

@@ -6,5 +6,6 @@ import java.util.List;
 import persistence.Item;
 
 public interface ItemService {
-	 List<Item> getItemWithOrderDate(LocalDate ld);
+	 List<Item> getAll();
+	 List<Item> getItemWithOrderTime(LocalDate ld);
 }

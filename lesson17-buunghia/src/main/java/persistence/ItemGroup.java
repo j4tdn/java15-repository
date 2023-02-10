@@ -30,7 +30,6 @@ public class ItemGroup {
 	}
 
 	public ItemGroup(Integer id, String name) {
-		super();
 		this.id = id;
 		this.name = name;
 	}

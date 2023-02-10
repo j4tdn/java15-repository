@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import connection.DbConnection;
+import dto.ItemGroupDto;
 import persistence.ItemGroup;
+import transformer.ItemGroupTransformer;
 import utils.SqlUtils;
 
 public class JdbcItemGroupDao implements ItemGroupDao {
@@ -21,8 +23,8 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 	}
 
 	@Override
-	public List<ItemGroup> getAmount() {
-		List<ItemGroup> result = new ArrayList<>();
+	public List<ItemGroupDto> getAmount() {
+		List<ItemGroupDto> result = new ArrayList<>();
 		String sql =
 				"WITH ThongTinLoaiHang AS(\n"
 				+ "	SELECT mh.MaMH,mh.TenMH,SUM(ctmh.SoLuong) SoLuong, ctmh.MaKC\n"
@@ -33,7 +35,7 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 				+ "	ON lh.MaLH = mh.MaLH\n"
 				+ "	GROUP BY mh.MaMH\n"
 				+ ")\n"
-				+ "SELECT lh.MaLH, lh.TenLH, GROUP_CONCAT(CONCAT(mh.TenMH, '-', ttlh.MaKC, '-', ctlh.SoLuong)) DanhSachMatHang, SUM(ttlh.SoLuong) SoLuong\n"
+				+ "SELECT lh.MaLH, lh.TenLH, GROUP_CONCAT(CONCAT(mh.TenMH, '-', ttlh.MaKC, '-', ttlh.SoLuong)) DanhSachMatHang, SUM(ttlh.SoLuong) SoLuong\n"
 				+ "FROM ThongTinLoaiHang ttlh\n"
 				+ "JOIN MatHang mh\n"
 				+ "ON ttlh.MaMH = mh.MaMH\n"
@@ -43,6 +45,9 @@ public class JdbcItemGroupDao implements ItemGroupDao {
 		try {
 			pst = connection.prepareStatement(sql);
 			rs = pst.executeQuery();
+			while(rs.next()) {
+				result.add(ItemGroupTransformer.transform(rs));
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {

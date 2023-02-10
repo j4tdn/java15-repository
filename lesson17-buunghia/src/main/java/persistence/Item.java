@@ -1,6 +1,6 @@
 package persistence;
 
-import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class Item {
 	private Integer id;
@@ -9,7 +9,7 @@ public class Item {
 	
 	private ItemGroup itemGroup; // mapping 1-N
 	
-	private LocalDate orderDate;
+	private LocalTime orderTime;
 	
 	public Item() {
 	}
@@ -21,10 +21,10 @@ public class Item {
 		this.itemGroup = itemGroup;
 	}
 	
-	public Item(Integer id, String name, LocalDate orderDate) {
+	public Item(Integer id, String name, LocalTime orderTime) {
 		this.id = id;
 		this.name = name;
-		this.orderDate = orderDate;
+		this.orderTime = orderTime;
 	}
 
 	public Integer getId() {
@@ -59,17 +59,21 @@ public class Item {
 		this.itemGroup = itemGroup;
 	}
 
-	public LocalDate getOrderDate() {
-		return orderDate;
+	public LocalTime getOrderDate() {
+		return orderTime;
 	}
 
-	public void setOrderDate(LocalDate orderDate) {
-		this.orderDate = orderDate;
+	public void setOrderDate(LocalTime orderTime) {
+		this.orderTime = orderTime;
 	}
+
 	@Override
 	public String toString() {
-		return "Item [id=" + id + ", name=" + name + ", orderDate=" + orderDate + "]";
+		return "Item [id=" + id + ", name=" + name + ", color=" + color + ", itemGroup=" + itemGroup + "]";
 	}
+
+	
+	
 	
 	
 	
