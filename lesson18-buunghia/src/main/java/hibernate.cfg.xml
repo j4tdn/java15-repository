@@ -1,0 +1,33 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- JDBC Properties -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/students_management</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">1234</property>
+
+		<!-- Hibernate Properties -->
+		<!-- Configure display query language for JPA/Hibnerate -->
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+		<property name="show_sql">true</property>
+		<property name="format_sql">false</property>
+
+		<!-- Set the current session context getCurrentSession -->
+		<property name="current_session_context_class">thread</property>
+	
+		<!-- 2nd level cache -->
+		<!-- 2nd level cache -->
+		
+	
+		<!-- Entity Mapping -->
+		<mapping class="persistence.Student"/>
+		<mapping class="persistence.Class"/>
+		<mapping class="persistence.Result"/>
+		
+	</session-factory>
+
+</hibernate-configuration>
