@@ -44,4 +44,5 @@ public class AbstractHibernateDao {
 	public <T> List<T> safeList(Query<?> query){
 		return (List<T>) query.getResultList();
 	}
+	
 }

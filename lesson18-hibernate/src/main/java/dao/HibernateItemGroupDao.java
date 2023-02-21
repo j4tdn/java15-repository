@@ -21,6 +21,8 @@ import persistence.ItemGroup;
 
 public class HibernateItemGroupDao extends AbstractHibernateDao implements ItemGroupDao {
 	//native query --> query(ngôn ngữ truy vấn) chỉ thưc hiện đươc trên 1 hệ quản trị csdl nào đó
+	private static String PARAM_MAX_IG_ID = "maxIgId";
+	private static String SQL_PARAM_MAX_IG_ID = ":" + PARAM_MAX_IG_ID;
 	private static String GET_ALL_ITEM_GROUPS = " "
 			+ "select * from LoaiHang"
 			+ "where MaLH < :maxIgId";
@@ -30,18 +32,18 @@ public class HibernateItemGroupDao extends AbstractHibernateDao implements ItemG
 			+ "SELECT ig from ItemGroup ig\n"
 			+ "where ig.id< :maxIgId";
 	private static String GET_AMOUNT_OF_ITEMS_PER_ITEM_GROUP = ""
-			+ "SELECT lh.MaLH" + ItemGroupDto.PROP_IG_ID + ","
-			+ "       lh.TenLH " + ItemGroupDto.PROP_IG_Name + "," 
-			+ "       SUM(ctmh.SoLuong) \n" + ItemGroupDto.PROP_AMOUNT_OF_ITEMS
-			+ "FROM MatHang mh \n"
-			+ "JOIN ChiTietMatHang ctmh \n"
-			+ "on mh.MaMH = ctmh.MaMH \n"
-			+ "JOIN LoaiHang lh \n"
-			+ "ON mh.MaLH = lh.MaLH"
-			+ "WHERE mh.MaLH < :maxIgId"
-			+ "GROUP BY mh.MaLH";
+			+ "SELECT lh.MaLH " + ItemGroupDto.PROP_IG_ID + ","
+			+ "       lh.TenLH " + ItemGroupDto.PROP_IG_NAME + ","
+			+ "       SUM(ctmh.SoLuong) " + ItemGroupDto.PROP_AMOUNT_OF_ITEMS + "\n"
+			+ "  FROM MatHang mh\n"
+			+ "  JOIN ChiTietMatHang ctmh\n"
+			+ "	   ON mh.MaMH = ctmh.MaMH"
+			+ "  JOIN LoaiHang lh\n"
+			+ "    ON mh.MaLH = lh.MaLH"
+			+ " WHERE mh.MaLH < " + SQL_PARAM_MAX_IG_ID + "\n"
+			+ " GROUP BY mh.MaLH";
 	//Yêu cầu
-	//1. Câu truy vấn trả dữ liệu về 1||n bangt trong database
+	//1. Câu truy vấn trả dữ liệu về 1||n bảng trong database
 	//2. Các bảng đã được ánh xạ/mapping với JAVA class(Entity)
 	//Ví dụ: Bảng: LoaiHang
 	//			Lớp: ItemGroup(entity)
@@ -63,16 +65,19 @@ public class HibernateItemGroupDao extends AbstractHibernateDao implements ItemG
 		//option4: Hibernate OOP query language --> criteriaQuery
 	}
 	@SuppressWarnings("deprecation")
-	@Override
 	public List<ItemGroupDto> getItemGroups() {
-		NativeQuery<?> query = openSession().createNativeQuery(GET_AMOUNT_OF_ITEMS_PER_ITEM_GROUP);
-		query.addScalar(ItemGroupDto.PROP_IG_ID,IntegerType.INSTANCE)
-		.addScalar(ItemGroupDto.PROP_IG_Name, StringType.INSTANCE)
-		.addScalar(ItemGroupDto.PROP_AMOUNT_OF_ITEMS, LongType.INSTANCE)
-		.setParameter("maxIgId", 8, IntegerType.INSTANCE)
-		.setResultTransformer(Transformers.aliasToBean(ItemGroupDto.class));
-		// get values via alias(s) in query --> set values into dto
+		// EntityManager(JPQ) = Session(Hibernate)
+		NativeQuery<?> query = openSession()
+				.createNativeQuery(GET_AMOUNT_OF_ITEMS_PER_ITEM_GROUP);
 		
+		// get values via alias(s) in query --> set values into dto
+		query.addScalar(ItemGroupDto.PROP_IG_ID, IntegerType.INSTANCE) // rs.getInt("MaLH") --> igId
+		     .addScalar(ItemGroupDto.PROP_IG_NAME, StringType.INSTANCE) // rs.getString("TenLH")
+		     .addScalar(ItemGroupDto.PROP_AMOUNT_OF_ITEMS, LongType.INSTANCE)
+		     .setParameter(PARAM_MAX_IG_ID, 8, IntegerType.INSTANCE)
+		     .setResultTransformer(Transformers.aliasToBean(ItemGroupDto.class));
+		
+		// JPA -> Hibernate -> Spring Data
 		
 		return safeList(query);
 	}

@@ -5,11 +5,11 @@
 	<session-factory>
 		<!-- JDBC Properties -->
 		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/java15_shopping_test</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/lesson18_phamchinhhieu</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password">1234</property>
 
-
+<!--java15_shopping_test lesson18_phamchinhhieu-->
 		<!-- Hibernate Properties -->
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 
@@ -23,6 +23,11 @@
  		<mapping class="persistence.Item" />
  		<mapping class="persistence.ItemGroup" />
  		<mapping class="persistence.ItemDetail" />
+ 		 <mapping class="persistence.Student" />
+ 		 <mapping class="persistence.Class" />
+ 		 		
+ 		
+ 		
 
 	</session-factory>
 

@@ -3,14 +3,16 @@ package dto;
 public class ItemGroupDto {
 	
 	public static final String PROP_IG_ID = "igId";
-	public static final String PROP_IG_Name = "igName";
-	public static final String PROP_AMOUNT_OF_ITEMS = "amountOfItem";
+	public static final String PROP_IG_NAME = "igName";
+	public static final String PROP_AMOUNT_OF_ITEMS = "amountOfItems";
 	
 	private Integer igId;
 	private String igName;
 	private Long amountOfItems;
+	public ItemGroupDto() {
+		// TODO Auto-generated constructor stub
+	}
 	public ItemGroupDto(Integer igId, String igName, Long amountOfItems) {
-		super();
 		this.igId = igId;
 		this.igName = igName;
 		this.amountOfItems = amountOfItems;
