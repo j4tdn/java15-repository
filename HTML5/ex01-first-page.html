@@ -1,0 +1,122 @@
+<!DOCTYPE> <!-- Support HTML5 -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ex01 - My First HTML Page</title>
+	<link rel="icon" href="images/world.png">
+
+	<!-- Internal css -->
+	<style>
+		table tbody tr:nth-child(2n + 1) {
+			background-color: gray;
+		}
+	</style>
+</head>
+<body id="block-start">
+
+
+	<!-- Anchor -->
+
+	<a href="https://www.google.com.vn" target="_blank">Navigate to google</a>
+	<br>
+	
+	<a href="tel:+0342451242">Call me : 0342451242</a>
+	<br>
+	<a href="#block-table">Table part</a>
+	<br>
+	<a href="ex02-prototype.html">PAGE 2</a>
+	<br>
+	<a href="sub-folder/ex03-prototype.html">SUB FOLDER - PAGE 3</a>
+
+	<!-- HEADING -->
+	<h1> This is H1 tag </h1>
+
+	<h3> This is H3 tag </h3>
+
+	<h5> This is H5 tag </h5>
+	<!-- PARAGRAPH -->
+	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. <strong>Duis aute irure dolor in reprehenderit</strong>  in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. <em>Excepteur sint occaecat cupidatat non</em>
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+	</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. </p>
+
+
+	<!-- IMAGE -->
+
+	<img src="images/cake.jpg" alt="cake" width="220px" height="220px">
+
+
+	<!-- TABLE -->
+	<hr>
+
+	<table border="1px" cellspacing="0" cellpadding="5px" id="block-table">
+		<thead>
+			<tr>
+			<th rowspan="2">Name</th>
+			<th rowspan="2">Age</th>
+			<th rowspan="2">Eye Color</th>
+			<th colspan="2">Phone</th>
+		</tr>
+		<tr>
+			<th>Fax 1</th>
+			<th>Fax 2</th>
+		</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<td>Peter</td>
+			<td>18</td>
+			<td>Blue</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>Kate</td>
+			<td>22</td>
+			<td>Green</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>Oliver</td>
+			<td>24</td>
+			<td>Gray</td>
+			<td>1</td>
+			<td>1</td>
+		</tr>
+		</tbody>
+		
+	</table>
+
+	<a href="#block-start">
+		<img src="images/scroll-top.png" alt="Scroll-Top">
+	</a>
+
+	<br>
+
+	<!-- DIVISION - Thẻ phân chia trang -->
+	<div>
+		<p>DESIGN By JAVA15 &#129315; &copy; 2023</p>
+	</div>
+
+	<!-- Audio/Video -->
+	<video src="video/video.mp4" controls poster="images/cupcake.png"
+			width="220px" height="220"  loop>
+		
+	</video>
+
+	<audio src="audio/audio.mp3" controls loop >
+		
+	</audio>
+
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/YsluoBG1BK4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+</html>
