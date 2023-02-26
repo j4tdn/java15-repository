@@ -1,0 +1,117 @@
+<!DOCTYPE html> <!-- Support HTML5 -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ex01-My First HTML Page</title>
+	<link rel="icon"	href="images/world.png">
+
+	<!-- internal CSS -->
+	<style>
+		table tbody tr:nth-child(2n){
+			background-color: skyblue;
+		}
+	</style>
+</head>
+<body id="block-star">
+	<!-- ANCHOR-LINK -->
+	
+		<a href="https://www.google.com/" target="_blank" >google</a>
+		<br>
+		<a href="tel:+762798079">Call me via this phone</a>
+		<br>
+		<a href="#block-table">Table path</a>
+		<br>
+		<a href="ex02-prototype.html">Page 2</a>
+		<br>
+		<a href="subfolder/ex03-prototype.html">Sub Folder - Page 3</a>
+
+
+ 	<!--HEADING -->
+ 	<h1>This is H1 tag</h1>
+
+ 	<h3>This is H3 tag</h3>
+ 	
+ 	<h5>This is H5 tag</h5>
+ 	<!-- PARAGRAPH -->
+ 	<p></p>
+ 	<!--	IMAGE	-->
+ 	<img src="images/cake.jpg" alt="cake" width="220" height="220">
+ 	<hr> <!-- horizontal line -->
+ 	<!-- TABLE -->
+ 	<table border="1px" cellpadding="5" cellspacing="0" bgcolor="Grey" width="500px" id="block-table">
+ 		<thead>
+ 			<tr>
+ 			<th rowspan="2">Name</th>
+ 			<th rowspan="2">Age</th>
+ 			<th rowspan="2">EyeColour</th>
+ 			<th colspan="2">Phone</th>
+ 		</tr>
+ 		<tr>
+ 			<th>Fax1</th>
+ 			<th>Fax2</th>
+ 		</tr>
+ 		</thead>
+ 		<tbody>
+ 			<tr>
+ 			<td>Peter</td>
+ 			<td>18</td>
+ 			<td>Blue</td>
+ 			<td>1</td>
+ 			<td>2</td>
+ 		</tr>
+ 		<tr>
+ 			<td>Booker</td>
+ 			<td>26</td>
+ 			<td>Orange</td>
+ 			<td>3</td>
+ 			<td>4</td>
+ 		</tr>
+ 		<tr>
+ 			<td>Paul</td>
+ 			<td>38</td>
+ 			<td>Grey</td>
+ 			<td>5</td>
+ 			<td>6</td>
+ 		</tr>
+ 		<tr>
+ 			<td>James</td>
+ 			<td>38</td>
+ 			<td>Yellow</td>
+ 			<td>7</td>
+ 			<td>8</td>
+ 		</tr>
+ 		<tr>
+ 			<td>Curry</td>
+ 			<td>30</td>
+ 			<td>Blue</td>
+ 			<td>9</td>
+ 			<td>10</td>
+ 		</tr>
+ 		<tr>
+ 			<td>Durant</td>
+ 			<td>35</td>
+ 			<td>Black</td>
+ 			<td>11</td>
+ 			<td>12</td>
+ 		</tr>
+ 		</tbody>
+ 		
+ 	</table>
+ 	<a href="#block-star">
+ 		<img src="images/scroll-top.png" alt="Scroll-Top">
+ 	</a>
+ 	<br>
+ 	<!-- DIVSION - THE PHAN CHIA TRANG -->
+ 	<div>
+ 		<p>Design by JAVA15 &#128514; &copy; 2023</p>
+ 	</div>
+ 	<!-- AUDIO VIDEO -->
+ 	<video src="video/video.mp4" controls poster="images/cupcake.png" width="200" height="200"></video>
+ 	<br>
+ 	<audio src="audio/audio.mp3" controls loop></audio>
+ 	<!-- EMBEDDED VIDEO -->
+ 	<iframe width="560" height="315" src="https://www.youtube.com/embed/zOOwAZyO5N0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</body>
+</html>
