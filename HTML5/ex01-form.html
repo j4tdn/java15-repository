@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ex01 - Form Demo</title>
+</head>
+<body>
+	<h2>Demo Tags with HTML Form</h2>
+
+	<hr>
+
+	<form action="#">
+		<table>
+			<tr>
+				<td>
+					<label>Passport Id:</label>
+				</td>
+				<td>
+					<input type="text" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Username:</label>
+				</td>
+				<td>
+					<input type="text" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Password:</label>
+				</td>
+				<td>
+					<input type="text" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Age:</label>
+				</td>
+				<td>
+					<input type="number" min="14" max="30">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Gender:</label>
+				</td>
+				<td>
+					<input type="radio" name="gender-group" checked>Male
+				</td>
+				<td>
+					<input type="radio" name="gender-group">Female
+				</td>
+			</tr>
+
+			<tr>
+				<td>City:</td>
+				<td>
+					<select>
+						<option value="HaNoi">Ha Noi</option>
+						<option value="DaNang">Da Nang</option>
+						<option value="TPHoChiMinh">TP Ho Chi Minh</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="REG"></td>
+				<td><input type="reset" value="RES"></td>
+			</tr>
+
+
+		</table>
+	</form>
+</body>
+</html>
