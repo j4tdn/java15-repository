@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ex01 - Form Demo</title>
+</head>
+<body>
+	
+	<h2>Demo Tags with HTML Form</h2>
+
+	<!-- <hr> -->
+
+	<!-- 
+		action: request will be submitted when click submit button
+	 -->
+	<form action="#">
+		<table cellpadding="5">
+			<tr>
+				<td><lable>Passport Id:</lable></td>
+				<td><input type = "text"></td>
+			</tr>
+			<tr>
+				<td><lable>Username:</lable></td>
+				<td><input type = "text" required></td>
+			</tr>
+			<tr>
+				<td><lable>Password:</lable></td>
+				<td><input type = "password" required></td>
+			</tr>
+			<tr>
+				<td><lable>Age:</lable></td>
+				<td><input type = "number" min="14" max="30"></td>
+			</tr>
+			<tr>
+				<td><lable>Gender:</lable></td>
+				<!-- RadioButton Group -->
+				<td>
+					<input type="radio" name="gender-group">Male
+					<input type="radio" name="gender-group" checked>Female
+				</td>
+			</tr>
+			<tr>
+				<td>City:</td>
+				<td>
+					<select>
+						<option value="HaNoi">Ha Noi</option>
+						<option value="DaNang">Da Nang</option>
+						<option value="SaiGon">Sai Gon</option>
+						<option value="QuangNgai">Quang Ngai</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type = "submit" value="REG">
+					<input type = "reset" value="RES">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
