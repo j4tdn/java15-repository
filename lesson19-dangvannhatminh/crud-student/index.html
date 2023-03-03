@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student Web App - Spring MVC </title>
+	
+	<style type="text/css">
+		html {
+			width: 100%;
+			height: 100%;
+		}
+		body {
+			width: 100%;
+			height: 100%;
+		}
+		form {
+			width: 70%;
+			background-color: #DDDDDD;
+		}
+		form table {
+			text-align: center;
+			width: 100%;
+			height: 200px;
+		}
+		form table .iconTable{
+			font-size: 30px;
+		}
+		div {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+		.searchBtn {
+			width: 200px;
+			height: 30px;
+			border: solid 1px;
+			border-radius: 30px;
+		}
+		.addStudentBtn {
+			width: 220px;
+			height: 35px;
+			border: solid 1px;
+			text-align: left;
+		}
+		.addStudentBtn span {
+			font-size: 25px;
+			margin-left: 5px;
+			padding: 5px;
+		}
+		ul {
+		  list-style-type: none;
+		  display: inline-block;
+		  padding-left: 0px;
+		}
+		ul li {
+			cursor: pointer;
+			font-weight: 800;
+			text-align: center;
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			margin-left: 10px;
+			margin-right: 10px;
+			border: solid 2px;
+			border-radius: 50%;
+		}
+		
+	</style>
+</head>
+<body >
+	<form>
+		<label>Student Web App - Spring MVC</label>
+		<hr>
+		<div class="searchBtn">
+			&#128270;   Search
+		</div>
+		<div class="addStudentBtn">
+			<span>&#43;</span>
+			Add new Student
+		</div>
+		<table border="1px" cellspacing="0" cellpadding="15px" >
+			<thead>
+				<td>&#8864;</td>
+				<td>Name</td>
+				<td>Class</td>
+				<td></td>
+			</thead>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>John Smith</td>
+				<td>12T8</td>
+				<td class="iconTable">&#128456; ╳</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>Mina Tan</td>
+				<td>10X3</td>
+				<td class="iconTable">&#128456; ╳</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox"></td>
+				<td>Lee Ha</td>
+				<td>14T2</td>
+				<td class="iconTable">&#128456; ╳</td>
+			</tr>
+		</table>
+		<div>
+			<span><</span>
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+			<span>></span>
+		</div>
+	</form>
+</body>
+</html>
