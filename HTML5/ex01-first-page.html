@@ -1,0 +1,100 @@
+<!DOCTYPE> <!-- Support HTML5 -->
+<html>
+<head>
+	<link rel="icon"  href="images/world.png">
+	<title>Ex01 - My First HTML Page</title>
+	<meta charset="utf-8">
+
+	<!-- internal css -->
+	<style>
+		table tbody tr:nth-child(2n+1) {
+			background-color: yellow;
+		}
+
+		p {
+			text-align: center;
+		}
+	</style>
+</head>
+<body id="block-start">
+
+	<!-- ANCHOR - LINK -->
+	<a href="https://www.google.com/" target="_blank">Navigate to Google Page</a> <br>
+	<a href="tel:+0345544474">Call me: 0345544474</a> <br>
+	<a href="#block-table">Table part</a> ><br>
+	<a href="ex02-prototype.html">Page 2</a> <br>
+	<a href="sub-folder/ex03-prototype.html">Sub Folder Page 3</a> <br>
+
+	<!-- HEADING -->
+	<h1>This is H1 tag</h1>
+	<h3>This is H3 tag</h3>
+	<h5>This is H5 tag</h5>
+
+	<!-- PARAGRAPH -->
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat.<br> Duis aute irure dolor in <strong>reprehenderit</strong> in <em>voluptate</em> velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<!-- IMAGE -->
+	<img src="images/cake.jpg" alt="cake" width="220" height="220">
+	<!-- Table -->
+	<table border="1px" cellpadding="5" cellspacing="0" id="block-table">
+		<thead>		
+			<tr>
+				<th rowspan="2">Name</th>
+				<th rowspan="2">Age</th>
+				<th rowspan="2">Eye color</th>
+				<th colspan="2">Phone</th>
+			</tr>
+			<tr>
+				<th>Fax1</th>
+				<th>Fax2</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Peter</td>
+				<td>18</td>
+				<td>Blue</td>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>Kate</td>
+				<td>22</td>
+				<td>Green</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>John</td>
+				<td>20</td>
+				<td>Red</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+		</tbody>
+	</table> <br>
+	<a href="#block-start">
+		<img src="images/scroll-top.png" alt="Scroll-top">
+	</a> <br>
+
+	<!-- Division - Thẻ phân chia trang -->
+	<div>
+		<p>Designed by JAVA14 &#129303; &copy; 2023</p>
+	</div>
+
+	<!-- Audio - Video -->
+	<video src="video/video.mp4" controls poster="images/cupcake.png" 
+		   width="220px" height="220px">
+	</video>
+
+	<audio src="audio/audio.mp3" controls loop></audio>
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/zFkTjHpeQNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+</body>
+</html>
