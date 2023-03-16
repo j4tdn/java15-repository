@@ -31,7 +31,7 @@ public class ItemGroupView {
 		System.out.println("\n\n 3. Search IG by name");
 		String sqlName = "Thắt lưng";
 		String sqlInjection = "...' OR '1=1";
-		List<ItemGroup> igsByName = itemGroupService.search(sqlInjection);
+		List<ItemGroup> igsByName = itemGroupService.search(sqlName);
 		igsByName.forEach(System.out::println);
 		
 		System.out.println("\n\n 4. Get IG(s) details");
