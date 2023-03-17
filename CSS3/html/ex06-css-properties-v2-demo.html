@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        #block-1 {
+            width: 250px;
+            height: 375px;
+
+            background-color: orange;
+            /*auto: size: itself*/
+            background-size: 100px 200px;
+            background-repeat: no-repeat;
+
+            position: fixed;
+
+            bottom: 500px;
+        }
+
+        #block-2 {
+            width: 250px;
+            height: 375px;
+
+            background-image: url(../images/cat.png);
+            background-size: cover;
+            /*images's dimension must have same rate with cover block*/
+
+            /* relative to itself */
+            position: relative;
+            left: 180px;
+            bottom: 120px;
+        }
+
+        #block-3 {
+            width: 250px;
+            height: 375px;
+
+            background-color: green;
+            background-repeat: no-repeat;
+
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        #container {
+            background-color: black;
+            margin: 0 auto;
+            width: 60%;
+            height: 600px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="block-1">
+
+    </div>
+
+    <div id="block-2">
+
+    </div>
+
+    <div id="container">
+        <div id="block-3">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
