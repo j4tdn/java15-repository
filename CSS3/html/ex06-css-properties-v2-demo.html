@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ex02 - V2 -Demo</title>
+	<style type="text/css">
+		#block1 {
+			width: 132px;
+			height: 198px;
+/*			background-color: green;*/
+			background: linear-gradient(135deg,
+				#ccc 0%,
+				#fff 100%);
+			background-repeat: no-repeat;
+			position: fixed;
+			z-index: 1;
+		}
+
+		#block2 {
+			width: 132px;
+			height: 198px;
+			background-image: url(../images/lemon.png);/*auto: size = itsel*/
+			background-size: cover; /*hình ảnh cùng tỉ lệ với cover block*/
+			background-size: contain;
+			background-repeat: no-repeat;
+			left: 90px;
+			bottom: 40px;
+			position: relative;
+			z-index: 0;
+		}
+
+		#container{
+			background-color: aqua;
+			margin: 0 auto;
+			width: 30%;
+			height: 300px;
+			position: relative;
+		}
+
+		#block3 {
+			width: 132px;
+			height: 198px;
+			background-color: orange;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 5px;
+			left: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div id="block1"></div>
+	<div id="block2"></div>
+	<div id="container">
+		<div id="block3"></div>
+	</div>
+
+
+
+</body>
+</html>
