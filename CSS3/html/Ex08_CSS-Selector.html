@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Selectors</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		ul li{
+			text-decoration: line-through;
+		}
+		ul a {
+			text-decoration: none;
+		}
+		ul a:hover{
+			color: green;
+		}
+		h1~p{
+			color: red;
+		}
+		input[type = checkbox]:checked + label{
+			color: green;
+		}
+		.form-submit:enabled{
+			background-color: red;
+			color: white;
+		}
+		.form-submit:disabled{
+			background-color: blue;
+			color: black;
+		}
+		/*.positions p:nth-child(-n+5){
+			color: red;
+		}*/
+		.positions p:last-of-type{
+			color: violet;
+		}
+		.post-title::after{
+			content: "";
+			display: block;
+			width: 40px;
+			height: 2px;
+			background-color: red;
+			margin:10px 0;
+		}
+		.post-title::before{
+			content: "\1F339";
+		}
+
+		}
+	</style>
+</head>
+<body>
+<h2 class="post-title">Seating Layout</h2>
+
+	<h1>Coffee &amp; Cake</h1>
+	<p>We have been banking and brewing</p>
+	<h2>Our menu:</h2>
+	<ul>
+		<li><a href="">Chocolate cupcake</a></li>
+		<li><a href="">Vanilla cupcake</a></li>
+	</ul>
+	<ol>
+		<li><a href="">Americano</a></li>
+		<li><a href="">Espresso</a></li>
+	</ol>
+	<div>
+		<p>Read what customer say <a href="">about us</a></p>
+	</div>
+
+	<p>We hope to see you soon</p>
+	<hr>
+	<form>
+		<div>
+			<input type="text" placeholder="Enter your name: ">
+		</div>
+		<div>
+			<p>
+				Hobbies
+			</p>
+			<input type="checkbox" id="fb"> <label for="fb">Football</label> <br>
+			<input type="checkbox" id="bd"> <label for="bd">Badminton</label> <br>
+			<input type="checkbox" id = vlb> <label for="vlb">Volleyball</label> <br>
+
+			<button class="form-submit" disabled>Submit</button>
+		</div>
+	</form>
+	<hr>
+
+	<div class="positions">
+		<h2>ROW A</h2>
+		<h2>ROW B</h2>
+		<p>Line1</p>
+		<p>Line2</p>
+		<p>Line3</p>
+		<p>Line4</p>
+		<p>Line5</p>
+		<p>Line6</p>
+	</div>
+
+</body>
+</html>
