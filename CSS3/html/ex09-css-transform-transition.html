@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ex09: Transform, Transition</title>
+    <style>
+        .block {
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            border: 1px solid grey;
+
+            background-color: rgb(77, 159, 156);
+            box-shadow: 0 0 10px 75px rgb(58, 77, 185);
+
+            transition: all 1s 3s linear,
+                transform 1s 5s;
+        }
+
+        .block:hover {
+            background-color: yellow;
+            border-radius: 50%;
+            opacity: 0.6;
+            transform: translate(100px, 30px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Advance Selectors</title>
+    <meta charset="utf-8">
+    <style>
+        ul li {
+            text-decoration: line-through;
+        }
+
+        ul a {
+            text-decoration: none;
+        }
+
+        ul a:hover {
+            color: green;
+        }
+
+        h1~p {
+            color: red;
+        }
+
+        input[type=checkbox]:checked+label {}
+
+        .form-sublit:enabled {}
+
+        .position p:nth-child(-n +2) {
+            color: red;
+        }
+
+        /*before, after --> inline tag*/
+        .post-title::after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: red;
+            margin: 20px 0px;
+        }
+
+        .post-title::before {
+            content: '\1F339';
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 class="post-title">Seating Layout</h2>
+
+
+    <h1>Coffee &amp; Cake</h1>
+    <p>We have been banking and brewing</p>
+    <h2>Our menu:</h2>
+    <ul>
+        <li><a href="">Chocolate cupcake</a></li>
+        <li><a href="">Vanilla cupcake</a></li>
+    </ul>
+    <ol>
+        <li><a href="">Americano</a></li>
+        <li><a href="">Espresso</a></li>
+    </ol>
+    <div>
+        <p>Read what customer say <a href="">about us</a></p>
+    </div>
+    <p>We hope to see you soon</p>
+
+    <hr>
+
+    <form>
+        <div>
+            <input type="text" placeholder="Enter your name">
+        </div>
+        <div>
+            <p>Hobbies</p>
+            <input type="checkbox" id="football"><label for="football">Football</label> <br>
+            <input type="checkbox"><label for="football">Volleyball</label> <br>
+            <input type="checkbox"><label for="football">Badminton</label> <br>
+
+            <button class="form-submit" disabled>Submit</button>
+        </div>
+    </form>
+
+    <hr>
+
+    <div class="position">
+        <p>Line 1</p>
+        <p>Line 2</p>
+        <p>Line 3</p>
+        <p>Line 4</p>
+        <p>Line 5</p>
+
+        <div>
+            <p>Footer 1</p>
+            <p>Footer 2</p>
+            <p>Footer 3</p>
+        </div>
+    </div>
+</body>
+
+</html>
