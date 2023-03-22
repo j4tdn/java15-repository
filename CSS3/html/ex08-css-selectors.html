@@ -3,8 +3,71 @@
 <head>
 	<title>Advance Selectors</title>
 	<meta charset="utf-8">
+	<style>
+		ul li {	
+			text-decoration: line-through;
+		}
+
+		ul a {
+			text-decoration: none;
+		}
+
+		ul a:hover {
+			color: green;
+		}
+
+		h1 ~ p {
+			color: red;
+		}
+
+		input[type=checkbox]:checked + label {
+			color: green;
+		}
+
+		.form-submit {
+			background-color: red;
+			color: white;
+		}
+
+		.form-submit:disabled {
+			background-color: blue;
+			color: black;
+		}
+
+		/*CSS positions*/
+		/*hightlight all elements except last 2 lines*/
+		.position>p:first-of-type {
+			color: red;
+		}
+
+		.position>p:last-of-type {
+			color: violet;
+			font-weight: bold;
+		}
+
+		/*before, after --> inline tag*/
+
+		.post-title::before {
+			content: '\1F339';
+		}
+
+		.post-title::after {
+			content: "";
+			display: block;
+			width: 40px;
+			height: 2px;
+			background-color: #f22;
+			margin: 20px 0;
+		}
+
+	</style>
 </head>
 <body>
+
+	<h2 class="post-title">Seating &#127801; Layout</h2>
+
+
+
 	<h1>Coffee &amp; Cake</h1>
 	<p>We have been banking and brewing</p>
 	<h2>Our menu:</h2>
@@ -20,5 +83,49 @@
 		<p>Read what customer say <a href="">about us</a></p>
 	</div>
 	<p>We hope to see you soon</p>
+
+	<hr>
+
+	<form>
+		<div>
+			<input type="text" placeholder="Enter your name">
+		</div>
+
+		<div>
+			<p>Hobbies</p>
+			<input type="checkbox" id="fb">
+			<label for="fb">Football</label> <br>
+
+			<input type="checkbox" id="vlb"> 
+			<label for="vlb">Volleyball</label> <br>
+
+			<input type="checkbox" id="bmt"> 
+			<label for="bmt">Badminton</label>
+
+			<button class="form-submit" disabled>Submit</button>
+		</div>
+	</form>
+
+	<hr>
+
+	<div class="position">
+		<h2>Row A</h2>
+		<h2>Row B</h2>
+		<h2>Row C</h2>
+
+		<p>Line 1</p>
+		<p>Line 2</p>
+		<p>Line 3</p>
+		<p>Line 4</p>
+		<p>Line 5</p>
+		<p>Line 6</p>
+
+		<div>
+			<p>Footer 1</p>
+			<p>Footer 2</p>
+			<p>Footer 3</p>
+		</div>
+	</div>
+
 </body>
 </html>
