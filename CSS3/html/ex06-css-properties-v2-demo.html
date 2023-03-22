@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ex06 - V2 - Demo</title>
+	<style>
+		#block-1 {
+			width: 250px;
+			height: 400px;
+
+			background-color: green;
+			background-repeat: no-repeat;
+
+			position: fixed;
+/*			z-index: 1;*/
+		}
+		#block-2 {
+			width: 250px;
+			height: 375px;
+
+			background-image: url(../images/cat.png); /* auto: size:itself */
+  			background-size: cover;
+  			/*image 's dimension must have same rate with cover block*/	
+
+  			/*relative to it's position*/
+  			position: relative;
+  			left: 180px;
+  			bottom: 120px;
+		}
+		#container {
+			width: 30%;
+			height: 600px;
+			background-color: blueviolet;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		#block-3 {
+			width: 250px;
+			height: 375px;
+
+			background-color: orange;
+			background-repeat: no-repeat;
+
+			position: absolute;
+			top: 10px;
+			left: 10px;
+
+		}
+
+		#block-4{
+			width: 250px;
+			height: 375px;
+			background-color: orange;
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="block-1">
+		
+	</div>
+	<div id="block-2">
+		
+	</div>
+	<div id="container">
+		<div id="block-3">
+			
+		</div>
+	</div>
+	<div id="block-4">
+		
+	</div>
+	
+</body>
+</html>
