@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ex06 - V2 - Demo</title>
+
+	<style>
+		#block-1 {
+			width: 250px;
+			height: 375px;
+
+			/*background-color: green;*/
+			background: linear-gradient(105deg, 
+				#ccc 0%,
+				#000 50%,
+				#abcb23 51%,
+				#2b2b2c 99%);
+			background-repeat: no-repeat;
+
+			position: fixed; /*another layer*/
+			z-index: 1; /*default: 0*/
+		}
+
+		#block-2 {
+			width: 250px;
+			height: 375px;
+
+			background: url(../images/cat.png);
+			/*image's dimension must have same rate with cover block*/
+			background-size: cover;
+
+			/*relative to it's position*/
+			position: relative;
+			left: 180px;
+			top: 420px;
+		}	
+
+		#container {
+			background-color: blueviolet;
+			margin: 0 auto;
+
+			width: 30%;
+			height: 600px;
+			position: relative;
+		}
+
+		#block-3 {
+			width: 250px;
+			height: 375px;
+
+			background-color: orange;
+			background-repeat: no-repeat;
+
+			position: absolute;
+			top: 10px;
+			left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id='block-1'>
+	</div>
+
+	<div id='block-2'>
+	</div>
+
+	<div id="container">
+		<div id='block-3'>
+		</div>	
+	</div>
+	
+</body>
+</html>
