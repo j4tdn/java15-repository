@@ -1,0 +1,296 @@
+html {
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Roboto', sans-serif;
+}
+header {
+	width: 100%;
+	height: 70px;
+	background-color: #F6C61C;
+}
+.wrapper {
+	width: 90%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	
+/*	position: relative;*/
+
+}
+.wrapper .header-navigation-left {
+	width: calc(100%/3);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: 20px;
+
+}
+.wrapper .header-navigation-right {
+	width: calc(100%/3);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+}
+.wrapper .header-logo {
+	width: calc(100%/3);
+	height: 100%;
+	position: relative;
+}
+.wrapper .header-logo img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.wrapper .list-block li {
+	display: inline-block;
+	padding: 0 17px;
+	margin-right: 15px;
+	box-sizing: border-box;
+}
+.wrapper .list-block li a{
+	font-size: 18px;
+	color: black;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+/*====================Main content=======================*/
+
+main{
+	width: 74%;
+	height: 1300px;
+	display: inline-block;
+	border-right: 1px solid #9E9C9C;
+}
+main .main-content {
+	margin: 55px 40px;
+	cursor: pointer;
+}
+main .main-title {
+	font-size: 28px;
+    margin: 40px 40px ;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+main .main-content .item {
+	margin: 30px 0;
+	display: flex;
+}
+
+main .main-content .item .item-desc{
+	margin-left: 30px;
+}
+main .main-content .item .item-desc .item-title{
+	font-size: 25px;
+}
+main .main-content .item .item-desc .item-info {
+	display: flex;
+}
+
+main .main-content .item .item-desc .item-info p{
+	margin: 20px 18px 20px 0;
+	color: #9E9C9C;
+}
+main .main-content .item .item-desc .item-info p:not(:last-child):after{
+	content: "";
+	display: inline-block;
+	width: 1.5px;
+	height: 15px;
+	margin-left: 18px;
+	background-color: #9E9C9C;
+}
+main .main-content .item .item-desc .item-info p:last-child{
+	color: #F9B536;
+}
+
+main .main-content .item .item-desc .item-content{
+	font-size: 16px;
+    line-height: 23px;
+}
+main .main-content .item .item-desc .item-content span{
+	color: #F9B536;
+	font-weight: bold;
+}
+main .main-content .item .item-desc .item-interact{
+	display: flex;
+	margin-top: 10px;
+}
+main .main-content .item .item-desc .item-interact div{
+	display: flex;
+	padding: 10px;
+	margin-right: 10px ;
+	box-sizing: border-box;
+}
+main .main-content .item .item-desc .item-interact .view::after{
+	content: "";
+	display: inline-block;
+	width: 1.5px;
+	height: 15px;
+	margin-left: 18px;
+	background-color: #9E9C9C;
+}
+main .main-content .item .item-desc .item-interact div span{
+	margin-left: 10px;
+
+}
+main .main-content .item .item-desc .item-interact .comment span{
+	color: #F9B536;
+}
+
+main .more-btn {
+	width: 150px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid #F9B536;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+main .more-btn:hover {
+	background-color: #F6C61C;
+	box-shadow: 0px 0px 50px 10px #F6C61C;
+}
+
+/*====================side bar ==============================*/
+aside {
+	width: 25%;
+	float: right;
+	display: inline-block;
+}
+aside .side-container {
+	margin-left: 40px;
+}
+aside .side-container .search-box{
+	display: flex;
+	align-items: center;
+	width: 260px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+aside .side-container .search-box i{
+	margin: 0 7px;
+}
+aside .side-container .search-box input, input::placeholder{
+	border: none;
+	font: 16px sans-serif;
+
+}
+aside .side-container .calendar {
+	margin: 40px 0;
+	border: 2px solid #ABB2B9;
+}
+aside .side-container th, td {
+	border: 1px solid #EAECEE;
+}
+aside .side-container .calendar th, td {
+	padding: 10px;
+}
+aside .side-container .calendar thead tr:nth-child(2) {
+	background-color: #ABB2B9 ;
+}
+aside .side-container .calendar thead tr:nth-child(1) .prev-month {
+	float: left;
+	font-size: 20px;
+}
+aside .side-container .calendar thead tr:nth-child(1) .next-month {
+	float: right;
+	font-size: 20px;
+}
+aside .side-container .calendar .non-day-of-month {
+	color: #ABB2B9;
+}
+aside .side-container .calendar .today {
+	background-color: #F6C61C;
+}
+aside .side-container .popular-container h2 {
+	font-size: 24px;
+    font-weight: 600;
+    margin: 75px 0px 50px;
+    position: relative;
+}
+aside .side-container .popular-container h2::after {
+	position: absolute;
+	top:50%;
+	content: "";
+    display: inline-block;
+    width: 218px;
+    height: 2px;
+    background-color: #dfdfdf;
+    margin-left: 7px;
+}
+aside .side-container .popular-container .popular-item {
+	margin: 20px 0;
+}
+aside .side-container .popular-container .popular-item .date-item {
+	display: block;
+    color: #a5a3a3;
+    font-size: 11px;
+    padding: 6px 0;
+}
+
+
+/*========================Footer====================*/
+footer {
+	width: 100%;
+	height: 80px;
+	background-color: #F6C61C;
+}
+footer .footer-content{
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+
+}
+footer .footer-content ul li{
+	margin: 0 20px;
+}
+footer .footer-content .footer-info{
+	display: block;
+    width: 20%;
+    text-align: center;
+    font-size: 12px;
+    color: #f1e9e9;
+}
+footer .footer-content .footer-contact{
+	display: block;
+	width: 50%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+footer .footer-content .footer-social{
+	display: block;
+	width: 20%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+footer .footer-content .footer-social li{
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	border-radius: 50%;
+	position: relative;
+}
+footer .footer-content .footer-social li i{
+	font-size: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
