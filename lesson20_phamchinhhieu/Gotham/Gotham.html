@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            height: 50px;
+            width: 100%;
+            background-color: rgb(255, 187, 1);
+        }
+        .content-left{
+            display: inline;
+            font-size: 32px-2rem;
+            font-family: corbel;
+            height: 50px;
+            line-height: 50px;
+        }
+        .content-right{
+            /* display: inline; */
+            font-size: 32px-2rem;
+            font-family: corbel;
+            height: 50px;
+            line-height: 50px;
+        }
+        .body{
+            width: 1140px;
+            border-right: 1px solid rgb(144, 144, 144);
+            float: left;
+
+        }
+        .img{
+            /* display: block; */
+            float:left; 
+            padding-top: 10px;
+            padding-left: 100px;
+            padding-right: 200px;
+        }
+    
+        li{
+            float: left;
+            margin-right: 44px;
+            padding-top: 10px
+        }
+        li a{
+            color: rgb(0, 0, 0);
+            text-decoration: none
+        }
+        h3{
+            padding-left: 100px;
+        }
+        .img1{
+            max-width: 100%;
+            height: auto;
+            float: left;
+            padding: 0 30px 0px 100px;
+        }
+        .info{
+            padding-bottom: 40px;
+        }
+        .text{
+            width: 1100px;
+        }
+        .text p{
+            padding-bottom: 20px;
+            margin: 0;
+        }
+        .text p a{
+            text-decoration: none;
+            color: black;
+        }
+        #title{
+            font-size: 40px;
+            font-weight: revert-layer;
+        }
+        #note{
+            color: #999;;
+        }
+        #note a{
+            color: rgb(255, 187, 1);
+            text-decoration: none;
+        }
+        .body-right{
+            display: inline;
+        }
+
+        .more{
+            padding-left: 600px;
+        }
+        .more-info{
+            width: 200px; /* độ rộng của phần tử */
+            height: 70px;
+            border-width: 2px;
+            border-style: solid;
+            border-color:rgb(255, 187, 1);
+            background-color: white;
+            margin-bottom: 20px;
+        }
+        .more-info:hover{
+            color:white;
+            background-color: rgb(255, 187, 1);
+        }
+        .search{
+            display: inline-block;
+            position: relative;
+            height: 100%;
+            padding: 20px 0px 40px 20px;
+          
+        }
+        #search-text{
+            display: inline-block;
+            position: relative;
+            width: 220px;
+            height: 35px;
+            border-width: 2px;
+            border-color: black;
+            border-style: solid;
+            border-radius: 5px;
+            margin-top:50px;
+            padding-left: 50px;
+            padding-right: 50px;
+
+        }
+        .img-search{
+            position: absolute;
+            margin:-30px 5px 0px 10px ;
+        }
+        .table{  
+            margin-left: 40px;
+            padding-left: 100px;
+        }
+        .Popular{
+            padding-top: 40px;
+        }
+        .Popular > span{
+            padding-left: 50px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .addi p{
+            float: left;
+            margin-top: -10px;
+        }.popular1{
+            font-size: 20px;
+            padding-top: 50px;
+        }
+        .popular1 p{
+            font-size: 15px;
+            margin:0;
+            padding-left: 50px;
+            color: rgb(162, 162, 162);
+        }
+        .popular1 span {
+             padding-left: 50px;
+        }
+        .footer{
+            display: inline;
+            padding-top: 0;
+            clear: both;
+            display: block;
+             height: 70px;
+            width: 100%;
+            background-color: rgb(255, 187, 1);
+        }
+        .footer-content{
+            display: inline;
+        }
+        .footer-content p{
+            margin: 25px 0 0 70px;
+            float: left;
+        }
+        .footer-content ul{
+            display: inline-block;
+            padding-left: 500px;
+        }     
+     
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+            <div  class="content-left">
+            <ul type="none">
+          
+                <li >
+                    <a href="#">CULTURE</a>
+                </li>
+                <li>
+                    <a href="#">EVENTS</a>
+                </li>
+                <li><a href="">FOOT</a></li>
+            </ul>
+       </div> 
+       <p><img class="img" src="D:\Java15\5. FrontEnd\lesson20_phamchinhhieu\Gotham\images\logo.png" width="200px"></p>
+       <div  class="content-right">
+            <ul type="none">
+      
+                <li >
+                    <a href="#">TRAVELLING</a>
+                </li>
+                <li>
+                    <a href="#">FASHION</a>
+                </li>
+                <li><a href="">OTHER</a></li>
+            </ul>
+        </div> 
+    </div>
+    <div class="body">
+        <h3>Recent Articles</h3>
+        <div class="info">
+            <p class="img1"><img src="D:\Java15\5. FrontEnd\lesson20_phamchinhhieu\Gotham\images\article-1.jpg"></p>
+            <div class="text">
+                <p id="title"><a href="#">5 Standout Things to Know About the 2033 Cannes Film Festival</a></p>
+                <p id="note">June 8, 2033 | by Thomas Smith | <a href="#">Culture</a></p>
+                <p id="detail-content">The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz ...
+                </p>
+            </div>   
+        </div> 
+        <div class="info">
+            <p class="img1"><img src="D:\Java15\5. FrontEnd\lesson20_phamchinhhieu\Gotham\images\article-2.jpg"></p>
+            <div class="text">
+                <p id="title"><a href="#">15 Time Management Tips for Archieving Your Goal</a></p>
+                <p id="note">July 8, 2023 | by Chinh Hieu | <a href="#">Business</a></p>
+                <p id="detail-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia animi natus dolorem sit vitae odio quos corporis at deleniti quibusdam...
+                </p>
+            </div>   
+        </div>
+        <div class="info">
+            <p class="img1"><img src="D:\Java15\5. FrontEnd\lesson20_phamchinhhieu\Gotham\images\article-3.jpg"></p>
+            <div class="text">
+                <p id="title"><a href="#">Dolor sit amet consectetur adipisicing elit. Molestiae.</a></p>
+                <p id="note">November 13, 2022 | by Muler | <a href="#">Business</a></p>
+                <p id="detail-content">Consectetur adipisicing elit. Mollitia animi natus dolorem sit vitae odio quos corporis at deleniti quibusdam...
+                </p>
+            </div>   
+        </div>
+
+
+        <div class="more">
+            <button class="more-info">MORE ARTICLES</button>
+        </div>
+    </div>
+    <div class="body-right">
+        <div class="search">
+           
+            <input type="text" id="search-text" placeholder="Search...">
+            <p class="img-search"><img src="D:\Java15\5. FrontEnd\lesson20_phamchinhhieu\Gotham\images\search.png"></p>
+
+        </div>
+        <div class="table">
+            <table border="1" style="width:25%;height:200px">
+                <tr>
+                    <th colspan="7">March 2023</th>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>M</td>
+                    <td>T</td>
+                    <td>W</td>
+                    <td>T</td>
+                    <td>F</td>
+                    <td>Sa</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td>1</td>
+                </tr>
+               
+            </table>
+        </div>
+        <div class="addi">
+            <div class="Popular">
+                <span>Popular News</span>
+                <div class="popular1">
+                    <p>June 5 2023</p> <br>
+                    <span>Scene: The Guide</span> <br>
+                </div>
+
+                <div class="popular1">
+                    <p>June 5 2023</p> <br>
+                    <span>Wileman Home Tour: Exeter History Restored</span> <br>
+                </div>
+
+                <div class="popular1">
+                    <p>June 5 2023</p> <br>
+                   
+                    <span>Discovering Relatives and Relics in Southern Sweden</span> <br>
+                </div>
+
+             
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-content">
+            <p class="f-info"> © 2033 Gotham. All rights reserved</p>
+            <ul type="none">
+                <li>About Blog</li>
+                <li>Need Help?</li>
+                <li>Content Guide</li>
+            </ul>
+           <!--  <ul class="footer-social">
+                <li><i class="gg-facebook" style="color: #F6C61C;"></i></li>
+                <li><i class="gg-google" style="color: #F6C61C;"></i> </li>
+                <li><i class="gg-twitter" style="color: #F6C61C;"></i></li>
+            </ul> -->
+        </div>
+    </div>
+
+    
+</body>
+</html>
