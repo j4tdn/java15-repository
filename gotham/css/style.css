@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main {
+    flex: 1;
+}
+
+aside {
+    width: 300px;
+    margin-right: 0;
+}
+
+header,
+footer,
+.main,
+aside {
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+}
+
+footer {
+    background-color: #ccc;
+    color: #333;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 100px;
+    background-color: yellow;
+    color: #fff;
+}
+
+.logo img {
+    height: 30px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+/* body */
+.wrapper .main .title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.wrapper .main .elements {
+    margin-top: 10px;
+}
+
+.wrapper .main .elements .element {
+    padding: 20px 0;
+    display: flex;
+}
+
+.wrapper .main .elements .element .content {
+    margin-left: 20px;
+}
+
+.wrapper .main .elements .element .content h1 {
+    font-size: 25px;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper .main .elements .element .content h3 {
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 50;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper .main .elements .element .content p {
+    margin-top: 12px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px 0;
+    line-height: 20px;
+}
+
+.wrapper .main .elements .element .content a i {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.wrapper .main .button-show-more {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    width: 150px;
+    height: 50px;
+    margin: 10px 40%;
+    border-radius: 6px;
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .vertical-line {
+    width: 1px;
+    background-color: #000;
+}
+
+.wrapper aside {
+    margin-top: 40px;
+
+}
+
+.wrapper aside .search-box {
+    display: flex;
+    align-items: center;
+    background-color: yellow;
+    padding: 8px 16px;
+    width: 200px;
+    height: 20px;
+    border-radius: 8px;
+}
+
+.wrapper aside .search-input {
+    padding-left: 10px;
+}
+
+.wrapper aside .calendar {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper aside .calendar .month-year-box {
+    margin-top: 20px;
+    background-color: yellow;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper aside .calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wrapper aside .calendar thead th {
+    border: 1px solid #ddd;
+    background-color: #f2f2f2;
+    height: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrapper aside .calendar tbody td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+.wrapper aside .calendar tbody td:hover {
+    background-color: #f2f2f2;
+}
