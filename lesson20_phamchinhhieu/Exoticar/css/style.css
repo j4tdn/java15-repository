@@ -1,0 +1,205 @@
+/*======BAsE STYLE======
+*/
+body{
+	font-size: 16px;
+	font-family: "Helvetica Neue",Aria, sans-serif;
+	line-height: 1.4;
+	opacity: 0.8;
+}
+/*======COMMON STYLE======*/
+.wrapper
+{
+	width: 84%;
+	margin: 0 auto;
+}
+.text-white .text-white a{
+	color: #fff;
+}
+/*======HEADER STYLE======*/
+#page-header{
+	width: 100%;
+	height: 66px;
+	background: #000;
+}
+#page-header .logo{
+	float: left;
+	line-height: 66px;
+
+}
+
+#page-header .main-nav{
+	float: right;
+}
+
+#page-header .main-nav ul li{
+	float: left;
+	margin-left:48px ;
+/*		line-height: 66px;*/
+
+}
+#page-header .main-nav ul li a{
+	color: #fff;
+	opacity: 0.8;
+
+}
+#page-header .main-nav ul li a:hover{
+	color: red;
+	opacity: 0.8;
+
+}
+
+/*======MAIN STYLE======*/
+
+
+
+/*======MAIN BANNER STYLE======*/
+.banner{
+	background-image: url(../images/banner.png);
+	height: 860px;
+	width: 100%;
+	background-size: cover;
+	position: relative;
+}
+.banner .banner-block{
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fff;
+}
+.title{
+	text-transform: uppercase;
+	font-size: 3 rem;
+	font-weight: bold;
+}
+.statement{
+	font-size: 1.4rem;
+	margin: 20px 0 10px;
+}
+.banner .banner-block .discover{
+	padding: 10px 22px;
+	background-color: #ca0500;
+	text-transform: uppercase;
+	box-shadow: inset 0 0 50px rgb(0,0,0,0,5);
+}
+.banner .banner-block .discover:hover{
+	padding: 10px 22px;
+	background-color: #ca0500;
+	text-transform: uppercase;
+	box-shadow: inset 0 0 50px rgb(0,0,0,0,5);
+}
+
+/*======MAIN ARTICLE STYLE======*/
+.articles{
+/*	overflow: hidden;*/
+	background: linear-gradient(
+		100deg,
+		white 0 50%,
+		black 50% 100%);
+}
+.wrapper article{
+	width: 50%;
+	float: left;
+	padding-left: 100px;
+}
+.articles ::after{
+	content: ".";
+	font-size: 0;
+	display: block;
+	clear: both;
+}
+.wrapper article:first-child{
+	padding-right: 80px;
+	box-sizing: border-box;
+}
+.wrapper article:last-child{
+	padding-right: 80px;
+	box-sizing: border-box;
+}
+.wrapper .articles-title{
+	font-size: 2rem;
+}
+.articles .wrapper article .articles-title:after{
+	content: ".";
+	font-size: 0px;
+	display: block;
+	width: 60px;
+	height: 2px;
+	background-color: red;
+	margin: 20px 0;
+}
+.articles .wrapper article .quote{
+	font-size: 1.6rem;
+	font-style: italic;
+}
+.articles .wrapper article .content{
+	margin: 20px 0;
+}
+.ar1{
+	color: white;
+}
+#page-footer{
+	width: 100%;
+	height: 200px;
+	background: #000;
+	opacity: 0.8;
+}
+#page-footer .info ul li{
+	float: left;
+	margin-left:150px ;
+	line-height: 66px;*/
+}
+#page-footer .info ul li a{
+	color: #fff;
+}
+
+#page-footer .info li a:after{
+	content: ".";
+	font-size: 0px;
+	display: block;
+	width: 120px;
+	height: 2px;
+	background-color: rgb(128, 128, 128);
+	margin:0;
+}
+#page-footer .sub-info ul {
+	float: left;
+}
+#page-footer .sub-info .first-info {
+	margin-left: 150px;
+}
+#page-footer .sub-info .thirth-info li{
+/*	float: left;*/
+	margin-left: -75px;
+	margin-right: 85px;
+}
+#page-footer .sub-info ul li{
+	clear: both;
+	margin-right:130px ;
+}
+#page-footer .sub-info ul li a{
+	color: #fff;
+}
+/*#page-footer .sub-info .social{
+	float: right;
+}*/
+#page-footer .sub-info .social .logo {
+	display: inline-block;
+	position: relative;
+	margin: 10px 10px;	
+	width: 38px;
+	height: 38px;
+	background: white;
+	border-radius: 50%;
+	float: left;
+}
+#page-footer .sub-info .social .logo a{
+	position: absolute;
+	transform: translate(-5px,-5px);
+}
+#page-footer .sub-info .social .logo  a .icon-tw{
+	position: absolute;
+	transform: translate(-1px,1px);
+}
+}
