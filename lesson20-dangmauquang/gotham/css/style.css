@@ -1,0 +1,106 @@
+/*===== Base style ======*/
+body {
+	font-style: 16px;
+	font-family: font-strong;
+	src: url(../commons/Proxima Nova);
+	line-height: 1.4;
+}
+
+/*===== Common style ======*/
+.wrapper {
+	width: 84%;
+	margin: 0 auto;
+}
+
+.text-white, .text-white a {
+	color: black;
+}
+
+/*===== Header style ======*/
+#page-header {
+	width: 100%;
+	height: 66px;
+	line-height: 66px;
+	background-color: yellow;
+}
+
+
+#page-header .main-nav ul:first-child {
+	width: 33.3%;
+	float: left;
+}
+
+#page-header .main-nav ul:last-child {
+	width: 33.3%;
+	float: right;
+}
+
+#page-header .main-nav ul li {
+	float: left;
+	margin-left: 48px;
+}
+
+#page-header .main-nav ul li a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+#page-header .main-nav .logo {
+	width: 33.3%;
+	text-align: center;
+	float: left;
+	padding-top: 20px;
+}
+
+.page-header::after {
+	content: ".";
+	font-size: 0;
+	display: block;
+	clear: both;
+}
+
+/*===== Footer style ======*/
+.footer{
+	background-color: black;
+	opacity: 90%;
+	padding-top: 20px;
+
+}
+
+.footer p {
+	width: 33%;
+	color: white;
+	float: left;
+}
+.footer ul {
+	width: 33%;
+	float: left;
+	color: white;
+}
+
+.footer ul li {
+	float: left;
+	margin-left: 44px;
+}
+
+.footer .social {
+	width: 33%;
+	float: right;
+}
+
+.footer .social a {
+	float: right;
+	border:  1px solid white;
+	border-radius: 50%;
+	padding: 7px;
+	margin:0 0 10px 10px;
+	color: white;
+	background-color: black;
+}
+
+.footer::after {
+	content: ".";
+	font-size: 0;
+	display: block;
+	clear: both;
+}
