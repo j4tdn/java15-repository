@@ -1,0 +1,22 @@
+header {
+    width: 100%;
+    height: 66px;
+    background-color: yellow;
+}
+.menu1 ul li{
+    float: left;
+    display: inline;
+    margin-left: 58px;
+    text-align: center;
+    line-height: 66px;
+}
+.menu2 ul li{
+    float: right;
+    display: inline;
+    margin-right: 58px;
+    text-align: center;
+}
+.logo {
+    margin: auto;
+    
+}
