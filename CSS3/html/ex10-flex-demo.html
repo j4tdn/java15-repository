@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ex10 - Flex Demo</title>
+
+    <style>
+        .title {
+            font-size: 2rem;
+            color: blue;
+        }
+
+        .container {
+            border: 10px solid rgb(54, 7, 54);
+            width: 600px;
+            height: 800px;
+            background-color: rgb(65, 24, 86);
+
+            /*
+                container   --> display: flex
+                item        --> flex-direction: 'row', row-reverse, column, column-reverse
+                justify-content: space-between, center,...
+
+                flex-direction          main-axis           cross-axis
+                    row              justify-content        align-items
+                    column              align-item        justify-content      
+            */
+
+            display: flex;
+
+            flex-wrap: wrap;
+            /*default: nowrap*/
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .item {
+            border: 10px solid rgb(195, 84, 195);
+            width: 220px;
+            height: 180px;
+            background-color: aqua;
+            font-size: 32;
+            text-align: center;
+            line-height: 180px;
+
+        }
+
+        .item:nth-child(2) {
+            width: 300px;
+            height: 180px;
+            background-color: rgb(248, 7, 156);
+            border: 10px solid rgb(180, 30, 37);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Flex Demo - 26.03.2023</h2>
+
+    <hr>
+    <hr>
+
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+    </div>
+</body>
+
+</html>

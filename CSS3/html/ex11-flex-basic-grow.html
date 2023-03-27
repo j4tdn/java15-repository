@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ex11: Flex Basis and Grow</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            width: 88%;
+            height: 220px;
+            background: #ede;
+
+            display: flex;
+        }
+
+        .item {
+
+            height: 80px;
+            background-color: aqua;
+            border: 1px solid rgb(51, 7, 51);
+            font-size: 2rem;
+
+            flex-basis: 300px;
+        }
+
+        .item:nth-child(1) {
+            flex-grow: 1;
+        }
+
+        .item:nth-child(2) {}
+
+        .item:nth-child(3) {}
+
+        .item:nth-child(4) {}
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="item">One</div>
+        <div class="item">Two</div>
+        <div class="item">Three</div>
+        <div class="item">Four</div>
+    </div>
+</body>
+
+</html>
