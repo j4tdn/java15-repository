@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ex11: Flex Basis and Grow - Demo</title>
+
+	<style type="text/css">
+		*, *::after, *::before {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.parent {
+			width: 88%;
+			height: 220px;
+			background: #ede;
+		}
+
+		.child {
+			width: 120px;
+			min-width: 100px;
+
+			flex-basis: 100px;
+			/*
+				override width if flex-direction = row
+				override height if flex-direction = column
+				dưới quyền min-width
+			*/
+
+			height: 80px;
+			background-color: skyblue;
+			border: 1px solid #ebc;
+			font-size: 2rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="child">One</div>
+		<div class="child">Two</div>
+		<div class="child">Three</div>
+		<div class="child">Four</div>
+	</div>
+</body>
+</html>

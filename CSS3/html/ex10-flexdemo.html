@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ex10: Flex Demo</title>
+	<style type="text/css">
+
+	/*	
+		container -> display: flex;
+		item      -> flex-direction: ;
+
+		justify-content: ;
+		align-item: ;
+		flex-direction	   main-axis		cross-axis
+			row 		justify-content		align-item
+		   column			align           justify-content
+	*/
+
+		.title {
+			font-size: 2rem;
+			color: #0f2;
+		}
+
+		.container {
+			border: 1px solid #ece;
+			width: 1400px;
+			height: 800px;
+			background-color: #acacac;
+			margin: 0 auto;
+
+			display: flex;
+
+			flex-direction: row-reverse;
+		}
+
+		.item:nth-child(2){
+			background-color: green;
+			height: 200px;
+		}
+
+		.item{
+			border: 1px solid #ece;
+			width: 220px;
+			height: 180px;
+			background-color: violet;
+			font-size: 32px;
+		}
+	</style>
+</head>
+<body>
+	<h2 class="title">Flex Demo - 26.03.2023</h2>
+
+	<hr><hr>
+
+	<div class="container">
+		<div class="item">A</div>
+		<div class="item">B</div>
+		<div class="item">C</div>
+	</div>
+</body>
+</html>
