@@ -28,6 +28,10 @@ body {
 	float: right;
 }
 
+#page-header .logo {
+	float: left;
+}
+
 #page-header .main-nav ul li {
 	float: left;
 	margin-left: 48px;
@@ -117,7 +121,9 @@ body {
 .articles .wrapper article {
 	width: 50%;
 	float: left;
-	padding: 50px 0;
+	padding: 80px 0;
+	font-size: 18px;
+	line-height: 1.6;
 
 }
 
@@ -183,10 +189,14 @@ body {
 .footer li a {
 	border:  1px solid white;
 	border-radius: 50%;
-	padding: 7px;
 	margin-right: 5px;
 	color: white;
 	background-color: black;
+}
+
+.footer li a i {
+	height: 30px;
+	width: 30px;
 }
 
 .coppyright {
