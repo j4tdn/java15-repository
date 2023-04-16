@@ -1,13 +1,14 @@
+
 /*===== Base style ======*/
-body {
+/*body {
 	font-style: 16px;
 	font-family: font-strong;
 	src: url(../commons/Proxima Nova);
 	line-height: 1.4;
-}
+}*/
 
 /*===== Common style ======*/
-.wrapper {
+/*.wrapper {
 	width: 84%;
 	margin: 0 auto;
 }
@@ -15,9 +16,9 @@ body {
 .text-white, .text-white a {
 	color: black;
 }
-
+*/
 /*===== Header style ======*/
-#page-header {
+/*#page-header {
 	width: 100%;
 	height: 66px;
 	line-height: 66px;
@@ -52,43 +53,244 @@ body {
 	padding-top: 20px;
 }
 
-.page-header::after {
+#page-header::after {
 	content: ".";
 	font-size: 0;
 	display: block;
 	clear: both;
+}*/
+
+/*==================== BASE STYLE ====================*/
+body{
+	font-size: 16px;
+	font-family: sans-serif;
+	line-height: 1.2;
 }
 
+a , a::after a::before{
+	content: "";
+	color: black;
+}
+
+a:hover {
+	font-style: italic;
+	color: salmon ;
+}
+
+.text-bold{
+	font-weight: bold;
+}
+
+/* ================== COMMON STYLE ========================*/
+.wrapper{
+	width: 88%;
+	height: 100%;
+/*	background-color: lightblue; */
+	margin: 0 auto;
+}
+
+/* ================== HEADER STYLE ========================*/
+#page-header{
+	height: 67px;
+	background-co
+	lor: #f7c61d;
+}
+#page-header .wrapper{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#page-header .wrapper .nav-flex ul {
+	display: flex;
+}
+
+#page-header .wrapper .nav-flex ul li {
+	margin: 0 35px;
+}
+
+#page-header .wrapper a {
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+}
+
+/* ================== PAGE MAIN STYLE ========================*/
+#page-main .wrapper .recent-articles {
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+#page-main .wrapper main{
+	width: 77%;
+	float: left;
+}
+
+#page-main .wrapper aside{
+	width: 23%;
+	float: right;
+	padding-left: 20px;
+	box-sizing: border-box;
+}
+
+#page-main .wrapper main .articles article {
+	display: flex;
+	gap:20px;
+	margin-bottom: 60px;
+}
+
+#page-main .wrapper main .articles article .article-right {
+	display: flex;
+	gap:20px;
+	flex-direction: column;
+}
+
+.category , .article-end , .comments  {
+	color: #e3b002;
+}
+
+.more-articles{
+	text-align: center;
+}
+
+.more-articles a{
+	display: inline-block;
+	padding: 12px 22px;
+	border: 1px solid #e3b002;
+	border-radius: 10px;
+}	
+
+/* ================== SIDE BAR STYLE ========================*/
+
+#right-sidebar .calendar{
+	margin-bottom: 60px;
+}
+
+.search-box{
+	position: relative;
+}
+
+.search-icon{
+	position: absolute;
+	top:6px;
+	left: 2px;
+}
+
+.search-text{
+	border: 1px solid #e5e5e5;
+	box-sizing: border-box;
+	padding: 5px 20px;
+	border-radius: 10px;
+	width: 100%;
+}
+
+.calendar {
+	margin-top: 30px;
+	width: 100%;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+}
+
+.calendar .calendar-top {
+	width: 100%;
+	height: 26px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-weight: bold;
+	border: 1px solid #e5e5e5;
+	box-sizing: border-box;
+}
+
+.calendar .calendar-body table{
+	width: 100%;
+}
+
+.calendar .calendar-body table th{
+	background-color: #e7e7e7;
+	height: 26px;
+	color: #888;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #e5e5e5;
+
+}
+
+.calendar .calendar-body table td{
+	height: 32px;
+	color: #888;
+	border: 1px solid #e5e5e5;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#current-date {
+	background-color: yellow;
+}
+
+.not-current-month{
+	opacity: 10%;
+}
+
+.popular-news>* {
+	margin: 15px 0;
+}
+
+.popular-news .title {
+	font-size: 18px;
+	display: flex;
+	white-space: nowrap;
+	align-items: center;
+	font-weight: bold;
+}
+
+.popular-news .title::after {
+	content: "";
+	display: block;
+	width: 100px;
+	height: 2px;
+	background-color: #e5e5e5;
+	margin-left: 10px;
+}
+
+.popular-news .meta {
+	color: #888;
+	margin: 8px 0;
+}
+
+
 /*===== Footer style ======*/
-.footer{
+#page-footer{
+	clear: both;
 	background-color: black;
 	opacity: 90%;
 	padding-top: 20px;
+	margin-top:20px;
 
 }
 
-.footer p {
+#page-footer p {
 	width: 33%;
 	color: white;
 	float: left;
 }
-.footer ul {
+#page-footer ul {
 	width: 33%;
 	float: left;
 	color: white;
 }
 
-.footer ul li {
+#page-footer ul li {
 	float: left;
 	margin-left: 44px;
 }
 
-.footer .social {
+#page-footer .social {
 	width: 33%;
 	float: right;
 }
 
-.footer .social a {
+/*#page-footer .social a {
 	float: right;
 	border:  1px solid white;
 	border-radius: 50%;
@@ -96,9 +298,23 @@ body {
 	margin:0 0 10px 10px;
 	color: white;
 	background-color: black;
+}*/
+
+#page-footer .social a {
+	display: inline-block;
+	border:  1px solid white;
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+	color: white;
+	font-size: 24px;
+	background-color: black;
+	text-align: center;
+	line-height: 45px;
+	margin: 0 10px;
 }
 
-.footer::after {
+#page-footer::after {
 	content: ".";
 	font-size: 0;
 	display: block;
