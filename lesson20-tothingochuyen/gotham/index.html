@@ -5,230 +5,346 @@
 	<title>Gotham - Demo</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
 	<header id="page-header">
 		<div class="wrapper">
-			<ul class="header-left">
-				<li>Culture</li>
-				<li>Events</li>
-				<li>Food</li>	
-			</ul>
+			<div class="nav-left nav-flex">
+				<ul>
+					<li><a href="#">Culture</a></li>
+					<li><a href="#">Events</a></li>
+					<li><a href="#">Food</a></li>	
+				</ul>
+			</div>
 
-			<img src="images/logo.png" class="header-img">
+			<div class="page-log">
+				<a href="#"><img src="images/logo.png" alt="gotham logo"></a>
+			</div>
 
-			<ul class="header-right">
-				<li>Traveling</li>
-				<li>Fashion</li>
-				<li>Other</li>
-			</ul>
+			<div class="nav-right nav-flex">
+				<ul>
+					<li><a href="#">Traveling</a></li>
+					<li><a href="#">Fashion</a></li>
+					<li><a href="#">Other</a></li>
+				</ul>
+			</div>	
 		</div>
 	</header>
 
-	<main id="page-main">
-		<div class="main-left">
-			<h3 class="main-header">Recent Articles</h3>
-			<div class="acticle-wrapper">
-				<img src="images/article-1.jpg" class="acticle-img">				
-				<div class="acticle">
-					<h4 class="acticle-title">5 Standout Things to Know About the 2033 Cannes Film Festival</h4>
-					<ul class="acticle-inf">
-						<li>June 8, 2033</li>
-						<li>by Thomas Smith</li>
-						<li>Culture</li>
-					</ul>
-					<p class="acticle-content">
-						The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz ...
-					</p>
-					<ul class="acticle-social acticle-inf">
-						<li><i class="acticle-icon fa fa-eye" aria-hidden="true"></i>266</li>
-						<li><i class=" acticle-icon fa fa-comment-o" aria-hidden="true"></i></i>3</li>
-					</ul>
-				</div>
-			</div>
+	<div id="page-main">
+		<div class="wrapper">
+			<main>
+				<h2 class="recent-articles text-bold">Recent Articles</h2>
 
-			<div class="acticle-wrapper">
-				<img src="images/article-2.jpg" class="acticle-img">				
-				<div class="acticle">
-					<h4 class="acticle-title">5 Standout Things to Know About the 2033 Cannes Film Festival</h4>
-					<ul class="acticle-inf">
-						<li>June 8, 2033</li>
-						<li>by Thomas Smith</li>
-						<li>Culture</li>
-					</ul>
-					<p class="acticle-content">
-						The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz ...
-					</p>
-					<ul class="acticle-social acticle-inf">
-						<li><i class="acticle-icon fa fa-eye" aria-hidden="true"></i>266</li>
-						<li><i class=" acticle-icon fa fa-comment-o" aria-hidden="true"></i></i>3</li>
-					</ul>
+				<div class="articles">
+					<article>
+						<div class="article-left">
+							<a href="#"><img src="images/article-1.jpg"></a>
+						</div>
+
+						<div class="article-right">
+							<h3 class="title">5 Standout Things to Know About the 2033 Cannes Film Festival</h3>
+
+							<p class="meta">
+								<a class="published-date">April 9, 2023</a> | by
+								<a class="publisher">Thomas Smith</a> |
+								<a class="category">Culture</a>
+							</p>
+
+							<p class="content">
+								The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz ...<span class="article-end">></span>
+							</p>
+
+							<p class="iteration">
+								<span class="viewer">
+									<i class="fa-solid fa-eye"></i> 266
+								</span>
+								&nbsp; | &nbsp;
+								<span class="comments">
+									<i class="fa-solid fa-comment"></i>&nbsp; 3
+								</span>
+							</p>
+						</div>
+					</article>
+
+					<article>
+						<div class="article-left">
+							<a href="#"><img src="images/article-2.jpg"></a>
+						</div>
+
+						<div class="article-right">
+							<h3 class="title">5 Standout Things to Know About the 2033 Cannes Film Festival</h3>
+
+							<p class="meta">
+								<a class="published-date">April 9, 2023</a> | by
+								<a class="publisher">Thomas Smith</a> |
+								<a class="category">Culture</a>
+							</p>
+
+							<p class="content">
+								The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz ...<span class="article-end">></span>
+							</p>
+
+							<p class="iteration">
+								<span class="viewer">
+									<i class="fa-solid fa-eye"></i> 266
+								</span>
+								&nbsp; | &nbsp;
+								<span class="comments">
+									<i class="fa-solid fa-comment"></i>&nbsp; 3
+								</span>
+							</p>
+						</div>
+					</article>
+
+					<article>
+						<div class="article-left">
+							<a href="#"><img src="images/article-3.jpg"></a>
+						</div>
+
+						<div class="article-right">
+							<h3 class="title">5 Standout Things to Know About the 2033 Cannes Film Festival</h3>
+
+							<p class="meta">
+								<a class="published-date">April 9, 2023</a> | by
+								<a class="publisher">Thomas Smith</a> |
+								<a class="category">Culture</a>
+							</p>
+
+							<p class="content">
+								The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz ...<span class="article-end">></span>
+							</p>
+
+							<p class="iteration">
+								<span class="viewer">
+									<i class="fa-solid fa-eye"></i> 266
+								</span>
+								&nbsp; | &nbsp;
+								<span class="comments">
+									<i class="fa-solid fa-comment"></i>&nbsp; 3
+								</span>
+							</p>
+						</div>
+					</article>
+
+					<article>
+						<div class="article-left">
+							<a href="#"><img src="images/article-4.jpg"></a>
+						</div>
+
+						<div class="article-right">
+							<h3 class="title">5 Standout Things to Know About the 2033 Cannes Film Festival</h3>
+
+							<p class="meta">
+								<a class="published-date">April 9, 2023</a> | by
+								<a class="publisher">Thomas Smith</a> |
+								<a class="category">Culture</a>
+							</p>
+
+							<p class="content">
+								The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz ...<span class="article-end">></span>
+							</p>
+
+							<p class="iteration">
+								<span class="viewer">
+									<i class="fa-solid fa-eye"></i> 266
+								</span>
+								&nbsp; | &nbsp;
+								<span class="comments">
+									<i class="fa-solid fa-comment"></i>&nbsp; 3
+								</span>
+							</p>
+						</div>
+					</article>
+
+					<article>
+						<div class="article-left">
+							<a href="#"><img src="images/article-5.jpg"></a>
+						</div>
+
+						<div class="article-right">
+							<h3 class="title">5 Standout Things to Know About the 2033 Cannes Film Festival</h3>
+
+							<p class="meta">
+								<a class="published-date">April 9, 2023</a> | by
+								<a class="publisher">Thomas Smith</a> |
+								<a class="category">Culture</a>
+							</p>
+
+							<p class="content">
+								The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz ...<span class="article-end">></span>
+							</p>
+
+							<p class="iteration">
+								<span class="viewer">
+									<i class="fa-solid fa-eye"></i> 266
+								</span>
+								&nbsp; | &nbsp;
+								<span class="comments">
+									<i class="fa-solid fa-comment"></i>&nbsp; 3
+								</span>
+							</p>
+						</div>
+					</article>
 				</div>
-			</div>
-			
-			<div class="acticle-wrapper">
-				<img src="images/article-3.jpg" class="acticle-img">				
-				<div class="acticle">
-					<h4 class="acticle-title">5 Standout Things to Know About the 2033 Cannes Film Festival</h4>
-					<ul class="acticle-inf">
-						<li>June 8, 2033</li>
-						<li>by Thomas Smith</li>
-						<li>Culture</li>
-					</ul>
-					<p class="acticle-content">
-						The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz ...
-					</p>
-					<ul class="acticle-social acticle-inf">
-						<li><i class="acticle-icon fa fa-eye" aria-hidden="true"></i>266</li>
-						<li><i class=" acticle-icon fa fa-comment-o" aria-hidden="true"></i></i>3</li>
-					</ul>
+
+				<div class="more-articles">
+					<a href="#">MORE ARTICLES</a>
 				</div>
-			</div>
-					
-			<div class="acticle-wrapper">
-				<img src="images/article-4.jpg" class="acticle-img">				
-				<div class="acticle">
-					<h4 class="acticle-title">5 Standout Things to Know About the 2033 Cannes Film Festival</h4>
-					<ul class="acticle-inf">
-						<li>June 8, 2033</li>
-						<li>by Thomas Smith</li>
-						<li>Culture</li>
-					</ul>
-					<p class="acticle-content">
-						The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz ...
-					</p>
-						<ul class="acticle-social acticle-inf">
-							<li><i class="acticle-icon fa fa-eye" aria-hidden="true"></i>266</li>
-							<li><i class=" acticle-icon fa fa-comment-o" aria-hidden="true"></i></i>3</li>
-						</ul>
+			</main>
+
+			<aside id="right-side-bar">
+				<div class="search-box">
+					<label class="search-icon">
+						<i class="fa-brands fa-searchengin"></i>
+					</label>
+
+					<input class="search-text" type="search" placeholder="Keywords">
+
 				</div>
-			</div>
-				
-			<div class="acticle-wrapper">
-				<img src="images/article-5.jpg" class="acticle-img">				
-				<div class="acticle">
-					<h4 class="acticle-title">5 Standout Things to Know About the 2033 Cannes Film Festival</h4>
-					<ul class="acticle-inf">
-						<li>June 8, 2033</li>
-						<li>by Thomas Smith</li>
-						<li>Culture</li>
-					</ul>
-					<p class="acticle-content">
-						The Cannes Film Festival is an annual film festival held in Cannes, France, which previews new films of all genres, including documentaries from all around the world. Here are nine of the films that generated the most buzz ...
-					</p>
-					<ul class="acticle-social acticle-inf">
-						<li><i class="acticle-icon fa fa-eye" aria-hidden="true"></i>266</li>
-						<li><i class=" acticle-icon fa fa-comment-o" aria-hidden="true"></i></i>3</li>
-					</ul>
+
+				<div class="calendar">
+					<div class="calendar-top">
+						<div class="calendar-prev">
+							<i class="fa-solid fa-chevron-left"></i>
+						</div>
+
+						<div class="calendar-month">
+							June 2033
+						</div>
+
+						<div class="calendar-next">
+							<i class="fa-solid fa-chevron-right"></i>
+						</div>
+					</div>
+
+					<div class="calendar-body">
+						<table>
+							<thead>
+								<tr>
+									<th>S</th>
+									<th>M</th>
+									<th>T</th>
+									<th>W</th>
+									<th>T</th>
+									<th>F</th>
+									<th>S</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>2</td>
+									<td>3</td>
+									<td>4</td>
+									<td>5</td>
+									<td>6</td>
+									<td>7</td>
+								</tr>
+
+								<tr>
+									<td>8</td>
+									<td>9</td>
+									<td>10</td>
+									<td>11</td>
+									<td>12</td>
+									<td>13</td>
+									<td>14</td>
+								</tr>
+
+								<tr>
+									<td>15</td>
+									<td id="current-date">16</td>
+									<td>17</td>
+									<td>18</td>
+									<td>19</td>
+									<td>20</td>
+									<td>21</td>
+								</tr>
+
+								<tr>
+									<td>22</td>
+									<td>23</td>
+									<td>24</td>
+									<td>25</td>
+									<td>26</td>
+									<td>27</td>
+									<td>28</td>
+								</tr>
+
+								<tr>
+									<td>29</td>
+									<td>30</td>
+									<td id="not-current-month">1</td>
+									<td id="not-current-month">2</td>
+									<td id="not-current-month">3</td>
+									<td id="not-current-month">4</td>
+									<td id="not-current-month">5</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
-			</div>
-			<button class="btn btn-acticle"> MORE ACTICLES</button>
+
+				<div class="popular-news">
+					<h2 class="title">Popular News</h2>
+
+					<article>
+						<p class="meta">June 5, 2033</p>
+						<h3>Scene: The Guide</h3>
+					</article>
+
+					<article>
+						<p class="meta">June 5, 2033</p>
+						<h3>Discovering Relatives and Relics in Southern Sweden</h3>
+					</article>
+
+					<article>
+						<p class="meta">May 29, 2033</p>
+						<h3>Wileman Home Tour: Exeter History Restored</h3>
+					</article>
+
+					<article>
+						<p class="meta">May 27, 2033</p>
+						<h3>Spring Seafood Medley</h3>
+					</article>
+
+					<article>
+						<p class="meta">May 19, 2033</p>
+						<h3>Easter Brunch with a Bite</h3>
+					</article>
+				</div>
+			</aside>
+			<div class="clear-fix"></div>
 		</div>
+	</div>
 
-		<div class="main-right">
-			<div class="search-field">
-				<input type="text" name="" class="search-box" placeholder="Keyword">
-				<i class="search-icon fa fa-search" aria-hidden="true"></i>
+	<footer id="page-footer">
+		<div class="wrapper">
+			<div class="copy-right">
+				&copy; 2033 Gotham. All rights reserved.
 			</div>
-			
-			<div class="calendar">					
-				<div class="month">
-					<ul>
-						<li> <div class="prev"><i class="fa fa-angle-left"></i></div></li>
-						<li> <div class="current-month-year">June 2033</div></li>
-						<li> <div class="next"><i class="fa fa-angle-right"></i></div></li>
-					</ul>
-				</div>
 
-				<ul class="weekdays">
-					<li>Mo</li>
-					<li>Tu</li>
-					<li>We</li>
-					<li>Th</li>
-					<li>Fr</li>
-					<li>Sa</li>
-					<li>Su</li>
+			<nav class="footer-nav">
+				<ul>
+					<li><a href="#">About Blog</a></li>
+					<li><a href="#">Need Help?</a></li>
+					<li><a href="#">Content Guid</a></li>
 				</ul>
+			</nav>
 
-				<ul class="days">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
-					<li>7</li>
-					<li>8</li>
-					<li>9</li>
-					<li><span class="active">10</span></li>
-					<li>11</li>
-					<li>12</li>
-					<li>13</li>
-					<li>14</li>
-					<li>15</li>
-					<li>16</li>	
-					<li>17</li>
-					<li>18</li>
-					<li>19</li>
-					<li>20</li>
-					<li>22</li>
-					<li>22</li>
-					<li>23</li>
-					<li>24</li>
-					<li>25</li>
-					<li>26</li>
-					<li>27</li>
-					<li>28</li>
-					<li>29</li>
-					<li>30</li>
-					<li>31</li>							
+			<div class="socials">
+				<ul>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
 				</ul>
 			</div>
-					
-			<div class="news">
-				<h3 class="news-header">Popular News</h3>
-					<div class="short-news">
-						<div class="short-news-date">June 5, 2033</div>
-						<div class="short-news-title">Scene: The Guide</div>
-					</div>
-					
-					<div class="short-news">
-						<div class="short-news-date">June 5, 2033</div>
-						<div class="short-news-title">Discovering Relatives and Relics in Southern Sweden</div>
-					</div>
-						
-					<div class="short-news">
-						<div class="short-news-date">May 29, 2033</div>
-						<div class="short-news-title">Wileman Home Tour: Exeter History Restored</div>
-					</div>
-						
-					<div class="short-news">
-						<div class="short-news-date">May 27, 2033</div>
-						<div class="short-news-title">Spring Seafood Medley</div>
-					</div>
-						
-					<div class="short-news">
-						<div class="short-news-date">May 19, 2033</div>
-						<div class="short-news-title">Easter Brunch with a Bite</div>
-					</div>
-				</div>
-		</div>
-	</main>
-
-	<footer>
-		<div class="coppyright">
-			&copy; 2023 Gotham. All rights reserved
-		</div>
-		<div class="direct-link">
-			<div ><a href="#">About Blog</a></div>
-			<div ><a href="#">Need Help?</a></div>
-			<div ><a href="#">Content Guide</a></div>
-		</div>
-		<div class="icon">
-			<a href="#" class="fa fa-facebook"></a>
-			<a href="#" class="fa fa-twitter"></a>
-			<a href="#" class="fa fa-google-plus"></a>
 		</div>
 	</footer>
+
+
 </body>
 </html>

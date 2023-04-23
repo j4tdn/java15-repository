@@ -16,6 +16,11 @@ body {
 	color: #fff;
 }
 
+a:hover {
+	color: #e00;
+	text-decoration: underline;
+}
+
 /*=====HEADER STYLE=====*/
 #page-header {
 	width: 100%;
@@ -93,10 +98,10 @@ body {
 .articles {
 	background: linear-gradient(
 		100deg,
-		#f12fab 0%,
-		#2989d8 50%,
-		#207cca 51%,
-		#67af81 100%
+		#fff 0%,
+		#fff 50%,
+		#000 51%,
+		#000 100%
 	);
 }
 
@@ -110,15 +115,20 @@ body {
 .articles .wrapper article {
 	width: 50%;
 	float: left;
+	padding: 80px 0;
+	font-size: 18px;
+	line-height: 1.6;
+
 }
 .articles .wrapper article:first-child {
- 	padding-right: 80px;
+ 	padding-right: 100px;
  	box-sizing: border-box;
  }
 
 .articles .wrapper article:last-child {
- 	padding-left: 80px;
+ 	padding-left: 100px;
  	box-sizing: border-box;
+ 	color: #fff;
  }
 
 .articles .wrapper article .article-title {
@@ -131,8 +141,8 @@ body {
 	display: block;
 	width: 60px;
 	height: 2px;
-	background-color: #ff0;
-	margin: 20px 0;
+	background-color: #f11;
+	margin: 30px 0;
 }
 
 .articles .wrapper article .quote {
@@ -145,58 +155,57 @@ body {
 }
 
 /*=====FOOTER STYLE=====*/
-.footer {
-	display: flex;
-	background: #000;
-	height: 150px;
-	padding: 20px 135px;
+#page-footer {
+	background-color: #111;
+	padding-top: 25px;
+	height: 250px;
 }
 
-.footer-col { 
+
+#page-footer .footer-col { 
  	width: 25%;
- }
+ 	float: left;
+}
 
-.footer-title { 
- 	color: #fff;
- 	font-size: 18px;
+#page-footer .footer-col .title{ 
  	text-transform: uppercase;
+ 	font-size: 18px;
+}
 
- }
-
-.footer-line { 
- 	width: 70%;
+#page-footer .footer-col .title::after{ 
+ 	content: ".";
+ 	font-size: 0;
+ 	width: 75%;
  	height: 1px;
- 	background: #ccc;
- 	margin: 18px 0;
- }
+ 	display: block;
+ 	background-color: #fff;
+ 	margin: 20px 0;
+}
 
-.footer-line ul li {
+
+#page-footer .footer-col ul>li {
+	opacity: 0.7;
+	font-size: 15px;
+	line-height: 1.6;
 	list-style-type: none;
 }
-
-.footer-line ul li a {
-	text-decoration: none;
+#page-footer .social ul>li {
+	display: inline-block;
+	margin: 20px;
 }
 
-.footer-link { 
-	font-size: 14px;
-	color: #ccc;
-	line-height: 20px;
- }
-
-.footer-groupicon {
-	display: flex;
-}
-
-.footer-icon {
-	width: 36px;
-	height: 36px;
-	background: #222;
-	color: #fff;
+#page-footer .social ul>li>a {
+	display: block;
+	width: 44px;
+	height: 44px;
+	background: #000;
 	border-radius: 50%;
-	margin-right: 10px;
 	text-align: center;
-	justify-content: center;
-	line-height: 36px;
-	margin-bottom: 20px;
+	line-height: 44px;
+}
+
+#page-footer .social .reversed {
+	margin-top: 20px;
+	opacity: 0.8;
+	font-size: 15px;
 }
