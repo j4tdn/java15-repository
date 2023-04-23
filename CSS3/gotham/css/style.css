@@ -66,14 +66,14 @@ a:hover {
 }
 
 #page-main .wrapper main {
-    width: 77%;
+    width: 70%;
     float: left;
 }
 
 #page-main .wrapper main .articles article {
     display: flex;
     gap: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
 }
 
 #page-main .wrapper main .articles article .article-right {
@@ -107,7 +107,9 @@ a:hover {
     background-color: #b7a466;
 }
 
-
+.right-side-bar>* {
+    margin-bottom: 60px;
+}
 
 /*===== MAIN STYLE  =====*/
 
@@ -119,18 +121,87 @@ a:hover {
 
 .search-box {
     position: relative;
+    margin-bottom: 60px;
 }
 
-.search-icon {
+.search-box .search-icon {
     position: absolute;
     top: 6px;
     left: 5px;
 }
 
-.search-text {
+.search-box .search-text {
+    width: 100%;
+    border-radius: 10px;
     box-sizing: border-box;
     padding: 5px 20px;
+    border: 1px solid #e5e5e5;
 }
 
+.calendar {
+    width: 100%;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+}
+
+.calendar .calendar-top {
+    width: 100%;
+    height: 26px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid #c86a6a;
+}
+
+
+.calendar .calendar-body table {
+    width: 100%;
+}
+
+.calendar .calendar-body table thead th {
+    background-color: #cfbdbd;
+    height: 26px;
+    color: #888;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid #c86a6a;
+    width: 14%;
+    box-sizing: border-box;
+}
+
+.calendar .calendar-body table td {
+    height: 32px;
+    color: #271f1f;
+    border: 2px solid #c86a6a;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.popular-news>* {
+    margin: 15px 0;
+}
+
+.popular-news .title {
+    font-size: 18px;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.popular-news .title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #c86a6a;
+    margin-left: 10px;
+}
+
+.popular-news .meta {
+    font-size: 14px;
+    color: #888;
+    margin: 8px 0;
+}
 
 /*===== FOOTER STYLE  =====*/
