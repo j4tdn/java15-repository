@@ -1,0 +1,144 @@
+*{
+	font-family: sans-serif;
+}
+/* CSS Header */
+.container{
+	width: 100%;
+	margin:0 auto;
+}
+header{
+	display: flex;
+	background-color: yellow;
+}
+nav ul{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+.header nav > ul > li {
+	text-align: center;
+	min-width: 120px;
+}
+nav ul > li > a {
+	text-decoration: none;
+	color: black;
+	padding: 15px 12px;
+	font-weight: bold;
+}
+
+nav.left{
+ width: 33%;
+ align-items: center;
+ display: flex;
+ justify-content: flex-end;
+}
+div.logo {
+	width: 33%;
+}
+div.logo > img{
+	max-width: 100%;
+	padding: 15px 12px;
+	display: flex;
+	margin:0 auto;
+}
+nav.right{
+ width: 33%;
+ align-items: center;
+ display: flex;
+}
+/* CSS main content */
+section.body {
+	width: 70%;
+	border-right: 1px solid gray;
+	display: inline-block;
+}
+.posts{
+	display: flex;
+	margin-bottom: 15px;
+}
+.post1{
+	margin-left: 30px;
+	margin-right: 10px;
+}
+h2{
+	margin-top:0;
+	padding-top: 10px;
+}
+.body h1{
+	font-size: 20px;
+	margin: 0;
+	font-weight: bold;
+}
+ul.class{
+	display: flex;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+ul.class > li {
+	list-style-type: none;
+	border-right: 1px solid gray;
+	min-width: 12px;
+	display: block;
+	padding: 5px 5px;
+}
+ul.class >li:last-child{
+	border-right: none;
+	color: yellow;
+} 
+ul.view > li > i {
+	color: gray;
+}
+button.button {
+	width: 150px;
+    height: 50px;
+    background-color: white;
+    border: 3px solid gold;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 20px auto;
+    position:relative;
+    left: 50%;
+
+}
+/* CSS footer */
+footer{
+	display: flex;
+	background-color: yellow;
+}
+div.right-footer{
+	width: 33%;
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+}
+nav.information{
+	width: 33%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+nav.social{
+	width: 33%;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+}
+.footer nav ul{
+	list-style-type: none;
+	display: flex;
+	font-size:small;
+}
+nav.information > ul > li {
+	min-width: 120px;
+}
+nav.social > ul > li > a > i {
+	background-color: white;
+	border-radius: 50%;
+	padding: 15px 15px;
+	margin:0;
+}

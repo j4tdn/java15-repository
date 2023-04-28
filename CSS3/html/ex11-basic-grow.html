@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ex11: Flex Basic And Grow - Demo</title>
+</head>
+<style type="text/css">
+	*, *::after , *::before{
+		box-sizing: border-box;
+	}
+	.parent {
+		width: 88%;
+		height: 220px;
+		background-color: skyblue;
+		display: flex;
+	}
+	.item	{
+		min-width: 250px;
+		width: 120px;
+		height: 80px;
+		background: orange;
+		border:1px solid darkred;
+	}
+	.item:nth-child(1){
+
+	}
+	.item:nth-child(2){
+		
+	}
+	.item:nth-child(3){
+		background-color: red;
+		flex-grow: 1;
+	}
+	.item:nth-child(4){
+		flex-grow:2;
+	}
+</style>
+<body>
+
+	<div class="parent">
+		<div class="item">One</div>
+		<div class="item">Two</div>
+		<div class="item">Three</div>
+		<div class="item">Four</div>
+	</div>
+</body>
+</html>

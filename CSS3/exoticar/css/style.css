@@ -1,0 +1,180 @@
+/* BASE STYLE */
+body {
+	font-size: 16px;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.4;
+}
+/* COMMON STYLE */
+.wrapper{
+	width: 84%;
+	margin: 0 auto;
+}
+.text-white{
+	color:whitesmoke;
+}
+.text-white .text-white a {
+	color:white;
+	opacity: 0.8 !important;
+}
+/* HEADER STYLE */
+#page-header {
+	width: 100%;
+	height: 66px;
+	background: #000;
+	line-height: 66px;
+}
+#page-header .logo{
+	float:left;
+}
+#page-header .main-nav{
+	float:right;
+}
+#page-header .main-nav ul li {
+	float:left;
+	margin-left:48px;
+	
+}
+#page-header .main-nav ul li a {
+	color:#fff;
+	opacity: 0.8;
+}
+#page-header .main-nav ul li a:hover{
+	color:#e00;
+	text-decoration: underline;
+}
+.banner {
+	background-image: url(../images/banner.png);
+	height: 812px;
+	width: 100%;
+	background-size: cover;
+	position : relative;
+}
+.banner .banner-block{
+	text-align: center;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top:50%;
+	left: 50%;
+}
+.banner .banner-block .title{
+	text-transform: uppercase;
+	font-size:3.4rem;
+	font-weight: bold;
+	color:whitesmoke;
+	opacity: 0.8 !important;
+}
+.banner .banner-block .statement{
+	font-size:1.4rem;
+	margin : 20px 0;
+	color:whitesmoke;
+	opacity: 0.8 !important;
+}
+.banner .banner-block .discover{
+	padding:10px 22px;
+	background-color: #ca0500;
+	text-transform: uppercase;
+	color:whitesmoke;
+	opacity: 0.8 !important;
+}
+.banner .banner-block .discover:hover{
+	border:1px solid #f00;
+	box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5) ;
+}
+/*======MAIN ARTICLE STYLE=======*/
+.articles {
+	background: linear-gradient(100deg, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(130,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.articles .wrapper article {
+	width: 50%;
+	float:left;
+}
+/* 
+	.articles
+		article
+		article
+	--> all is one layer
++	.articles --> background
++	.article --> nothing
+	child elements ( no color) : float left right;
+	--> place in a higher layer --> make parent invisible
+	solving by 2 ways
+	=====================================================
+	1. child elements set background ( parent background)
+	2. using clear property for parent element to make sure parent & child elements in one layer
+		+ clear : float(both in element after last child)
+		+ clear : 
+	*/
+.articles::after {
+	content:".";
+	font-size:0;
+	display: block;
+	clear:both;
+}
+.articles .wrapper article:first-child{
+	padding-right: 80px;
+	box-sizing: border-box;
+}
+.articles .wrapper article:last-child{
+	padding-left: 80px ;
+	box-sizing: border-box;
+}
+.articles .wrapper article .article-title{
+	font-size: 3.4rem;
+}
+.articles .wrapper article .article-title::after{
+	content:".";
+	font-size: 0;
+	display: block;
+	width: 60px;	
+	height: 2px;
+	background: salmon;
+	margin : 20px 0;
+}
+.articles .wrapper article .quote{
+	font-size: 1.6rem;
+	font-style: italic;
+}
+.articles .wrapper article .content{
+	margin: 20px 0;
+}
+/* FOOTER STYLE */
+#page-footer {
+	background-color: #111;
+	overflow: hidden;
+	padding-top: 40px;
+}
+#page-footer .footer-col{
+	width: 25%;
+	float:left;
+
+}
+#page-footer .footer-col::after{
+	content: '.';
+	font-size: 0;
+	display: block;
+	clear: both;
+}
+#page-footer .footer-col .title{
+	text-transform: uppercase;
+}
+#page-footer .footer-col .title::after{
+	content: '.';
+	font-size: 0;
+	width: 50%;
+	height: 1px;
+	background-color: #fff;
+	margin: 15px 0;
+	display: block;
+}
+#page-footer .footer-col ul > li {
+	opacity: 0.7;
+	font-size: 15px;
+	line-height: 1.6;
+}
+#page-footer .social ul > li {
+	display:  inline-block;
+	margin-right: 20px;
+}
+#page-footer .social ul > li > a {
+	color:white;
+}

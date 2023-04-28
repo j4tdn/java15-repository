@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advance Selectors</title>
+	<meta charset="utf-8">
+	<style>
+		ul li {
+			text-decoration: line-through;
+		}
+		ul a {
+			text-decoration: none;
+			/* sass , scss */
+		}
+		ul a:hover	{
+			color:yellow;
+		}
+		h1 ~ p {
+			color: darkgreen;
+		}
+		input[type=checkbox]:checked + label {
+			color: green;
+		}
+		.form-submit:enabled{
+			background-color: darkred;
+			color:whitesmoke;
+		}
+		.form-submit:disabled{
+			background-color: purple;
+			color:yellow;
+		}
+		/* CSS position */
+		/* highlight all elements except last 2 lines */
+		.position p:nth-child(-n+2){
+			color:rebeccapurple;
+		}
+		.position > p:first-of-type{
+			color:red;
+		}
+		.position > p:last-of-type{
+			color:salmon;
+		}
+		/* before , after --> inline tag */
+		/* 1 the la inline thi k co width , height . neu muon no an thi phai dung block */
+		.post-title::after{
+			display: block;
+			width:20px;
+			height:2px;
+			background-color: #f22;
+			content:"";
+		}
+	</style>
+</head>
+<body>
+	<h2 class="post-title">Seating Layout &#9880</h2>
+
+	<h1>Coffee &amp; Cake</h1>
+	<p>We have been banking and brewing</p>
+	<h2>Our menu:</h2>
+	<ul>
+		<li><a href="">Chocolate cupcake</a></li>
+		<li><a href="">Vanilla cupcake</a></li>
+	</ul>
+	<ol>
+		<li><a href="">Americano</a></li>
+		<li><a href="">Espresso</a></li>
+	</ol>
+	<div>
+		<p>Read what customer say <a href="">about us</a></p>
+	</div>
+	<p>We hope to see you soon</p>
+	<hr>
+	<form>
+		<div>
+			<input type="text" placeholder="enter your name">
+		</div>
+		<div>
+			<p>Hobbies</p>
+			<br>
+			<input type="checkbox" id="football"><label for="football">Football</label><br>
+			<input type="checkbox" id="volleyball"><label for="volleyball">Volleyball</label><br>
+			<input type="checkbox" id="badminton"><label for="badminton">Basketball</label><br>
+			<button class="form-submit" disabled>Submit</button>
+		</div>
+	</form>
+	
+	<hr>
+
+	<div class="position">
+		<h2>Row A</h2>
+		<h2>Row B</h2>
+		<h2>Row C</h2>
+
+		<p>Line 1</p>
+		<p>Line 2</p>
+		<p>Line 3</p>
+		<p>Line 4</p>
+		<p>Line 5</p>
+		<p>Line 6</p>
+		<p>Line 7</p>
+		<div>
+			<p>Footer</p>
+			<p>Footer2</p>
+			<p>Footer3</p>
+		</div>
+	</div>
+</body>
+</html>
