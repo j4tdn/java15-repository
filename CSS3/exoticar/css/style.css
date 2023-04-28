@@ -19,6 +19,11 @@ body {
 	color: #fff;
 }
 
+a:hover {
+	color: #e00;
+	text-decoration: underline;
+}
+
 /*===== ==========   =====
   ===== HEADER STYLE =====
   ===== ==========   =====*/
@@ -40,11 +45,6 @@ body {
 #page-header .main-nav ul li {
 	float: left;
 	margin-left: 48px;
-}
-
-#page-header .main-nav ul li a:hover {
-	color: #e00;
-	text-decoration: underline;
 }
 
 /*===== ==========   =====
@@ -101,10 +101,10 @@ body {
 .articles {
 	background: linear-gradient(
 		100deg, 
-		#f12fab 0%,
-		#2989d8 50%,
-		#207cca 51%,
-		#67af81 100%);
+		#fff 0%,
+		#fff 50%,
+		#000 51%,
+		#000 100%);
 }
 
 /*
@@ -126,7 +126,7 @@ body {
 	   + new element after last child: clear --> left || both;
 	   + parent::after: clear --> left || both;
 */
-.articles::after {
+.articles::after, #page-footer  .wrapper::after {
 	content: ".";
 	font-size: 0;
 	display: block;
@@ -136,18 +136,21 @@ body {
 .articles .wrapper article {
 	width: 50%;
 	float: left;
-	padding: 50px 0;
+	padding: 80px 0;
+	font-size: 18px;
+	line-height: 1.6;
 
 }
 
 .articles .wrapper article:first-child {
-	padding-right: 80px;
+	padding-right: 100px;
 	box-sizing: border-box;
 }
 
 .articles .wrapper article:last-child {
-	padding-left: 80px;
+	padding-left: 100px;
 	box-sizing: border-box;
+	color: #fff;
 }
 
 .articles .wrapper article .article-title {
@@ -159,9 +162,9 @@ body {
 	font-size: 0;
 	display: block;
 	width: 60px;
-	height: 2px;
-	background-color: #ff0;
-	margin: 20px 0;
+	height: 3px;
+	background-color: #f11;
+	margin: 30px 0;
 }
 
 .articles .wrapper article .quote {
@@ -171,4 +174,66 @@ body {
 
 .articles .wrapper article .content {
 	margin: 20px 0;
+}
+
+/*===== ==========   =====
+  ===== FOOTER STYLE =====
+  ===== ==========   =====*/
+#page-footer {
+	background-color: #111;
+	padding: 25px 0;
+	
+}
+
+#page-footer .footer-col{
+	width: 25%;
+	float: left;
+}
+
+#page-footer .footer-col .title{
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+#page-footer .footer-col .title::after {
+	content: '.';
+	font-size: 0;
+	display: block;
+	width: 75%;
+	height: 1px;
+	background-color: #fff;
+	margin: 15px 0;
+}
+
+#page-footer .footer-col ul>li {
+	opacity: 0.7;
+	font-size: 15px;
+	line-height: 1.6;
+}
+
+#page-footer .social ul>li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+#page-footer .social ul>li>a {
+	display: block;
+	width: 44px;
+	height: 44px;
+	background: #000;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 44px;
+}
+
+#page-footer .social ul>li>a:hover {
+	color: #f10;
+	background-color: #fff;
+	opacity: 1;
+}
+
+#page-footer .social .reversed {
+	margin-top: 20px;
+	opacity: 0.8;
+	font-size: 15px; 
 }
