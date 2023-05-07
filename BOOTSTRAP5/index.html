@@ -101,14 +101,19 @@
 	</div>
 
 
-    
-    <h1>Demo Bootstrap 5 - 23.04.2023</h1>
+    <div class="d-flex justify-content-between pt-2 pb-2 pe-3">
+    	<h1>Demo Bootstrap 5 - 23.04.2023</h1>
+    	<button type="button" class="btn btn-success"
+    		data-bs-toggle="modal" data-bs-target="#bp-np-modal">Create New Post</button>
+    </div>
+   
 
     <!-- Bootstrap Table -->
     <hr>
     <h3 class="text-success">01. Grid system --> 12 columns & 6 tiers(breakpoints)</h2>
-    <table class="table">
-	  <thead>
+    
+    <table class="table table-hover table-bordered">
+	  <thead class="table-info">
 	    <tr>
 	      <th scope="col">#</th>
 	      <th scope="col">Breakpoint</th>
@@ -157,8 +162,9 @@
 	  </tbody>
 	</table>
 
-    <hr>
     <h3 class="text-danger">View Width = <span class="view-width">___</span></h3>
+
+    <hr>
 
     <!-- 
 		Responsive khi UI view width càng nhỏ
@@ -186,6 +192,67 @@
     		<div class="col-md-6 col-lg-3"></div>
     	</div>
     </div>
+
+
+    <!-- MODAL(s) -->
+
+    <div class="modal fade" tabindex="-1" id="bp-np-modal" data-bs-backdrop="static" data-bs-keyboard="false">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title text-primary">New BreakPoint Post</h5>
+	        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	      </div>
+	      <div class="modal-body">
+	      	<form class="row g-3">
+			  <div class="col-md-6">
+			    <label for="inputEmail4" class="form-label">Email</label>
+			    <input type="email" class="form-control" id="inputEmail4">
+			  </div>
+			  <div class="col-md-6">
+			    <label for="inputPassword4" class="form-label">Password</label>
+			    <input type="password" class="form-control" id="inputPassword4">
+			  </div>
+			  <div class="col-12">
+			    <label for="inputAddress" class="form-label">Address</label>
+			    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+			  </div>
+			  <div class="col-12">
+			    <label for="inputAddress2" class="form-label">Address 2</label>
+			    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+			  </div>
+			  <div class="col-md-6">
+			    <label for="inputCity" class="form-label">City</label>
+			    <input type="text" class="form-control" id="inputCity">
+			  </div>
+			  <div class="col-md-4">
+			    <label for="inputState" class="form-label">State</label>
+			    <select id="inputState" class="form-select">
+			      <option selected>Choose...</option>
+			      <option>...</option>
+			    </select>	
+			  </div>
+			  <div class="col-md-2">
+			    <label for="inputZip" class="form-label">Zip</label>
+			    <input type="text" class="form-control" id="inputZip">
+			  </div>
+			  <div class="col-12">
+			    <div class="form-check">
+			      <input class="form-check-input" type="checkbox" id="gridCheck">
+			      <label class="form-check-label" for="gridCheck">
+			        Check me out
+			      </label>
+			    </div>
+			  </div>
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+	        <button type="button" class="btn btn-primary">Publish now</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
 
     <script src="js/bootstrap.bundle.min.js"></script>

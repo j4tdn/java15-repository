@@ -1,0 +1,10 @@
+.hline {
+	width: 100%;
+	height: 2px;
+	background: green;
+	margin: 30px 0;
+}
+
+.popup-game {
+	cursor: pointer;
+}
