@@ -12,7 +12,6 @@ console.log('====== EX02 - Popup Functions ======');
 		if (expectedJs) {
 			pgame();
 		}
-
 	}
 
 	function pgame() {
