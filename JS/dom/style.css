@@ -1,0 +1,9 @@
+#btn{
+	padding : 0 12px;
+	font-weight: bold;
+	cursor: pointer;
+}
+ul li span{
+	color: darkred;
+	cursor: pointer;
+}
