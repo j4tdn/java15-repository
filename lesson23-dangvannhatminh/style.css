@@ -1,0 +1,70 @@
+html {
+	width: 100%;
+	height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFE3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.main-content {
+	width: 600px;
+	border-radius: 50px;
+}
+.main-content .title {
+	background-color: #5095D8;
+	height: 70px;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.main-content .add-content {
+	width: 100%;
+	display: flex;
+	height: 50px;
+}
+.main-content .add-content .task-content{
+	width: 85%;
+	padding: 0px 20px;
+	box-sizing: border-box;
+}
+.main-content .add-content .add-btn{
+	width: 15%;
+	padding:10px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+.main-content .list-task {
+}
+.main-content .list-task li{
+	width: 100%;
+	height: 40px;
+	display: flex;
+	border: solid 2px #ccc;
+}
+.main-content .list-task li .box-check{
+	width: 10%;
+	padding: 15px;
+	box-sizing: border-box;
+	background-color: #5095D8;
+}
+.main-content .list-task li .item-name{
+	width: 75%;
+	padding: 15px;
+	box-sizing: border-box;
+}
+.main-content .list-task li .del-btn{
+	width: 15%;
+	padding: 15px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #5095D8;
+	cursor: pointer;
+}
+
