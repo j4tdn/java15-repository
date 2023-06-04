@@ -1,0 +1,43 @@
+.pointer{
+	cursor: pointer;
+	box-sizing: border-box;
+	padding: 5px 12px;
+}
+.text-bold{
+	font-weight: bold;
+	font-size:18px;
+}
+
+.register-form table td{
+	font-size: 18px;
+}
+
+.register-form table td >input[type='text'],
+.register-form table td >input[type='number']{
+	height:28px;
+	font-size: 18px;
+	color:#ccc;
+}
+
+.avatar{
+	width: 220px;
+	height: 200px;
+	border:1px solid black;
+
+}
+.user-avatar{
+	display: flex;
+	align-items: center;
+	gap:20px;
+}
+.text-md-green{
+	color: green;
+	font-size: 20px;
+}
+.block-md{
+	width: 220px;
+	height: 200px;
+}
+.bg-green{
+	background-color: green;
+}

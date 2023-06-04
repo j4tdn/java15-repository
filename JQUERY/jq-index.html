@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JQ-Index Demo-02.06.2023</title>
+	<link rel="stylesheet" type="text/css" href="css/jq-style.css">
+</head>
+<body>
+	<h1>JQuery Demo - 06.02.2023</h1>
+	<hr>
+
+
+	<p class="welcome">Welcome to JQuery lessons</p>
+	<p class="meta">
+		<span class="wish">Hope you enjoy the JQuery  language</span><br>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+	<hr>
+	<!-- jq from demo -->
+	<div class="register-form">
+		<h3>Register for new Class -2023</h3>
+		<form>
+			<table cellpadding="8px">
+				<tr class="user-name">
+					<td >Your name: <span style="color:red;" class="required">(*)</span> </td>
+					<td><input type="text"/></td>
+				</tr>
+				<tr class="user-age">
+					<td>Your age:  <span style="color:red;" class="required">(*)</span></td>
+					<td><input type="number"/></td>
+				</tr>
+				<tr>
+					<td>Your avatar:</td>
+					<td class="user-avatar">
+						<img class="avatar" src="img/avatar.png" alt="User" >
+						<input type="file" class="reg-selected-file">
+					</td>
+				</tr>
+				<tr>
+					<td><input type="reset" value="CLEAR" class="pointer" ></td>
+					<td><input type="button" value="SIGN UP" class="pointer button-register"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	<!-- ADD , REMOVE , TOGGLE -->
+	<h3 class="text-md-green">Demo Toggle Class-2023</h3>
+	<button class="button-toggle mb-10">Toggle >.< Block</button>
+	<div class="block-md bg-green"></div>
+
+	<script type="text/javascript" src="js/jquery-3.7.0.js"></script>
+	<script type="text/javascript" src="js/jq-script.js"></script>
+</body>
+</html>
