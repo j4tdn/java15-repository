@@ -1,0 +1,82 @@
+body {
+    background-color: blueviolet;
+}
+
+.notice {
+    color: red;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.content {
+    max-width: 450px;
+    margin: 15px auto;
+    border: 1px solid greenyellow;
+    border-radius: 35px;
+    box-shadow: 0 0 10px #3be0d0;
+}
+
+.content-header {
+    background-color: greenyellow;
+    height: 80px;
+    border-radius: 35px 35px 0 0;
+    padding-top: 0;
+}
+
+.content-header h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 80px;
+    margin: 0;
+}
+
+.add-content {
+    height: 50px;
+    width: 100%;
+
+}
+
+.add-text {
+    width: 80%;
+    line-height: 50px;
+    font-size: 16px;
+    float: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: 0;
+    outline: none;
+}
+
+.add-button {
+    width: 20%;
+    height: 45px;
+    background-color: blue;
+    text-align: center;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+ul.tasks {
+    margin: 0;
+    padding: 0;
+}
+
+li.task {
+    list-style: none;
+    height: 60px;
+    border: 1px solid red;
+}
+
+li.task>* {
+    float: left;
+    height: 60px;
+}
+
+li.task:last-child {
+    border-radius: 0 0 40px 40px;
+}
