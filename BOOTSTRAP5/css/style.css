@@ -1,0 +1,17 @@
+.mn-block-md>div {
+    height: 120px;
+    border: 2px solid #e6d8b7;
+}
+
+.mn-text-warning>div {
+    background-color: orange;
+}
+
+.mn-text-success>div {
+    background-color: green;
+}
+
+/* 
+.mn-bd-2 {
+    border: 2px solid #e6d8b7;
+} */
