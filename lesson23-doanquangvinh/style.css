@@ -1,0 +1,47 @@
+.app-block{
+	display: flex;
+	flex-direction: column;
+	width: 500px;
+	border: 2px solid whitesmoke ;
+	margin:0 auto;
+	border-radius: 10px;
+}
+.header{
+	justify-content: center;
+	text-align: center;
+	color: white;
+	font-weight: bolder;
+	background: skyblue;
+}
+.content > form > input {
+	width: 85%;
+}
+#btn-add{
+	width: 15%;
+	background: skyblue;
+}
+.content > form{
+	width: 100%;
+	height: 50px;
+	display: inline-flex;
+}
+.task{
+	display: flex;
+	height: 50px;
+	justify-content: space-between;
+}
+.task > .images{
+	width: 100%;
+}
+.content{
+	display: flex;
+	justify-content: flex-start;
+	text-align: center;
+}
+.box{
+	background-color: skyblue;
+	justify-content: center;
+	text-align: center;
+	display: flex;
+}
+
