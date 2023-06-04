@@ -1,0 +1,87 @@
+/* CSS code */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+.container {
+  width: 500px;
+  padding: 50px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container h3 {
+  text-align: center;
+}
+
+.container form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.container form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.container form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.container .task-list {
+  display: flex;
+  justify-content: center;
+}
+
+.container ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none; /* Remove underline from the label */
+}
+
+.container ul li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.container ul li input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+}
+
+.container ul li .delete-icon {
+  cursor: pointer;
+}
+
+.container .plus {
+  display: block;
+  margin: 20px auto;
+}
+
+.container .counter {
+  text-align: center;
+}
