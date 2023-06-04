@@ -1,0 +1,7 @@
+.mn-block-md > div{
+	height: 120px;
+	border: 2px solid #e6d7b3;
+}
+.mn-text-warning > div{
+	background-color: orange;
+}
