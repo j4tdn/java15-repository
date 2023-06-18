@@ -1,6 +1,22 @@
 body {
 	background-color: #FFFFE4;
 }
+/*======================
+====== TODO UTILS ======
+========================*/
+.text-red {
+	color: red;
+}
+
+.todo-error-message {
+	text-align: center;
+	transform: translateY(60px);
+	visibility: hidden;
+}
+
+.task-done {
+	text-decoration: line-through;
+}
 
 /*======================
 ====== TODO BLOCK ======
@@ -68,6 +84,11 @@ body {
 	cursor: pointer;
 }
 
+.todo-form .todo-add-button:disabled {
+	cursor: default;
+	color: #ececec;
+}
+
 
 .todo-tasks .task {
 	width: 100%;
@@ -103,6 +124,7 @@ body {
 	background-size: 30px;
 	background-repeat: no-repeat;
 	background-position: center;
+	cursor: pointer;
 }
 
 .todo-tasks .task:last-child {
