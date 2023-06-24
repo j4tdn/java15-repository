@@ -3,8 +3,8 @@
 <head>
 	<title>Advance Selectors</title>
 	<meta charset="utf-8">
-	<style type="text/css">
-		ul li {
+	<style>
+		ul li {	
 			text-decoration: line-through;
 		}
 
@@ -20,45 +20,51 @@
 			color: red;
 		}
 
-		input[type=checkbox]:checked + label{
+		input[type=checkbox]:checked + label {
 			color: green;
 		}
 
-		.form-submit{
+		.form-submit {
 			background-color: red;
 			color: white;
 		}
 
-		.form-submit:disabled{
+		.form-submit:disabled {
 			background-color: blue;
 			color: black;
 		}
 
-		.position p:nth-child(-n + 3) {
+		/*CSS positions*/
+		/*hightlight all elements except last 2 lines*/
+		.position>p:first-of-type {
 			color: red;
 		}
 
-		.position p:last-of-type {
-			color: aqua;
+		.position>p:last-of-type {
+			color: violet;
+			font-weight: bold;
 		}
 
-		.post-title::before{
-			
+		/*before, after --> inline tag*/
+
+		.post-title::before {
+			content: '\1F339';
 		}
 
-		.post-title::after{
+		.post-title::after {
 			content: "";
-			width: 20px;
 			display: block;
+			width: 40px;
 			height: 2px;
-			background-color: red;
+			background-color: #f22;
 			margin: 20px 0;
 		}
+
 	</style>
 </head>
 <body>
 
-	<h2 class="post-title">Seating Layout</h2>
+	<h2 class="post-title">Seating &#127801; Layout</h2>
 	<h1>Coffee &amp; Cake</h1>
 	<p>We have been banking and brewing</p>
 	<h2>Our menu:</h2>
@@ -75,17 +81,25 @@
 	</div>
 	<p>We hope to see you soon</p>
 
+	<hr>
+
 	<form>
 		<div>
-			<input type="text" name="" placeholder="Enter your name">
+			<input type="text" placeholder="Enter your name">
 		</div>
+
 		<div>
 			<p>Hobbies</p>
-			<input type="checkbox" id="fb"> <label for="fb">Football</label><br>
-			<input type="checkbox" id="vlb"> <label for="vlb">Volleyball</label><br>
-			<input type="checkbox" id="bmt"> <label for="bmt">Badminton</label>
+			<input type="checkbox" id="fb">
+			<label for="fb">Football</label> <br>
 
-			<button class="form-submit" disabled> Submit</button>
+			<input type="checkbox" id="vlb"> 
+			<label for="vlb">Volleyball</label> <br>
+
+			<input type="checkbox" id="bmt"> 
+			<label for="bmt">Badminton</label>
+
+			<button class="form-submit" disabled>Submit</button>
 		</div>
 	</form>
 
@@ -109,5 +123,6 @@
 			<p>Footer 3</p>
 		</div>
 	</div>
+
 </body>
 </html>

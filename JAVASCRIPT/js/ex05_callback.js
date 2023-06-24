@@ -10,7 +10,7 @@ console.log('running -->' + running);
 
 let intervalLabel = setInterval(function(argument){
 	console.log('interval running -->' + (++running));
-	if(running === 10){
+	if(running === 1){
 		clearInterval(intervalLabel);
 	}
 }, 1000);

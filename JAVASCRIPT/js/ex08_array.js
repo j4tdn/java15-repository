@@ -16,7 +16,7 @@ months.push(7);
 
 console.log('let try --> push' + months);
 
-months.insert(2, 555);
+// months.insert(2, 555);
 
 console.log('lets try --> prototype insert' + months);
 
