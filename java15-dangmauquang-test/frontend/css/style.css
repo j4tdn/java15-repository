@@ -1,0 +1,71 @@
+			/*HEADER*/
+
+.search-box input[type="text"] {
+  padding-right: 30px;
+}
+
+.search-box button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background: #ccc url('path/to/search-icon.png') center no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+	width:200px;
+	height: 100px;
+	margin-left: 100px;
+	margin-top: 20px;
+	float: left;
+}
+
+.search-box {
+	width: 200px;
+	margin: 0 auto;
+	padding-top: 40px;
+}
+
+/*Category*/
+
+.category{
+	width: 100%;
+	margin: 0 auto;
+}
+.inline-list {
+	clear: both;
+  	list-style: none;
+  	background-color: blue;
+  	text-align: center;
+}
+
+.inline-list li {
+  display: inline-block;
+  font-size: 0.9em;
+  padding: 0 10px;
+  color: white;
+}
+
+/*Collection*/
+.collection h2 {
+	text-align: center;
+}
+
+.collection {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/*Product*/
+
+.product h2 {
+	text-align: center;
+}
+
+.footer {
+	clear: both;
+	width: 100%;
+}

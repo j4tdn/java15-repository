@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Md7jIQ9s3ZJb7xYuRJYsLfTbpECQkqd6zfUqG2ieHQPU0q8cfw/DqgIc3h6lHhB7bnP3DKWfAzidz5ThRb+K7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <img class="logo" src="images/logo.webp" alt="Ikea">
+      </div>
+        <div class="search-box">
+          <input type="text" id="search" name="q" placeholder="Tìm kiếm...">
+          </div>
+      </div>
+
+      <div class="category">
+        <ul class="inline-list">
+            <li>Tất cả</li>
+            <li>Đồ Phòng Khách</li>
+            <li>Đồ Phòng Ngủ</li>
+            <li>Đồ Phòng Tắm</li>
+            <li>Đồ Bếp</li>
+            <li>Đồ dùng bàn ăn</li>
+            <li>Đồ trẻ em</li>
+            <li>Đồ dùng gia đình</li>
+            <li>Decor</li>
+            <li>Tin tức</li>
+            <li>Tất cả danh mục</li>
+        </ul>
+      </div>
+    </header>
+    <main class="main">    
+      <div id="carouselExampleCaptions" class="carousel slide" style="margin-bottom: 15px;" >
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/image_slider1.webp" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/image_slider2.webp" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width: 100%;">
+            <img src="images/custom_banner_1_image.webp" class="card-img-top" alt="...">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 100%;">
+            <img src="images/custom_banner_2_image.webp" class="card-img-top" alt="...">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 100%;">
+            <img src="images/custom_banner_3_image.webp" class="card-img-top" alt="..."> 
+          </div>
+        </div>  
+      </div>
+
+      <br><br>
+      <div class="collection">
+        <h2 class="col">BỘ SƯU TẬP</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card" style="width: 100%;">
+              <img src="images/ads-2-1.jpg" class="card-img-top" alt="...">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card" style="width: 100%;">
+              <img src="images/ads-2-1.jpg" class="card-img-top" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br>
+      <div class="product">
+        <h2 class="col">SẢN PHẨM</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card" style="width: 100%;">
+              <img src="images/1.webp" class="card-img-top" alt="...">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 100%;">
+              <img src="images/2.webp" class="card-img-top" alt="...">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 100%;">
+              <img src="images/3.webp" class="card-img-top" alt="..."> 
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card" style="width: 100%;">
+              <img src="images/4.webp" class="card-img-top" alt="..."> 
+            </div>
+          </div>
+        </div>  
+      </div>
+      
+    </main>
+    <footer>
+      <div class="footer">
+        <a><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </footer>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" 
+    crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
