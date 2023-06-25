@@ -1,0 +1,47 @@
+#searchtext {
+    width: fit-content;
+    transition: width 0.5s ease 0s;
+    height: 40px;
+    border-radius: 5px;
+    color: #000;
+    border: 1px solid #d3d3d3;
+    font: normal 13px 'Arial';
+    background: #fff;
+    border-radius: 4px;
+    border: solid 2px #ccc;
+}
+
+.header__navbar {
+    width: fit-content;
+}
+
+header .header {
+    display: flex;
+}
+
+.site-nav{
+    font-size: 0.875em;
+    cursor: default;
+    margin: 0;
+    display: inline-block;
+    text-align: left;
+    background: #0051ba;
+    text-decoration: none;
+}
+
+.site-nav__link {
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    font-size: 17px;
+    font-family: Arial;
+}
+
+ul.site-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
