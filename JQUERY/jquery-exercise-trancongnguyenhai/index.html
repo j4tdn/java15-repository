@@ -4,52 +4,55 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>TODO APP</title>
-	<link rel="stylesheet" href="style.css">
+	<title>JAVA15 - TODO APP</title>
+	<link rel="icon" href="images/todo-icon.jpg">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<p class="notice">Oops... Task's content cannot be EMPTY !!!</p>
-
-	<div class="content-block">
-		<div class="content-header">
-			<h2>TODO LIST-APP</h2>
+	<p class="todo-error-message text-red text-center">
+		Oops... Task's content cannot be EMPTY!!!
+	</p>
+	<div class="todo-block">
+		<div class="todo-header">
+			<h2>Todo List - App</h2>
 		</div>
-
-		<div class="content-body">
-			<div class="add-content">
-				<input class="add-text" type="text" placeholder="A task you want to complete">
-				<button class="add-button">+</button>
+		<div class="todo-body">
+			<div class="todo-form">
+				<input class="todo-text-ip" type="text" placeholder="A task you want to complete">
+				<button class="todo-add-button" disabled>+</button>
 			</div>
 
-			<ul class="tasks">
+			<ul class="todo-tasks">
 				<li class="task">
-					<div class="check-box">
+					<div class="task-cbx">
 						<input type="checkbox" unchecked>
-						<div class="task-text">Task 01</div>
-						<div class="task-delete"></div>
 					</div>
+					<div class="task-content">Task 01</div>
+					<div class="task-trash"></div>
 				</li>
 				<li class="task">
-					<div class="check-box">
+					<div class="task-cbx">
 						<input type="checkbox" unchecked>
-						<div class="task-text">Task 02</div>
-						<div class="task-delete"></div>
 					</div>
+					<div class="task-content">Task 02</div>
+					<div class="task-trash"></div>
 				</li>
 				<li class="task">
-					<div class="check-box">
+					<div class="task-cbx">
 						<input type="checkbox" unchecked>
-						<div class="task-text">Task 03</div>
-						<div class="task-delete"></div>
 					</div>
+					<div class="task-content">Task 03</div>
+					<div class="task-trash"></div>
 				</li>
 			</ul>
 		</div>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-	<script src="script.js"></script>
+	<script src="js/jquery-3.7.0.js"></script>
+	<script src="js/jquery-ui-1.13.2.js"></script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>
