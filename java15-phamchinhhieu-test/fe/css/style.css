@@ -1,0 +1,19 @@
+header{
+    height: 20%;
+}
+.header-page .logo{
+    float: left;
+}
+.search{
+    margin-top:60px;
+    margin-left: 200px;
+   
+	border: 1;
+	padding: 0 12px;
+	font-size: 30px;
+}
+.body-page{
+    margin-top: 150px;
+}
+.body-page .category ul {
+}
