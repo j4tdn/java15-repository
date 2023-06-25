@@ -1,0 +1,97 @@
+.header-container {
+  width: 100%;
+}
+
+.header-container .navbar{
+  display: flex;
+  justify-content: center;
+}
+
+.header-container .container-fluid{
+  width: 80%;
+}
+
+.nav-header {
+  background-color: #0051ba;
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+}
+.nav-header .title-nav{
+
+}
+.nav-header .title-nav .site-nav li{
+  display: inline-block;
+  line-height:40px;
+  padding: 0px 10px;
+  border-right: solid #ccc 1px;
+}
+.nav-header .title-nav .site-nav li a{
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+}
+.nav-header .title-all span{
+  line-height:40px;
+  color: white;
+  font-size: 13px;
+}
+.item-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.item-container .row .col-4{
+  color: #ccc;
+  height: 300px;
+}
+.item-container .row .col-4:nth-child(1){
+  background-size: cover;
+  background-image: url('https://theme.hstatic.net/1000155151/1001055935/14/custom_banner_1_image.jpg?v=11');
+}
+
+.item-container .row .col-4:nth-child(2){
+  background-size: cover;
+  background-image: url('https://theme.hstatic.net/1000155151/1001055935/14/custom_banner_2_image.jpg?v=11');
+}
+
+.item-container .row .col-4:nth-child(3){
+  background-size: cover;
+  background-image: url(' https://theme.hstatic.net/1000155151/1001055935/14/custom_banner_3_image.jpg?v=11');
+}
+.content .collections-content {
+  text-align: center;
+}
+.content .collections-content h1 {
+    display: inline-block;
+    font-family: 'Roboto',sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 45px;
+}
+.content .collections-content>.row{
+  height: 200px;
+  width: 70%;
+  margin: 0 auto;
+}
+.content .collections-content .decor{
+  background-size: cover;
+  background-image: url('https://theme.hstatic.net/1000155151/1001055935/14/ads-2-1.jpg?v=11');
+}
+.content .collections-content .kitchen{
+  background-size: cover;
+  background-image: url('https://theme.hstatic.net/1000155151/1001055935/14/ads-2-2.jpg?v=11');
+  height: 200px;
+}
+.content .collections-content .bathroom{
+  background-size: cover;
+  background-image: url('https://theme.hstatic.net/1000155151/1001055935/14/ads-2-3.jpg?v=11');
+  height: 200px;
+}
+.content .collections-content .sleep{
+  background-size: cover;
+  background-image: url('https://theme.hstatic.net/1000155151/1001055935/14/ads-2-4.jpg?v=11');
+  height: 200px;
+}
