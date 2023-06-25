@@ -3,40 +3,60 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>DOM - EX01 - CRUD</title>
-	<link rel="stylesheet" href="style.css">
+	<title>JAVA15 - TODO APP</title>
+	<link rel="icon" href="images/todo-icon.jpg">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="container">
-	<h3>ToDo List</h3>
+<body>
 
-	<form>
-		<input id="new-text" type="text" placeholder="Add new Task">
-		<button bs-target='15' id="btn-add">+</button>
-	</form>	
-	<ul id="tasks">
-  <li>
-    <input type="checkbox" id="task1">
-    <label for="task1">Task 01</label>
-    <span class="delete-icon">&#128465;</span>
-  </li>
-  <li>
-    <input type="checkbox" id="task2">
-    <label for="task2">Task 02</label>
-    <span class="delete-icon">&#128465;</span>
-  </li>
-  <li>
-    <input type="checkbox" id="task3">
-    <label for="task3">Task 03</label>
-    <span class="delete-icon">&#128465;</span>
-  </li>
-  <li>
-    <input type="checkbox" id="task4">
-    <label for="task4">Task 04</label>
-    <span class="delete-icon">&#128465;</span>
-  </li>
-</ul>
-	<script src="script.js"></script>
-	<script src="jquery-3.7.0.js"></script>
+	<!-- Let's test with SELECT ALL 3 states -->
+
+	<p class="todo-error-message text-red">
+		Oops... Task's content cannot be EMPTY !!!
+	</p>
+
+	<div class="todo-block">
+		<div class="todo-header">
+			<h2>Todo List - App</h2>
+		</div>
+		
+		<div class="todo-body">
+			<div class="todo-form">
+				<input class="todo-text-ip" type="text" placeholder="A task you want to complete">
+				<button class="todo-add-button">+</button>
+			</div>
+			
+			<ul class="todo-tasks">
+				<li class="task">
+					<div class="task-cbx">
+						<input type="checkbox" unchecked>
+					</div>
+					<div class="task-content">Task 01</div>
+					<div class="task-trash"></div>
+				</li>
+				<li class="task">
+					<div class="task-cbx">
+						<input type="checkbox" unchecked>
+					</div>
+					<div class="task-content">Task 02</div>
+					<div class="task-trash"></div>
+				</li>
+				<li class="task">
+					<div class="task-cbx">
+						<input type="checkbox" unchecked>
+					</div>
+					<div class="task-content">Task 03</div>
+					<div class="task-trash"></div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.7.0.js"></script>
+	<script src="js/jquery-ui-1.13.2.js"></script>
+	<script src="js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </body>
 </html>
