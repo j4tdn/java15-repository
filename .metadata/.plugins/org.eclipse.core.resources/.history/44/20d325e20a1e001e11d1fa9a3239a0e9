@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--1. Initial Bean Via empty constructor -->
+	<bean id="igA" class="bkit.java15.bean.ItemGroup"></bean>
+	
+	<bean id="igB" class="bkit.java15.bean.ItemGroup">
+		<property name="id" value="1"></property>
+		<property name="name" value="Item Group B"></property>
+	</bean>
+	
+	<bean id="itemB1" class="bkit.java15.bean.Item">
+		<property name="id" value="151"></property>
+		<property name="name" value="Item 151"></property>
+		<property name="sellPrices" value="A151"></property>
+		<property name="provider">
+			<list>
+				<value>P1</value>
+				<value>P2</value>
+			</list>
+		</property>
+		<property name="itemGroup" ref="igB"> </property>
+		
+	<!-- 	<property name="itemGroup">
+			<bean class="bkit.java15.bean.ItemGroup">
+				<property name="id" value="99"></property>
+				<property name="name" value="Item Group B99"></property>
+				</bean>
+		</property> -->
+	</bean>
+	
+	<bean id="igC" class="bkit.java15.bean.ItemGroup">
+		<constructor-arg name="id" value="2"></constructor-arg>
+		<constructor-arg name="name" value="Item Group C"></constructor-arg>
+	</bean>
+	
+	
+	
+	
+	<!--2. Initial Bean via empty constructor & setter -->
+	<!--3. Initial Bean via empty constructor with arguments -->
+	
+</beans>

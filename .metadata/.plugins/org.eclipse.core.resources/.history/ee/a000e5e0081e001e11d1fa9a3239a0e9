@@ -1,0 +1,18 @@
+package bkit.java15.view;
+
+import java.util.Arrays;
+
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import bkit.java15.utils.IocUtils;
+public class Ex01SpringBeansDemo {
+	private static final String SPRING_BEANS_METADATA_PATH = "1. Spring Beans.xml";
+	
+	public static void main(String[] args) {
+		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(SPRING_BEANS_METADATA_PATH);
+		
+//		Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+		IocUtils.printIocBeanNames(context);
+	}
+}
