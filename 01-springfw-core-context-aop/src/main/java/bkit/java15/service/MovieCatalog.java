@@ -10,7 +10,7 @@ public class MovieCatalog {
 		this.catalog = catalog;
 	}
 	
-	public void recomend() {
+	public void recommend() {
 		switch(catalog) {
 			case ACTION:
 				System.out.println("If you like 'ACTION' movie, we would like to suggest watching 'ACTION 123' series");

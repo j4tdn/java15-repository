@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- config bean which contains join point methods -->
+	<bean name="movieService" class="bkit.java15.service.MovieService">
+		<property name="name" value="Avatar"></property>
+		<property name="catalog" value="ADVENTURE"></property>
+	</bean>
+	
+	<!-- config bean for advice -->
+	<bean name="runBeforeInvokeService" class="bkit.java15.interceptors.ServiceBeforeAdvice"></bean>
+	<bean name="runAfterInvokeService" class="bkit.java15.interceptors.ServiceAfterAdvice"></bean>
+	
+	<!-- config proxy contains join point & advice -->
+	<bean name="movieServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="target" ref="movieService"></property>
+		<property name="interceptorNames">
+			<list>
+				<value>runBeforeInvokeService</value>
+				<value>runAfterInvokeService</value>
+			</list>
+		</property>
+	</bean>
+	
+</beans>
