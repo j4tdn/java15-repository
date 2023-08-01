@@ -1,14 +1,17 @@
 package bkit.java15.view;
 
+import javax.sound.midi.Soundbank;
+
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import bkit.java15.configuration.SpringBeanConfig;
+import bkit.java15.configuration.AppConfig;
 import bkit.java15.service.MovieCatalog;
+import bkit.java15.service.MovieRecommender;
 import bkit.java15.utils.IocUtils;
 
 public class Ex02SpringBeansAnnotationDemo {
-	private static final Class<?> SPRING_BEANS_METADATA_PATH = SpringBeanConfig.class;
+	private static final Class<?> SPRING_BEANS_METADATA_PATH = AppConfig.class;
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(SPRING_BEANS_METADATA_PATH);
@@ -17,9 +20,16 @@ public class Ex02SpringBeansAnnotationDemo {
 
 		System.out.println("\n ========= Test Call Bean Methods ============ \n");
 
-		MovieCatalog movieCatalog = context.getBean("movieCatalog", MovieCatalog.class);
-		movieCatalog.recomend();;
+		MovieRecommender movieRecommender = context.getBean("movieRecommender", MovieRecommender.class);
+		movieRecommender.recomend();
 
+		System.out.println("\n ========= Test Bean Scope ============ \n");
+		MovieCatalog movieCatalogA1 = context.getBean("movieCatalogAdventure", MovieCatalog.class);
+		MovieCatalog movieCatalogA2 = context.getBean("movieCatalogAdventure", MovieCatalog.class);
+		
+		System.out.println("movieCatalogA1: " + System.identityHashCode(movieCatalogA1));
+		System.out.println("movieCatalogA2: " + System.identityHashCode(movieCatalogA2));
+		
 		context.close();
 	}
 }

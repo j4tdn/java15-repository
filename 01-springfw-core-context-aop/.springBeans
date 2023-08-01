@@ -8,6 +8,7 @@
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
 		<config>src/main/resources/1. Spring Beans.xml</config>
+		<config>src/main/resources/2. Spring AOP - join point advice proxy.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
