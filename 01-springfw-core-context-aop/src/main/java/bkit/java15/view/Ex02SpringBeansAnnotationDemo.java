@@ -3,14 +3,14 @@ package bkit.java15.view;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import bkit.java15.configuration.SpringBeanConfig;
+import bkit.java15.configuration.AppConfig;
 import bkit.java15.service.MovieCatalog;
 import bkit.java15.service.MovieRecommender;
 import java15.bkit.utils.IocUtils;
 
 public class Ex02SpringBeansAnnotationDemo {
 
-	private static final Class<?> SPRING_BEANS_METADATA_PATH = SpringBeanConfig.class;
+	private static final Class<?> SPRING_BEANS_METADATA_PATH = AppConfig.class;
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(SPRING_BEANS_METADATA_PATH);

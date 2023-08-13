@@ -6,9 +6,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import bkit.java15.service.MovieService;
 import java15.bkit.utils.IocUtils;
 
-public class Ex04SpringAopAdvisorDemo {
+public class Ex05SpringAopAutoProxyDemo {
 	
-	private static final String AOP_PATH = "3. Spring AOP - join point advisor proxy.xml";
+	private static final String AOP_PATH = "4. Spring AOP - join point advisor auto proxy.xml";
 	
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(AOP_PATH);
@@ -17,10 +17,11 @@ public class Ex04SpringAopAdvisorDemo {
 		
 		System.out.println("\n====================");
 		
-		// get bean of proxy --> return target of proxy = join point
-		MovieService movieService = context.getBean("movieServiceProxy", MovieService.class);
+		// get bean itself(joinpoint) --> base on advisor to add aspects
+		MovieService movieService = context.getBean("movieService", MovieService.class);
 		movieService.printName();
 		movieService.printCatalog();
+		movieService.insertMovie();
 		
 		context.close();
 	}

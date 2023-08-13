@@ -1,0 +1,8 @@
+1. After coding
+2. mvn
+   + clean  : delete jar files in target
+   + build  : build project to war/jar/pom
+            
+   + install: update jar files from pom.xml
+              build project
+   
