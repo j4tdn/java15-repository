@@ -24,4 +24,8 @@ public class MovieService {
 	public void printCatalog() {
 		System.out.println(">> " + getClass().getName() + " --> " + catalog);
 	}
+	
+	public void insertMovie() {
+		System.out.println("Inserting ... nothing to database !!!");
+	}
 }

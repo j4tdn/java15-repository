@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<!-- config bean which contains join point methods -->
+	<bean name="movieService" class="bkit.java15.service.MovieService">
+		<property name="name" value="Avatar"></property>
+		<property name="catalog" value="ADVENTURE"></property>
+	</bean>
+	
+	<!-- config bean for advicc -->
+	<bean name="runAroundInvokeService" class="bkit.java15.interceptors.ServiceAroundAdvice"></bean>
+	
+	<!-- config bean for pointcut -->
+	<bean name="moviePointCut" class="org.springframework.aop.support.NameMatchMethodPointcut">
+		<property name="mappedNames">
+			<list>
+				<value>printName</value>
+				<value>printCatalog</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- config bean for advisor(xml) = aspect(java) -->
+	<bean name="advisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
+		<property name="advice" ref="runAroundInvokeService"></property>
+		<property name="pointcut" ref="moviePointCut"></property>
+	</bean>
+	
+	<!-- config auto proxy -->
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator">
+	</bean>
+	
+</beans>
