@@ -1,22 +1,14 @@
 package bkit.java15.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomePageController {
-	
-	@RequestMapping("/")
-	@ResponseBody
-	public String index() {
-		return "Hello World 123";
-	}
-	
-	@RequestMapping("/test")
+
+	@GetMapping(value = {"", "index"})
 	public String test() {
-		// return view-name
-		return "test";
+		return "index";
 	}
-		
+
 }

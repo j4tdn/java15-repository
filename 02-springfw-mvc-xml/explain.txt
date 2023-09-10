@@ -1,0 +1,25 @@
+@Controller
+  + Target: TYPE
+  + Khai báo, chứa method nào sẽ được dùng để xử lý request path nào
+  + Alias of @Conponent
+  
+@RequestMapping
+  + Target: TYPE, METHOD
+  + Khai báo: common path trên class
+            : sub path trên method
+  + value: path
+  + method: mặc định, chấp nhận cho tất cả method
+            GET: get data
+            POST: add data
+            PUT: update data
+            DELETE: delete data
+  
+  Spring 4
+  @RequestMapping(value="getdata", method=GET) = @GetMapping(value="getdata")
+  
+  + return view page default webapp --> WEB-INF/view/hello.jsp
+  + return view name(config view resolver)
+                   
+
+@ResponseBody
+  + return content in return part
