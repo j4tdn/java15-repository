@@ -4,12 +4,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>bkit-java15</groupId>
-  <artifactId>02-springfw-mvc-xml</artifactId>
+  <groupId>bkit.java15</groupId>
+  <artifactId>03-springfw-mvc-ant</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>02-springfw-mvc-xml Maven Webapp</name>
+  <name>03-springfw-mvc-ant Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -18,59 +18,57 @@
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
     
-    <springfw.mvc>5.3.18</springfw.mvc>
-    <javax.servlet.api>3.1.0</javax.servlet.api>
-    <javax.jsp.api>2.3.3</javax.jsp.api>
-    <javax.jstl.api>1.2</javax.jstl.api>
-    <org.hibernate>6.1.0.Final</org.hibernate>
+    <org.springframework.version>5.3.18</org.springframework.version>
+    <org.hibernate.version>6.1.0.Final</org.hibernate.version>
     
+    <javax.servlet.api.version>3.1.0</javax.servlet.api.version>
+    <javax.jsp.api.version>2.3.3</javax.jsp.api.version>
+    <javax.jstl.api.version>1.2</javax.jstl.api.version>
   </properties>
 
   <dependencies>
-    
 	<dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-webmvc</artifactId>
-	    <version>${springfw.mvc}</version>
-	</dependency>
-	
-	<dependency>
+	    <version>${org.springframework.version}</version>
+	</dependency>  
+	  
+ 	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-validator</artifactId>
+	    <version>${org.hibernate.version}</version>
+	</dependency> 
+    
+    <dependency>
 	    <groupId>javax.servlet</groupId>
 	    <artifactId>javax.servlet-api</artifactId>
-	    <version>${javax.servlet.api}</version>
+	    <version>${javax.servlet.api.version}</version>
 	    <scope>provided</scope>
 	</dependency>
 	
 	<dependency>
 	    <groupId>javax.servlet.jsp</groupId>
 	    <artifactId>javax.servlet.jsp-api</artifactId>
-	    <version>${javax.jsp.api}</version>
+	    <version>${javax.jsp.api.version}</version>
 	    <scope>provided</scope>
 	</dependency>
 	
 	<dependency>
 	    <groupId>javax.servlet</groupId>
 	    <artifactId>jstl</artifactId>
-	    <version>${javax.jstl.api}</version>
+	    <version>${javax.jstl.api.version}</version>
 	</dependency>
-	
-	<dependency>
-	    <groupId>org.hibernate</groupId>
-	    <artifactId>hibernate-validator</artifactId>
-	    <version>${org.hibernate}</version>
-	</dependency>
-
+    
   </dependencies>
 
   <build>
-    <finalName>02-springfw-mvc-xml</finalName>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+    <finalName>03-springfw-mvc-ant</finalName>
+    <pluginManagement>
       <plugins>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
         </plugin>
-        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.0.2</version>

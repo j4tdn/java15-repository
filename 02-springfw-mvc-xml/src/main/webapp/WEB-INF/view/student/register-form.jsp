@@ -18,21 +18,21 @@
 				<td><label>Id</label></td>
 				<td>
 					<form:input type="text" path="id" />
-					<form:errors path="id" cssClass="text-danger"></form:errors>
+					<form:errors path="id" cssClass="text-danger" />
 				</td>
 			</tr>
 			<tr>
 				<td><label>Name</label></td>
 				<td>
 					<form:input type="text" path="name"/>
-					<form:errors path="name" cssClass="text-danger"></form:errors>
+					<form:errors path="name" cssClass="text-danger" />
 				</td>
 			</tr>
 			<tr>
 				<td><label>Age</label></td>
 				<td>
 					<form:input type="number" min="15" max="40" path="age" />
-					<form:errors path="age" cssClass="text-danger"></form:errors>
+					<form:errors path="age" cssClass="text-danger" />
 				</td>
 			</tr>
 			<tr>
@@ -46,7 +46,7 @@
 						-->
 						<form:options items="${mockCountries}" itemValue="code" itemLabel="name" />
 					</form:select>
-					<form:errors path="country" cssClass="text-danger"></form:errors>
+					<form:errors path="country" cssClass="text-danger" />
 				</td>
 			</tr>
 			
@@ -54,7 +54,15 @@
 				<td><label>Operating System:</label></td>
 				<td>
 					<form:checkboxes items="${mockOses}" path="operatingSystems"/>
-					<form:errors path="operatingSystems" cssClass="text-danger"></form:errors>
+					<form:errors path="operatingSystems" cssClass="text-danger" />
+				</td>
+			</tr>
+			
+			<tr>
+				<td><label>Course Code</label></td>
+				<td>
+					<form:input type="text" path="courseCode"/>
+					<form:errors path="courseCode" cssClass="text-danger" />
 				</td>
 			</tr>
 			<tr>
