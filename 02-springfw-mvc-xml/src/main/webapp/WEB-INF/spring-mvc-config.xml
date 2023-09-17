@@ -22,5 +22,13 @@
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	
+	<!-- 
+		Step 5  : Configure FE resource(css, js, images) for client-server 
+		location: vị trí chứa FE files 
+		mapping : request mapping from server 
+	-->
+	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+	
 
 </beans>

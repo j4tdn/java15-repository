@@ -22,6 +22,7 @@
     <javax.servlet.api>3.1.0</javax.servlet.api>
     <javax.jsp.api>2.3.3</javax.jsp.api>
     <javax.jstl.api>1.2</javax.jstl.api>
+    <org.hibernate>6.1.0.Final</org.hibernate>
     
   </properties>
 
@@ -52,6 +53,13 @@
 	    <artifactId>jstl</artifactId>
 	    <version>${javax.jstl.api}</version>
 	</dependency>
+	
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-validator</artifactId>
+	    <version>${org.hibernate}</version>
+	</dependency>
+
 
 
   </dependencies>
