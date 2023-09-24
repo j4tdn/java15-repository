@@ -1,0 +1,16 @@
+@Controller: 
+	+ target: TYPE
+	+ khai báo, chứa method nào sẽ được dùng để xử lý request path
+	+ alias của @Component
+	
+@RequestMapping
+	+ target: TYPE, METHOD
+	+ khai báo: common path trên class
+	 		  :sub path trên method
+	+ value: path
+	+ method: mặc định, chấp nhận cho all method
+			  GET, POST, PUT, DELETE
+	
+	* From Spring 4: @RequestMapping(value="/getdata", method = GET) = @GetMapping("/getdata")
+	
+	
