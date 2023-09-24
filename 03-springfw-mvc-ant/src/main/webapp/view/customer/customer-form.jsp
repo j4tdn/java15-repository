@@ -11,11 +11,13 @@
 <body>
 	
 	<div class="container">
-		<h3 class="h4 mt-4 mb-4">Save Customer</h3>
+		<h3 class="h4 mt-4 mb-4">--- Maintain Customer ---</h3>
 		
 		<hr>
 
-		<form:form action="save" method="POST" modelAttribute="customer">
+		<form:form action="${contextPath}/customer/save" method="POST" modelAttribute="customer">
+			
+			<form:hidden path="id" />
 			
 			<div class="form-group row mt-4 mb-4">
 				<label for="firstName" class="col-sm-2 col-form-label">First name:</label>
@@ -43,7 +45,7 @@
 
 		<hr>
 		
-		<a href="">Back to Customer List</a>
+		<a href="${contextPath}/customer">Back to Customer List</a>
 		
 		<footer class="bg-light fixed-bottom py-3 text-center">
 			<div class="container-fluid">

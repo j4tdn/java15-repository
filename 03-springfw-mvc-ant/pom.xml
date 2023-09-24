@@ -19,7 +19,11 @@
     <maven.compiler.target>11</maven.compiler.target>
     
     <org.springframework.version>5.3.18</org.springframework.version>
-    <org.hibernate.version>6.1.0.Final</org.hibernate.version>
+    <org.hibernate.validator.version>6.1.0.Final</org.hibernate.validator.version>
+    
+    <mysql-connector-java.version>8.0.16</mysql-connector-java.version>
+	<hibernate.version>5.4.32.Final</hibernate.version>
+	<commons-dbcp.version>1.4</commons-dbcp.version>
     
     <javax.servlet.api.version>3.1.0</javax.servlet.api.version>
     <javax.jsp.api.version>2.3.3</javax.jsp.api.version>
@@ -36,7 +40,7 @@
  	<dependency>
 	    <groupId>org.hibernate</groupId>
 	    <artifactId>hibernate-validator</artifactId>
-	    <version>${org.hibernate.version}</version>
+	    <version>${org.hibernate.validator.version}</version>
 	</dependency> 
     
     <dependency>
@@ -57,6 +61,36 @@
 	    <groupId>javax.servlet</groupId>
 	    <artifactId>jstl</artifactId>
 	    <version>${javax.jstl.api.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>${mysql-connector-java.version}</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-c3p0</artifactId>
+		<version>${hibernate.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>commons-dbcp</groupId>
+		<artifactId>commons-dbcp</artifactId>
+		<version>${commons-dbcp.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-tx</artifactId>
+		<version>${org.springframework.version}</version>
 	</dependency>
     
   </dependencies>

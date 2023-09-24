@@ -22,7 +22,7 @@
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerId" aria-controls="#navbarTogglerId" aria-expanded="false" aria-label="Toggle navigation">
 			      <span class="navbar-toggler-icon"></span>
 			    </button>
-				<a class="navbar-brand" href="">
+				<a class="navbar-brand"  href="${contextPath}/">
 					<svg xmlns="http://www.w3.org/2000/svg" width="42" height="32" fill="currentColor" class="bi bi-person-badge" viewBox="0 0 16 16">
 					  <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
 					  <path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0h-7zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492V2.5z"/>
@@ -32,13 +32,13 @@
 
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link" class="customer-page" aria-current="page" href="">Customer</a>
+							<a class="nav-link nav-customer" class="customer-page" aria-current="page" href="${contextPath}/customer">Customer</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Stuff</a>
+							<a class="nav-link nav-stuff" href="${contextPath}/stuff">Stuff</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Admin</a>
+							<a class="nav-link nav-admin" href="${contextPath}/admin" tabindex="-1" aria-disabled="true">Admin</a>
 						</li>
 					</ul>
 
@@ -55,7 +55,7 @@
 
 
 	<main class="container-fluid">
-		<a href=""
+		<a href="${contextPath}/customer/add"
 			class="btn btn-primary btn-sm mt-3 mb-3"> <i
 			class="far fa-address-book"></i> Add Customer
 		</a>
@@ -63,6 +63,7 @@
 		<table class="table table-bordered table-striped">
 			<thead class="table-dark">
 				<tr>
+					<th><a href="">#</a></th>
 					<th><a href="">First name</a></th>
 					<th><a href="">Last name</a></th>
 					<th><a href="">Email</a></th>
@@ -71,42 +72,19 @@
 			</thead>
 
 			<tbody>
+					<c:forEach var="customer" items="${customers}" varStatus="loop">
 					<tr>
-						<td>Lorem ipsum dolor sit amet.</td>
-						<td>Lorem ipsum dolor sit amet.</td>
-						<td>Lorem ipsum dolor sit amet.</td>
+						<td>${loop.count}</td>
+						<td>${customer.firstName}</td>
+						<td>${customer.lastName}</td>
+						<td>${customer.email}</td>
 						<td>
-							<a href="" class="btn btn-info btn-sm">Update</a> 
-							<a href="" class="btn btn-danger btn-sm">Delete</a>
+							<a href="${contextPath}/customer/update?id=${customer.id}" class="btn btn-info btn-sm">Update</a> 
+							<a href="${contextPath}/customer/delete?id=${customer.id}" class="btn btn-danger btn-sm">Delete</a>
 						</td>
 					</tr>
-					<tr>
-						<td>Lorem ipsum dolor sit amet.</td>
-						<td>Lorem ipsum dolor sit amet.</td>
-						<td>Lorem ipsum dolor sit amet.</td>
-						<td>
-							<a href="" class="btn btn-info btn-sm">Update</a> 
-							<a href="" class="btn btn-danger btn-sm">Delete</a>
-						</td>
-					</tr>
-					<tr>
-						<td>Lorem ipsum dolor sit amet.</td>
-						<td>Lorem ipsum dolor sit amet.</td>
-						<td>Lorem ipsum dolor sit amet.</td>
-						<td>
-							<a href="" class="btn btn-info btn-sm">Update</a> 
-							<a href="" class="btn btn-danger btn-sm">Delete</a>
-						</td>
-					</tr>
-					<tr>
-						<td>Lorem ipsum dolor sit amet.</td>
-						<td>Lorem ipsum dolor sit amet.</td>
-						<td>Lorem ipsum dolor sit amet.</td>
-						<td>
-							<a href="" class="btn btn-info btn-sm">Update</a> 
-							<a href="" class="btn btn-danger btn-sm">Delete</a>
-						</td>
-					</tr>
+					</c:forEach>
+					
 			</tbody>
 		</table>
 
@@ -137,6 +115,7 @@
 	</footer>
 	
 	
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="${contextPath}/resources/js/script.js"></script>
 </body>
 </html>
