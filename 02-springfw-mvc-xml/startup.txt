@@ -1,0 +1,21 @@
+1. After coding
+
+2. mvn
+   + clean  : delete jar files in target
+   + build  : build project to war/jar/pom
+   + install: update jar files from pom.xml
+              build project
+   --> mvn clean install -DskipTests
+
+3  Copy built war file 
+   from project_path/target/project.war
+   to   maven/webapp
+
+4. Start tomcat server
+   double click maven/bin/startup.bat
+
+5. Open browser
+   Enter: localhost:8080/project_name
+   
+          8080: tomcat/server.xml
+
