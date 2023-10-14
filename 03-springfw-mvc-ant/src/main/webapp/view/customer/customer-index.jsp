@@ -71,36 +71,47 @@
 				</tr>
 			</thead>
 
-			<tbody>
-					<c:forEach var="customer" items="${customers}" varStatus="loop">
+			<tbody>	
+					<c:forEach var="customer" items="${customers}" varStatus="loop"> 
+					<!-- loop.count start from 1  -->
 					<tr>
-						<td>${loop.count}</td>
+						<c:set var="startedRowIndex" value="${(currentPage-1)*pageSize}"></c:set>
+						<td>${startedRowIndex + loop.count}</td>
 						<td>${customer.firstName}</td>
 						<td>${customer.lastName}</td>
 						<td>${customer.email}</td>
 						<td>
 							<a href="${contextPath}/customer/update?id=${customer.id}" class="btn btn-info btn-sm">Update</a> 
-							<a href="${contextPath}/customer/delete?id=${customer.id}" class="btn btn-danger btn-sm">Delete</a>
+							<!-- 
+								TODO: Enhance 
+								1. Using js function to call onclick
+								2. Using bootstrap popup for better UI
+								3. Using REST to skip reload page
+							-->
+							<a onclick="if(!confirm('Are you sure to delete customer ${customer.id} ?')) return false;" href="${contextPath}/customer/delete?id=${customer.id}" class="btn btn-danger btn-sm">Delete</a>
 						</td>
 					</tr>
 					</c:forEach>
 					
 			</tbody>
 		</table>
-
+		
+		<!-- bootstrap d-none or disabled  -->
 		<nav class="float-end">
 			<ul class="pagination">
-
-				<li class="page-item">
-					<a href="" aria-label="Previous" class="page-link">
+				<li class="page-item ${currentPage <= 1 ? 'd-none' : ''}">
+					<a href="${contextPath}/customer/page/${currentPage-1}" aria-label="Previous" class="page-link">
 						<span aria-hidden="true">&laquo;</span>
 					</a>
 				</li>
-			    <li class="page-item"><a class="page-link" href="#">1</a></li>
-			    <li class="page-item"><a class="page-link bg-warning" href="#">2</a></li>
-			    <li class="page-item"><a class="page-link" href="#">3</a></li>
+				<c:forEach var="pageIndex" begin="1" end="${totalPages}">
+				<c:set var="pageActiveStyle" value="${pageIndex == currentPage ? 'bg-warning' : '' }"></c:set>
 			    <li class="page-item">
-			    	<a href="" aria-label="Next" class="page-link"> 
+			    	<a class="page-link ${pageActiveStyle}" href="${contextPath}/customer/page/${pageIndex}">${pageIndex}</a>
+			    </li>
+			    </c:forEach>
+			    <li class="page-item ${currentPage == totalPages ? 'd-none' : ''}">
+			    	<a href="${contextPath}/customer/page/${currentPage+1}" aria-label="Next" class="page-link"> 
 						<span aria-hidden="true">&raquo;</span>
 					</a>
 			    </li>
