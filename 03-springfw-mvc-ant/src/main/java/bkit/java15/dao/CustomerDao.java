@@ -14,7 +14,11 @@ public interface CustomerDao {
 	
 	List<Customer> getAll(Pageable pageable, Sortable sortable);
 	
+	List<Customer> getAll(Pageable pageable, Sortable sortable, String text);
+	
 	int countTotalItems();
+	
+	int countTotalItems(String text);
 
 	void saveOrUpdate(Customer customer);
 

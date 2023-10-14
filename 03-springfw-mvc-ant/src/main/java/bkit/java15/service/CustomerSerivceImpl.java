@@ -36,8 +36,20 @@ public class CustomerSerivceImpl implements CustomerService{
 	
 	@Override
 	@Transactional
+	public List<Customer> getAll(Pageable pageable, Sortable sortable, String text) {
+		return customerDao.getAll(pageable, sortable, text);
+	}
+	
+	@Override
+	@Transactional
 	public int countTotalItems() {
 		return customerDao.countTotalItems();
+	}
+	
+	@Override
+	@Transactional
+	public int countTotalItems(String text) {
+		return customerDao.countTotalItems(text);
 	}
 	
 	@Override

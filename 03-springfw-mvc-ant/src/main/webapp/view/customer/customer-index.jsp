@@ -42,10 +42,8 @@
 						</li>
 					</ul>
 
-					<form:form action="" method="GET" class="d-flex">
-						<input name="text" value=""
-							class="form-control me-2" type="search" placeholder="Search"
-							aria-label="Search">
+					<form:form action="${contextPath}/customer/search" method="GET" class="d-flex">
+						<input name="text" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 						<button class="btn btn-outline-success" type="submit">Search</button>
 					</form:form>
 				</div>
