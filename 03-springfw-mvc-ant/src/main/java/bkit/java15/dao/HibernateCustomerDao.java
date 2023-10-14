@@ -3,7 +3,6 @@ package bkit.java15.dao;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import bkit.java15.persistence.Customer;
 
