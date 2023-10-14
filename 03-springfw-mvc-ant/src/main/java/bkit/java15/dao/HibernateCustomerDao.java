@@ -6,6 +6,7 @@ import org.hibernate.type.IntegerType;
 import org.springframework.stereotype.Repository;
 
 import bkit.java15.common.Pageable;
+import bkit.java15.common.Sortable;
 import bkit.java15.persistence.Customer;
 
 @Repository
@@ -30,10 +31,10 @@ public class HibernateCustomerDao extends AbstractHibernateDao implements Custom
 	}
 	
 	@Override
-	public List<Customer> getAll(Pageable pageable, String sortField, String sortDir) {
+	public List<Customer> getAll(Pageable pageable, Sortable sortable) {
 		return getCurrentSession().createQuery(
 				  "SELECT c FROM Customer c \n"
-				+ "ORDER BY c." + sortField + " " + sortDir , Customer.class)
+				+ "ORDER BY c." + Sortable.CUSTOMER_PROPS.get(sortable.getSortField()) + " " + sortable.getSortDir() , Customer.class)
 				.setFirstResult(pageable.getOffset())
 				.setMaxResults(pageable.getRowCount())
 				.getResultList();

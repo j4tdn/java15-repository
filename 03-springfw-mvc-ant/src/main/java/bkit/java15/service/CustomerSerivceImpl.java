@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import bkit.java15.common.Pageable;
+import bkit.java15.common.Sortable;
 import bkit.java15.dao.CustomerDao;
 import bkit.java15.persistence.Customer;
 
@@ -29,8 +30,8 @@ public class CustomerSerivceImpl implements CustomerService{
 	
 	@Override
 	@Transactional
-	public List<Customer> getAll(Pageable pageable, String sortField, String sortDir) {
-		return customerDao.getAll(pageable, sortField, sortDir);
+	public List<Customer> getAll(Pageable pageable, Sortable sortable) {
+		return customerDao.getAll(pageable, sortable);
 	}
 	
 	@Override

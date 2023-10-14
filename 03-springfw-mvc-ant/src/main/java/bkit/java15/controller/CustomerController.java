@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import bkit.java15.common.Pageable;
+import bkit.java15.common.Sortable;
 import bkit.java15.persistence.Customer;
 import bkit.java15.service.CustomerService;
 
@@ -29,11 +30,14 @@ public class CustomerController {
 
 	@GetMapping
 	public String list(Model model) {
-		return listByPage(1, model);
+		return listByPage(1, "first-name", "asc", model);
 	}
 	
 	@GetMapping("/page/{pageNum}")
-	public String listByPage(@PathVariable("pageNum") int pageNum, Model model) {
+	public String listByPage(@PathVariable("pageNum") int pageNum,
+			@RequestParam(name = "sort-field") String sortField,
+			@RequestParam(name = "sort-dir") String sortDir,
+			Model model) {
 		int totalItems = customerService.countTotalItems();
 		int totalPages = (int)Math.ceil((float)totalItems/pageSize);
 		int currentPage = pageNum < 1 ? 1 
@@ -44,7 +48,11 @@ public class CustomerController {
 		model.addAttribute("currentPage", currentPage);
 		model.addAttribute("pageSize", pageSize);
 		
-		model.addAttribute("customers", customerService.getAll(Pageable.of(currentPage, pageSize)));
+		model.addAttribute("currentSortField", sortField);
+		model.addAttribute("currentSortDir", sortDir);
+		model.addAttribute("reversedOrder", "asc".equals(sortDir) ? "desc" : "asc");
+		
+		model.addAttribute("customers", customerService.getAll(Pageable.of(currentPage, pageSize), Sortable.of(sortField, sortDir)));
 		return CUSTOMER_INDEX;
 	}
 	

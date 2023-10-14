@@ -63,11 +63,26 @@
 		<table class="table table-bordered table-striped">
 			<thead class="table-dark">
 				<tr>
-					<th><a href="">#</a></th>
-					<th><a href="">First name</a></th>
-					<th><a href="">Last name</a></th>
-					<th><a href="">Email</a></th>
-					<th>Action</th>
+					<th class="text-white">#</th>
+					<th>
+						<a href="${contextPath}/customer/page/${currentPage}?sort-field=first-name&sort-dir=${currentSortField == 'first-name' ? reversedOrder : 'asc'}" class="text-white">First Name</a>
+						<c:if test="${currentSortField == 'first-name'}">
+							<span class="${currentSortDir == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
+						</c:if>
+					</th>
+					<th>
+						<a href="${contextPath}/customer/page/${currentPage}?sort-field=last-name&sort-dir=${currentSortField == 'last-name' ? reversedOrder : 'asc'}" class="text-white">Last Name</a>
+						<c:if test="${currentSortField == 'last-name'}">
+							<span class="${currentSortDir == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
+						</c:if>
+					</th>
+					<th>
+						<a href="${contextPath}/customer/page/${currentPage}?sort-field=email&sort-dir=${currentSortField == 'email' ? reversedOrder : 'asc'}" class="text-white">Email</a>
+						<c:if test="${currentSortField == 'email'}">
+							<span class="${currentSortDir == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></span>
+						</c:if>
+					</th>
+					<th class="text-white">Action</th>
 				</tr>
 			</thead>
 
@@ -97,21 +112,22 @@
 		</table>
 		
 		<!-- bootstrap d-none or disabled  -->
+		<c:set var="currentSort" value="sort-field=${currentSortField}&sort-dir=${currentSortDir}"></c:set>
 		<nav class="float-end">
 			<ul class="pagination">
 				<li class="page-item ${currentPage <= 1 ? 'd-none' : ''}">
-					<a href="${contextPath}/customer/page/${currentPage-1}" aria-label="Previous" class="page-link">
+					<a href="${contextPath}/customer/page/${currentPage-1}?${currentSort}" aria-label="Previous" class="page-link">
 						<span aria-hidden="true">&laquo;</span>
 					</a>
 				</li>
 				<c:forEach var="pageIndex" begin="1" end="${totalPages}">
 				<c:set var="pageActiveStyle" value="${pageIndex == currentPage ? 'bg-warning' : '' }"></c:set>
 			    <li class="page-item">
-			    	<a class="page-link ${pageActiveStyle}" href="${contextPath}/customer/page/${pageIndex}">${pageIndex}</a>
+			    	<a class="page-link ${pageActiveStyle}" href="${contextPath}/customer/page/${pageIndex}?${currentSort}">${pageIndex}</a>
 			    </li>
 			    </c:forEach>
 			    <li class="page-item ${currentPage == totalPages ? 'd-none' : ''}">
-			    	<a href="${contextPath}/customer/page/${currentPage+1}" aria-label="Next" class="page-link"> 
+			    	<a href="${contextPath}/customer/page/${currentPage+1}?${currentSort}" aria-label="Next" class="page-link"> 
 						<span aria-hidden="true">&raquo;</span>
 					</a>
 			    </li>
