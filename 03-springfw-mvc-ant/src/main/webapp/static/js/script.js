@@ -8,3 +8,13 @@ function highlightNav(navSignature, navTag) {
 	    ? navTag.classList.add('active')
 	    : navTag.classList.remove('active');
 }
+
+let infoMessageCloseIcon = document.querySelector('.info-message-close');
+let infoMessage = document.querySelector('.info-message');
+
+if (infoMessageCloseIcon) {
+	infoMessageCloseIcon.onclick = function(e) {
+		e.preventDefault();
+		infoMessage.classList.add('d-none');
+	}
+}

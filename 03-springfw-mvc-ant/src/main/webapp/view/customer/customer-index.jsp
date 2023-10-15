@@ -13,7 +13,7 @@
 <link
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
 	rel="stylesheet">
-
+<link href="${contextPath}/resources/css/style.css" rel="stylesheet"/>
 </head>
 <body>
 	<header>
@@ -55,18 +55,51 @@
 
 
 	<main class="container-fluid">
-		<a href="${contextPath}/customer/add"
-			class="btn btn-primary btn-sm mt-3 mb-3"> <i
-			class="far fa-address-book"></i> Add Customer
-		</a>
+		
+		<!-- Info Message panel -->
+		<c:if test="${param.message != null && !param.message.isEmpty()}">
+			<div class="info-message bg-info d-flex justify-content-between align-items-center ps-1 pe-1 pt-2 pb-2">
+				<span class="text-white">${param.message}</span>
+				<a class="info-message-close text-danger">x</a>
+			</div>
+		</c:if>
+	
+		<div class="d-flex justify-content-between align-items-center">
+			<a href="${contextPath}/customer/add"
+				class="btn btn-primary btn-sm mt-3 mb-3"> <i
+				class="far fa-address-book"></i> Add Customer
+			</a>
+			
+			<nav>
+				<ul class="pagination d-flex justify-content-between align-items-center">
+					<c:set var="currentSort" value="sort-field=${currentSortField}&sort-dir=${currentSortDir}"></c:set>
+					<li class="page-item ${currentPage == 1 ? 'disabled' : ''}">
+						<a href="${contextPath}/customer/page/${currentPage-1}?${currentSort}" aria-label="Previous" class="page-link">
+							<span aria-hidden="true">&laquo;</span>
+						</a>
+					</li>
+					<c:forEach var="pageIndex" begin="1" end="${totalPages}" step="1">
+				    <li class="page-item">
+				    	<c:set var="pageActiveStyle" value="${pageIndex == currentPage ? 'bg-warning' : ''}"></c:set>
+				    	<a class="page-link ${pageActiveStyle}" href="${contextPath}/customer/page/${pageIndex}?${currentSort}">${pageIndex}</a>
+				    </li>
+				    </c:forEach>
+				    <li class="page-item ${currentPage == totalPages ? 'disabled' : ''}">
+				    	<a href="${contextPath}/customer/page/${currentPage+1}?${currentSort}" aria-label="Next" class="page-link"> 
+							<span aria-hidden="true">&raquo;</span>
+						</a>
+				    </li>
+				</ul>
+			</nav>
+		</div>
 		
 		<table class="table table-bordered table-striped">
 			<thead class="table-dark">
 				<tr>
-					<th><a href="">#</a></th>
-					<th><a href="">First name</a></th>
-					<th><a href="">Last name</a></th>
-					<th><a href="">Email</a></th>
+					<th>#</th>
+					<th><a href="${contextPath}/customer/page/1?sort-field=first-name&sort-dir=asc" class="text-white">First Name</a></th>
+					<th><a href="${contextPath}/customer/page/1?sort-field=last-name&sort-dir=asc" class="text-white">Last Name</a></th>
+					<th><a href="${contextPath}/customer/page/1?sort-field=email&sort-dir=asc" class="text-white">Email</a></th>
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -74,38 +107,27 @@
 			<tbody>
 					<c:forEach var="customer" items="${customers}" varStatus="loop">
 					<tr>
-						<td>${loop.count}</td>
+						<!-- 
+							loop.count: from 1
+							page 1 - #1  =  0 + loop.count
+							page 2 - #6  =  5 +
+							page 3 - #11 = 10 + 
+						-->
+						<td>${(currentPage-1)*itemsPerPage + loop.count}</td>
 						<td>${customer.firstName}</td>
 						<td>${customer.lastName}</td>
 						<td>${customer.email}</td>
 						<td>
 							<a href="${contextPath}/customer/update?id=${customer.id}" class="btn btn-info btn-sm">Update</a> 
-							<a href="${contextPath}/customer/delete?id=${customer.id}" class="btn btn-danger btn-sm">Delete</a>
+							<a onclick="if(!confirm('Are you sure to delete customer ${customer.id} ?')) return false;" 
+							   href="${contextPath}/customer/delete?id=${customer.id}" class="btn btn-danger btn-sm">Delete</a>
 						</td>
 					</tr>
 					</c:forEach>
 					
 			</tbody>
 		</table>
-
-		<nav class="float-end">
-			<ul class="pagination">
-
-				<li class="page-item">
-					<a href="" aria-label="Previous" class="page-link">
-						<span aria-hidden="true">&laquo;</span>
-					</a>
-				</li>
-			    <li class="page-item"><a class="page-link" href="#">1</a></li>
-			    <li class="page-item"><a class="page-link bg-warning" href="#">2</a></li>
-			    <li class="page-item"><a class="page-link" href="#">3</a></li>
-			    <li class="page-item">
-			    	<a href="" aria-label="Next" class="page-link"> 
-						<span aria-hidden="true">&raquo;</span>
-					</a>
-			    </li>
-			</ul>
-		</nav>
+		
 	</main>
 
 	<footer class="bg-light fixed-bottom py-3 text-center">
