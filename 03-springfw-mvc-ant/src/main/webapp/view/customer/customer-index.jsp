@@ -35,23 +35,26 @@
 							<a class="nav-link nav-customer" class="customer-page" aria-current="page" href="${contextPath}/customer">Customer</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link nav-stuff" href="${contextPath}/stuff">Stuff</a>
+							<a class="nav-link nav-stuff" href="${contextPath}/staff">Staff</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link nav-admin" href="${contextPath}/admin" tabindex="-1" aria-disabled="true">Admin</a>
 						</li>
 					</ul>
 
-					<form:form action="" method="GET" class="d-flex">
-						<input name="text" value=""
-							class="form-control me-2" type="search" placeholder="Search"
-							aria-label="Search">
+					<form:form action="${contextPath}/customer/search" method="GET" class="d-flex">
+						<input name="text" class="form-control me-2" type="search" value="${param.text}" aria-label="Search">
 						<button class="btn btn-outline-success" type="submit">Search</button>
 					</form:form>
 				</div>
 			</div>
 		</nav>
 	</header>
+	
+	<c:set var="urlParamText" value=""></c:set>
+	<c:if test="${param.text != ''}">
+		<c:set var="urlParamText" value="&text=${param.text}"></c:set>
+	</c:if>
 
 
 	<main class="container-fluid">
@@ -70,9 +73,11 @@
 				class="far fa-address-book"></i> Add Customer
 			</a>
 			
+			<!-- pagination -->
+			<c:if test="${totalPages > 1}">
 			<nav>
 				<ul class="pagination d-flex justify-content-between align-items-center">
-					<c:set var="currentSort" value="sort-field=${currentSortField}&sort-dir=${currentSortDir}"></c:set>
+					<c:set var="currentSort" value="sort-field=${currentSortField}&sort-dir=${currentSortDir}${urlParamText}"></c:set>
 					<li class="page-item ${currentPage == 1 ? 'disabled' : ''}">
 						<a href="${contextPath}/customer/page/${currentPage-1}?${currentSort}" aria-label="Previous" class="page-link">
 							<span aria-hidden="true">&laquo;</span>
@@ -91,15 +96,45 @@
 				    </li>
 				</ul>
 			</nav>
+			</c:if>
 		</div>
 		
+		<!-- TABLE -->
+		
+		<c:choose>
+		<c:when test="${totalItems > 0}">
 		<table class="table table-bordered table-striped">
 			<thead class="table-dark">
+				<c:set var="sortDirCssClass" value="${currentSortDir == 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down'}"></c:set>
 				<tr>
 					<th>#</th>
-					<th><a href="${contextPath}/customer/page/1?sort-field=first-name&sort-dir=asc" class="text-white">First Name</a></th>
-					<th><a href="${contextPath}/customer/page/1?sort-field=last-name&sort-dir=asc" class="text-white">Last Name</a></th>
-					<th><a href="${contextPath}/customer/page/1?sort-field=email&sort-dir=asc" class="text-white">Email</a></th>
+					<th>
+						<c:set var="sortByFirstName" value="${currentSortField == 'first-name'}"></c:set>
+						<a href="${contextPath}/customer/page/${currentPage}?sort-field=first-name&sort-dir=${sortByFirstName ? reversedOrder : 'asc'}${urlParamText}" class="text-white">
+							First Name 
+							<c:if test="${sortByFirstName}">
+								<i class="${sortDirCssClass}"></i>
+							</c:if>
+						</a>
+					</th>
+					<th>
+						<c:set var="sortByLastName" value="${currentSortField == 'last-name'}"></c:set>
+						<a href="${contextPath}/customer/page/${currentPage}?sort-field=last-name&sort-dir=${sortByLastName ? reversedOrder : 'asc'}${urlParamText}" class="text-white">
+							Last Name
+							<c:if test="${sortByLastName}">
+								<i class="${sortDirCssClass}"></i>
+							</c:if>
+						</a>
+					</th>
+					<th>
+						<c:set var="sortByEmail" value="${currentSortField == 'email'}"></c:set>
+						<a href="${contextPath}/customer/page/${currentPage}?sort-field=email&sort-dir=${sortByEmail ? reversedOrder : 'asc'}${urlParamText}" class="text-white">
+							Email
+							<c:if test="${sortByEmail}">
+								<i class="${sortDirCssClass}"></i>
+							</c:if>
+						</a>
+					</th>
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -127,12 +162,19 @@
 					
 			</tbody>
 		</table>
+		</c:when>
+		
+		<c:otherwise>
+		<h3>There are no elements ^^</h3>
+		</c:otherwise>
+		
+		</c:choose>
 		
 	</main>
 
 	<footer class="bg-light fixed-bottom py-3 text-center">
 		<div class="container-fluid">
-			<span class="text-muted">CMA made with JAVA11  &#129392;  25.06.2022</span>
+			<span class="text-muted">CMA made with JAVA15  &#129392;  25.06.2022</span>
 		</div>
 	</footer>
 	

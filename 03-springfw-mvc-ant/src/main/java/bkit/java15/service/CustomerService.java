@@ -13,6 +13,8 @@ public interface CustomerService {
 	List<Customer> getAll(Pageable pageable);
 	
 	List<Customer> getAll(Pageable pageable, Sortable sortable);
+	
+	List<Customer> getAll(Pageable pageable, Sortable sortable, String text);
 
 	Customer get(int id);
 	
@@ -21,5 +23,7 @@ public interface CustomerService {
 	void delete(int id);
 	
 	int countTotalAmountOfCustomers();
+	
+	int countTotalAmountOfCustomers(String text);
 	
 }

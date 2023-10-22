@@ -27,9 +27,15 @@ public class CustomerController {
 	private CustomerService customerService;
 
 	// click customer menu
+	// default page = 1, filter text = null
 	@GetMapping
 	public String index(Model model) {
-		return listByPage(1, "first-name", "asc", model); // default page = 1
+		return listByPage(1, "first-name", "asc", null, model);
+	}
+	
+	@GetMapping("/search")
+	public String search(@RequestParam("text") String text, Model model) {
+		return listByPage(1, "first-name", "asc", text, model);
 	}
 	
 	// click [sort], [page] number
@@ -37,8 +43,10 @@ public class CustomerController {
 	public String listByPage(@PathVariable("pageNum") int pageNum, 
 			@RequestParam("sort-field") String sortField,
 			@RequestParam("sort-dir") String sortDir,
+			String text,
 			Model model) {
-		int totalItems = customerService.countTotalAmountOfCustomers();
+		
+		int totalItems = customerService.countTotalAmountOfCustomers(text);
 		int itemsPerPage = Pageable.CONFIGURED_ITEMS_PER_PAGE;
 		int totalPages = (int)Math.ceil((float)totalItems/itemsPerPage);
 		
@@ -46,15 +54,21 @@ public class CustomerController {
 							: pageNum > totalPages ? totalPages
 							: pageNum;
 		
+		model.addAttribute("totalItems", totalItems);
 		model.addAttribute("totalPages", totalPages);
 		model.addAttribute("currentPage", currentPage);
 		model.addAttribute("itemsPerPage", itemsPerPage);
 		
 		model.addAttribute("currentSortField", sortField);
 		model.addAttribute("currentSortDir", sortDir);
+		model.addAttribute("reversedOrder", sortDir.equals("asc") ? "desc" : "asc");
 		
-		model.addAttribute("customers", customerService.getAll(
-				Pageable.of(currentPage, itemsPerPage), Sortable.of(sortField, sortDir)) );
+		model.addAttribute("customers", 
+				customerService.getAll(
+					Pageable.of(currentPage, itemsPerPage), 
+					Sortable.of(sortField, sortDir), 
+					text)
+				);
 		return CUSTOMER_INDEX;
 	}
 

@@ -17,6 +17,9 @@ public class Pageable {
 	}
 
 	public int getOffset() {
+		if (pageNum <= 0) {
+			return 0;
+		}
 		return (pageNum - 1) * pageSize;
 	}
 

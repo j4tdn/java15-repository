@@ -3,6 +3,7 @@ package bkit.java15.dao;
 import java.util.List;
 
 import org.hibernate.type.IntegerType;
+import org.hibernate.type.StringType;
 import org.springframework.stereotype.Repository;
 
 import bkit.java15.common.Pageable;
@@ -34,8 +35,6 @@ public class HibernateCustomerDao extends AbstractHibernateDao implements Custom
 				.getResultList();
 	}
 	
-	// sortable(first-name, asc)
-	
 	@Override
 	public List<Customer> getAll(Pageable pageable, Sortable sortable) {
 		String sortField = sortable.getSortField();
@@ -47,6 +46,35 @@ public class HibernateCustomerDao extends AbstractHibernateDao implements Custom
 				.setFirstResult(pageable.getOffset()) // offset
 				.setMaxResults(pageable.getRowCount()) // row_count
 				.getResultList();
+	}
+	
+	@Override
+	public List<Customer> getAll(Pageable pageable, Sortable sortable, String text) {
+		String sortField = sortable.getSortField();
+		
+		var sql = GET_ALL_CUSTOMERS;
+		
+		if (text != null && !text.isEmpty()) {
+			String condition = "\n"
+					+ "WHERE FIRST_NAME LIKE :ptext OR LAST_NAME LIKE :ptext OR EMAIL LIKE :ptext";
+			sql = sql.concat(condition);
+		}
+		
+		sql = sql + "\n" 
+				  + "ORDER BY " + Sortable.CUSTOMER_PROPS.get(sortField)  + " " + sortable.getSortDir();
+		
+		var query = openSession().createNativeQuery(sql, Customer.class);
+				
+		if (text != null && !text.isEmpty()) {
+			query.setParameter("ptext", "%" + text + "%", StringType.INSTANCE);
+		}
+		
+		System.out.println("offset: " + pageable.getOffset());
+		System.out.println("rowcount: " + pageable.getRowCount());
+		
+		return query.setFirstResult(pageable.getOffset()) // offset
+					.setMaxResults(pageable.getRowCount()) // row_count
+					.getResultList();
 	}
 	
 	@Override
@@ -73,6 +101,25 @@ public class HibernateCustomerDao extends AbstractHibernateDao implements Custom
 		return (int)getCurrentSession().createNativeQuery(COUNT_AMOUNT_OF_CUSTOMERS)
 				.addScalar("TOTAL_RECORDS", IntegerType.INSTANCE)
 				.getSingleResult();
+	}
+	
+	@Override
+	public int countTotalAmountOfCustomers(String text) {
+		var sql = COUNT_AMOUNT_OF_CUSTOMERS;
+		
+		if (text != null && !text.isEmpty()) {
+			String condition = "\n"
+					+ "WHERE FIRST_NAME LIKE :ptext OR LAST_NAME LIKE :ptext OR EMAIL LIKE :ptext";
+			sql = sql.concat(condition);
+		}
+		
+		var query = getCurrentSession().createNativeQuery(sql);
+		
+		if (text != null && !text.isEmpty()) {
+			query.setParameter("ptext", "%" + text + "%", StringType.INSTANCE);
+		}
+		
+		return (int)query.addScalar("TOTAL_RECORDS", IntegerType.INSTANCE).getSingleResult();
 	}
 	
 }

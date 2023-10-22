@@ -56,7 +56,7 @@
 
 
 	<main class="container-fluid">
-		<h3>Title: Home Page</h3>
+		<h3>Title: Staff Page</h3>
 		
 		<hr>
 		

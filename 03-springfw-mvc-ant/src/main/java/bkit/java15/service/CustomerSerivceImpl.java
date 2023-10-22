@@ -33,6 +33,11 @@ public class CustomerSerivceImpl implements CustomerService{
 	}
 	
 	@Override
+	public List<Customer> getAll(Pageable pageable, Sortable sortable, String text) {
+		return customerDao.getAll(pageable, sortable, text);
+	}
+	
+	@Override
 	public Customer get(int id) {
 		return customerDao.get(id);
 	}
@@ -53,6 +58,12 @@ public class CustomerSerivceImpl implements CustomerService{
 	@Transactional
 	public int countTotalAmountOfCustomers() {
 		return customerDao.countTotalAmountOfCustomers();
+	}
+	
+	@Override
+	@Transactional
+	public int countTotalAmountOfCustomers(String text) {
+		return customerDao.countTotalAmountOfCustomers(text);
 	}
 	
 }
