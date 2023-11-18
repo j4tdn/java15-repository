@@ -1,0 +1,13 @@
+.center {
+	text-align: center;
+	color: blue;
+	font-family: Corbel;
+}
+
+.red {
+	color: red;
+}
+
+form.form-signin div {
+	margin: 10px 0;
+}
